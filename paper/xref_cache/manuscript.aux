@@ -1,0 +1,84 @@
+\newlabel{eq:native}{{1}{4}{The Algorithm and the Quantities Held Fixed}{equation.2.1}{}}
+\newlabel{eq:matched-kernel}{{2}{5}{The Algorithm and the Quantities Held Fixed}{equation.2.2}{}}
+\newlabel{thm:main}{{2.1}{5}{The Algorithm and the Quantities Held Fixed}{theorem.2.1}{}}
+\newlabel{sec:field}{{3}{6}{How Gradient Noise Reweights Curvature}{section.3}{}}
+\newlabel{eq:psi}{{3}{6}{How Gradient Noise Reweights Curvature}{equation.3.3}{}}
+\newlabel{prop:rowkernel}{{3.1}{6}{How Gradient Noise Reweights Curvature}{theorem.3.1}{}}
+\newlabel{eq:rowkernel}{{4}{6}{How Gradient Noise Reweights Curvature}{equation.3.4}{}}
+\newlabel{thm:scalar}{{3.2}{6}{How Gradient Noise Reweights Curvature}{theorem.3.2}{}}
+\newlabel{sec:phases}{{4}{7}{Constructing Vanishing and Persistent Error}{section.4}{}}
+\newlabel{eq:construction-window}{{5}{7}{Constructing Vanishing and Persistent Error}{equation.4.5}{}}
+\newlabel{fig:copulas}{{1}{8}{How a different pairing reverses mean motion in the concrete example of Section~\ref {sec:matrix-experiment}. Both problems have the same separate curvature and noise distributions and the same gradient covariance. \textbf {a:} For displacement $u=(x,-x)$, bars give the mean coordinate gradient per unit coordinate displacement, conditioned on that coordinate having zero noise (quiet) or unit noise (noisy). Equivalently, they show $\E [(Au)_i/u_i\mid |e_i|]$. A negative bar gives an outward descent component; it is not a negative Hessian eigenvalue. Ordinary averaging gives $.75$ in both cases. \textbf {b:} AdamW's local curvature weights are the same in both problems, but the quiet coordinate receives much more weight. These weights average over the full noise history; they are not instantaneous inverse-noise factors. Caps show deterministic certified bounds, not confidence intervals. \textbf {c:} After including weight decay, the local mean motion is $\dot x=-kx$. The weighted quiet contribution now makes the coupled case repel along this direction. Arrows show direction only in this local linearization, not simulated trajectories. Plotting code was developed with OpenAI Codex; displayed quantities are derived from certified calculations}{figure.1}{}}
+\newlabel{eq:restoring-lyapunov}{{6}{8}{Why the independent case has small error}{equation.4.6}{}}
+\newlabel{eq:reference-limit}{{7}{9}{Why the independent case has small error}{equation.4.7}{}}
+\newlabel{eq:SGD-matrix}{{8}{9}{Smooth distributions and the SGD comparison}{equation.4.8}{}}
+\newlabel{sec:continuous-copula}{{4.1}{10}{Changing the Pairing Continuously}{subsection.4.1}{}}
+\newlabel{cor:continuous-copula-phases}{{4.1}{10}{Changing the Pairing Continuously}{theorem.4.1}{}}
+\newlabel{eq:copula-local-threshold}{{9}{10}{Changing the Pairing Continuously}{equation.4.9}{}}
+\newlabel{sec:matrix-experiment}{{5.1}{11}{The Two-Dimensional AdamW Experiment}{subsection.5.1}{}}
+\newlabel{tab:field-stability}{{1}{11}{Certified Bounds for the Local Drift Eigenvalues}{table.1}{}}
+\newlabel{tab:matrix-errors}{{2}{12}{Stationary-Error Displays at the Prespecified Final Window}{table.2}{}}
+\newlabel{fig:matrix-phases}{{2}{13}{Two-Dimensional problems with the same listed summaries but different curvature/noise pairings, using the discrete sampling law. Left: all four zero-start final-window error displays, with approximate simultaneous 95\% error bars for the 432 primary quantities (often smaller than the symbols). Lines connect observed means; no exponent is fitted. Right: every terminal state at the finest step, retaining all 256 zero-start replicas for each method/pairing. The inset shows the clouds near the minimum. These plots do not prove switching between states or convergence to stationarity. The error separation for smooth sampling distributions is proved separately. Plotting code was developed with OpenAI Codex; displayed quantities are derived from recorded numerical outputs}{figure.2}{}}
+\newlabel{app:kernel}{{A}{14}{The Exact Response Kernel and Best Possible Scalar Bounds}{appendix.A}{}}
+\newlabel{app:transfer}{{B}{15}{From the Optimizer History to Its Stationary Limit}{appendix.B}{}}
+\newlabel{eq:corrected-core}{{10}{16}{Using samples in the right order}{equation.B.10}{}}
+\newlabel{lem:regular-transfer}{{B.1}{16}{Using samples in the right order}{theorem.B.1}{}}
+\newlabel{app:repulsion}{{C}{17}{Why Stationary Laws Cannot Gather at an Unstable Optimum}{appendix.C}{}}
+\newlabel{lem:uniform-origin-excitation}{{C.1}{17}{Why Stationary Laws Cannot Gather at an Unstable Optimum}{theorem.C.1}{}}
+\newlabel{eq:uniform-origin-bracket}{{11}{17}{Why Stationary Laws Cannot Gather at an Unstable Optimum}{equation.C.11}{}}
+\newlabel{prop:matrix-stationary-repulsion}{{C.2}{18}{Why Stationary Laws Cannot Gather at an Unstable Optimum}{theorem.C.2}{}}
+\newlabel{eq:conditional-log-generator}{{12}{18}{Why Stationary Laws Cannot Gather at an Unstable Optimum}{equation.C.12}{}}
+\newlabel{app:reference}{{D}{19}{The Stable Reference Law, Smooth Examples and SGD}{appendix.D}{}}
+\newlabel{eq:explicit-smoothing-margin}{{13}{21}{A completely specified smooth counterexample}{equation.D.13}{}}
+\newlabel{app:continuous}{{E}{21}{A Range of Dependence Choices with Different Long-run Behavior}{appendix.E}{}}
+\newlabel{jota-main-last-equation}{{13}{22}{}{}}
+\bibcite{balles2018dissecting}{1}
+\bibcite{benaim1999}{2}
+\bibcite{bernstein2018signsgd}{3}
+\bibcite{borkarmeyn2000}{4}
+\bibcite{cambanissimonsstout1976}{5}
+\bibcite{cattaneo}{6}
+\bibcite{chaudharisoatto2018}{7}
+\bibcite{chen2019adamtype}{8}
+\bibcite{chenmoumaguluri2022}{9}
+\bibcite{cohen_edge}{10}
+\bibcite{adaptive_edge}{11}
+\bibcite{das}{12}
+\bibcite{defossez2022simple}{13}
+\bibcite{symmetry}{14}
+\bibcite{dj2024}{15}
+\bibcite{dj2026}{16}
+\bibcite{ddb}{17}
+\bibcite{duchi2011adagrad}{18}
+\bibcite{eos}{19}
+\bibcite{fort2015}{20}
+\bibcite{fortpages}{21}
+\bibcite{kingma2015adam}{22}
+\bibcite{kunstner2023noise}{23}
+\bibcite{kushneryin2003}{24}
+\bibcite{litaie2017}{25}
+\bibcite{liwenlyu}{26}
+\bibcite{liu2021}{27}
+\bibcite{loshchilov2019adamw}{28}
+\bibcite{malladi}{29}
+\bibcite{mandt2017}{30}
+\bibcite{compagnoni}{31}
+\bibcite{mouetal2020}{32}
+\bibcite{pemantle1990}{33}
+\bibcite{polyakjuditsky1992}{34}
+\bibcite{reddi}{35}
+\bibcite{robbinsmonro1951}{36}
+\bibcite{simsekli}{37}
+\bibcite{singh}{38}
+\bibcite{smithle2018}{39}
+\bibcite{su}{40}
+\bibcite{thomas}{41}
+\bibcite{wilson2017marginal}{42}
+\bibcite{yaida2019}{43}
+\bibcite{zaheer2018adaptive}{44}
+\bibcite{zeiler2012adadelta}{45}
+\bibcite{zhang_attention}{46}
+\bibcite{zhang2022adam}{47}
+\bibcite{zhang_hessian}{48}
+\bibcite{zhuang2020adabelief}{49}
+\bibcite{zou2019sufficient}{50}

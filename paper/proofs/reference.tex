@@ -1,0 +1,178 @@
+\section{The Stable Reference Law, Smooth Examples and SGD}
+\label{app:reference}
+
+The following condition proves that stationary risk shrinks with the
+step size for a broader class than the two-matrix example. Let the bounded positive-definite matrix $A$ be
+independent of the complete bounded noise vector $e$, let
+$A-\bar H$ and $\bar H-A$ have the same law, and retain coordinate sign
+invariance and equal nonzero noise marginals. This central symmetry means that the deviation matrix from the mean
+has the same law as its negative. It does not mean symmetry of $A$ about
+zero, and it allows noncommuting matrices.
+
+For fixed $u$, put $m_i=(\bar H u)_i$ and
+$\xi_i(u)=((A-\bar H)u)_i+e_i$. Its two summands are independent symmetric variables, so their sum is
+symmetric. Across time the coordinate gradients are independent with
+common law $m_i+\xi_i(u)$. For one numerator summand condition on all
+other times and their squared-energy term $J$. Its own-time scalar action
+$x/(\sqrt{d_jx^2+J}+\epsilon)$ is odd increasing. Its mean at the
+symmetric $\xi_i(u)$ is zero; shifting by $m_i$ gives its sign.
+Summing with the nonnegative history weights proves
+\[
+ m_iF_i(u)\geq0,\qquad
+ u^\top\bar H G(u)\geq\lambda u^\top\bar H u.
+\]
+The distribution of $\xi_i(u)$ can vary with $u$; the argument fixes $u$
+before averaging its history.
+
+The exact rowwise identity and independence give $DF(0)=c\bar H$,
+$c=\E\Psi(|e_i|)>0$. Flipping the entire noise history of one coordinate eliminates every
+cross-coordinate covariance at zero. Equal marginal distributions give
+fluctuation covariance $DI$, with $D>0$. Lemma~\ref{lem:regular-transfer} applies with
+$P_0=\bar H$, $c_0=\lambda$. The drift matrix
+$B=\lambda I+c\bar H$ is symmetric positive definite, and the unique
+OU covariance is $S=D B^{-1}/2$. Thus
+\[
+ \lim\frac{\E L(u)}\eta
+ =\tfrac12\operatorname{tr}(\bar H S)
+ =\tfrac D4\operatorname{tr}[\bar H(\lambda I+c\bar H)^{-1}]>0.
+\]
+All positive absolute scaled moments converge by the same lemma. This
+proves \eqref{eq:reference-limit} and the independent half of
+Theorem~\ref{thm:main}.
+
+\paragraph{A fixed smooth joint law.}
+The unsmoothed independent Hessian takes $sH_1,sH_2$ with equal probabilities,
+so its deviation from $\bar H$ is a symmetric two-point matrix law. Add
+$\tau B_0$ with an independent radial $C^\infty$ bump density supported
+on a Frobenius ball in $\operatorname{Sym}_2$. Its mean is zero, it is
+centrally symmetric, and it is invariant under coordinate exchange. Add
+$\tau Z_0$ to $e$ with independent iid symmetric smooth compact coordinate
+jitters. Use these same independent kernels in both copulas.
+
+The full Hessian and noise distributions still match separately. The
+joint law is unchanged by flipping any coordinate of $e$ while keeping
+$A$ fixed, so the matrix/noise mixed moments still vanish. Swapping the two
+coordinates in both the matrix and noise vector also preserves the law. In the independent arm, the matrix
+and noise vector remain independent, and the centered matrix law
+retains its central symmetry. Both joint laws are finite mixtures
+of translated smooth product densities on
+$\operatorname{Sym}_2\times\R^2$. Their supports are compact and have nonempty interior in all matrix
+and noise coordinates. Choose one sufficiently small $\tau>0$ so that all sample
+Hessians remain uniformly positive definite.
+
+At fixed $\epsilon$, coupling these jitters to their unsmoothed marks and
+using the bounded continuous Hilbert quotient derivative proves convergence
+of the origin Jacobians as $\tau\downarrow0$ by dominated convergence.
+Their strictly positive and negative eigenvalue margins therefore
+persist for a sufficiently small fixed positive $\tau$. Coordinate-swap symmetry keeps the coupled antisymmetric direction
+invariant. Its drift is zero on the symmetric line and repels near zero,
+which gives the hypotheses of
+Proposition~\ref{prop:matrix-stationary-repulsion}. The conditional noise bound continues to apply to the smooth
+sign-invariant noise. The coupled risk has a positive lower bound; the
+bounded optimizer state gives its finite upper bound. This proves the two risk orders.
+
+For two independent matrices with these full-dimensional smooth laws,
+commutation has probability zero. For a symmetric matrix with distinct
+eigenvalues, the symmetric matrices that commute with it lie in a
+lower-dimensional subspace. Matrices with repeated eigenvalues themselves
+form a measure-zero algebraic set. All smoothing
+parameters and problem laws were fixed before the step limit.
+
+\paragraph{Exact SGD covariance equality.}
+For $0<\eta\leq1/(h_{\max}+\lambda)$, set
+$T=I-\eta(A+\lambda I)$ and $Q=\E ee^\top$. Every sample map shrinks distances uniformly, with norm at most $1-\eta(h_{\min}+\lambda)<1$.
+Its stationary mean is zero, and freshness and $\E[A_{ij}e_k]=0$ give
+the exact covariance recurrence
+\[
+ \Sigma=\mathcal L_\eta(\Sigma)+\eta^2Q,
+ \qquad \mathcal L_\eta(S)=\E[TST^\top].
+\]
+The operator has norm at most the squared common contraction factor, so
+$(I-\mathcal L_\eta)^{-1}$ exists and the solution is unique. Both the covariance-update operator
+and the added-noise term depend only on the matched complete separate
+distributions. Thus the covariance
+and quadratic risk agree exactly between copulas, despite noncommutation.
+Moreover
+\[
+ \operatorname{tr}\Sigma\leq
+ \frac{\eta^2\operatorname{tr}Q}
+ {1-(1-\eta(h_{\min}+\lambda))^2}=O(\eta).
+\]
+Expanding the recurrence and dividing by $\eta$ shows that
+$\Sigma/\eta\to\Xi$, where
+\[
+ (\bar H+\lambda I)\Xi+\Xi(\bar H+\lambda I)=Q.
+\]
+The solution is unique and positive definite because $Q$ is positive
+definite in this construction. Hence both matched SGD risks have order
+$\eta$. This completes Theorem~\ref{thm:main}; equality of full invariant
+distributions is not asserted.
+
+\paragraph{A completely specified smooth counterexample.}
+Use the atomic matrices and optimizer constants displayed in
+Section~\ref{sec:matrix-experiment}. This geometry admits an explicit fixed
+smoothing scale.
+Write $H_{\min},H_{\max}$ for its minimum and maximum sample eigenvalues.
+Let $B$ have normalized density on $\operatorname{Sym}_2$ proportional to
+\[
+ \exp\!\left[-\frac1{1-\|B\|_F^2}\right]
+                         \ind\{\|B\|_F<1\},
+\]
+and let $Z_1,Z_2$ be independent with normalized density proportional to
+$\exp[-1/(1-z^2)]\ind\{|z|<1\}$, independent of all original marks and
+of $B$. Choose the fixed dyadic number $\tau=2^{-20}$ and replace
+$A,e$ by $A_\tau=A+\tau B$, $e_\tau=e+\tau Z$ in both laws.
+These smooth densities are centrally symmetric; the matrix law is also
+exchange invariant. Their bounds are $\|B\|_{\rm op}\leq1$, $|Z_i|\leq1$.
+
+To certify that this particular scale preserves the strict margins, let
+$T_\epsilon$ be the Hilbert quotient in Appendix~\ref{app:transfer}.
+Its derivative norm is at most $C_*/\epsilon$ and its derivative has
+Lipschitz constant $6C_*/\epsilon^2$. At zero, the original coordinate
+Hessian-row history map has operator norm at most $H_{\max}$; its
+perturbation has norm at most $\tau$, and the noise-history perturbation
+has Hilbert norm at most $\tau$. The chain rule therefore gives
+\[
+ \|D_uf_{\tau,i}(0)-D_uf_{0,i}(0)\|
+ \leq\tau C_*\left(\frac{6H_{\max}}{\epsilon^2}
+                                    +\frac1\epsilon\right).
+\]
+Expectation and the two row norm squares imply
+\begin{equation}\label{eq:explicit-smoothing-margin}
+ \|J_\tau-J_0\|_{\rm op}
+ \leq\sqrt2\tau C_*\left(\frac{6H_{\max}}{\epsilon^2}
+                                    +\frac1\epsilon\right)
+ <\frac{99082.5}{1048576}<.1.
+\end{equation}
+The numerical bound uses only $H_{\max}<4$, $C_*<1.1$, $\epsilon>.02$
+and $\sqrt2<1.5$. Its last inequality is the exact integer comparison
+$1981650<2097152$. It is a uniform derivative bound, not a fitted or
+simulation-based smoothing tolerance.
+
+Exchange equivariance makes $J_\tau$ symmetric with the same symmetric
+and antisymmetric eigendirections. Thus each decay-plus-field eigenvalue
+changes by less than $.1$. The coupled antisymmetric value remains below
+$-.302334$, while its symmetric value remains above $6.685694$.
+The independent antisymmetric and symmetric values remain above
+$2.186275$ and $9.473861$, respectively. The eigenvalue perturbation bound known as Weyl's inequality and the
+atomic bounds $H_{\min}>.399$, $H_{\max}<3.601$ give
+\[
+ \lambda_{\min}(A_\tau)>.398999,\qquad
+ \lambda_{\max}(A_\tau)<3.601001,\qquad
+ \operatorname{cond}(A_\tau)<10.
+\]
+The population eigenvalues stay $.75,3.25$. All complete separate distributions and
+mixed-moment matching identities remain unchanged. The independent arm retains
+independence of its complete Hessian/noise vectors and central symmetry
+of its Hessian law. The coupled arm retains conditional noise-sign symmetry, a drift that
+vanishes on the symmetric line, and the uniform conditional noise bound.
+
+Both joint laws now have specified smooth densities in all matrix and
+noise coordinates,
+and the restoring and repulsion arguments above establish the stationary
+orders $\Theta(\eta)$ and $\Theta(1)$ for this fixed pair. The smoothing does not change
+with the step size. The numerical trajectories elsewhere use the
+atomic fixture; they are not mislabeled as smooth-law simulations.
+The bound proves that the chosen smoothing scale and sample condition
+numbers are valid. It gives no numerical value for the stationary-risk
+floor, time needed to escape the origin, or convergence rate to stationarity.

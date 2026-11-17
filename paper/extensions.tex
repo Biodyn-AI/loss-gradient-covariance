@@ -1,0 +1,81 @@
+\section{Effect Size, Return Speed and Memory Length}\label{sec:supplementary-extensions}
+\subsection{Comparing Errors at the Same Local Return Speed}
+For the scalar class write $k_C=\lambda+\chi_C$ for a coupling $C$.
+At common $\eta$, larger $k_C$ lowers stationary error and makes small
+perturbations return faster toward zero in the limiting dynamics. Thus the
+lower error does not come from a slower return. Match this local return
+speed per gradient update by $\eta_C=a/k_C$ with $a\downarrow0$.
+The stationary limiting process, on clock $t=na$ and scale
+$u/\sqrt a$, is
+\[
+ dY=-Ydt+\frac{\sqrt D}{k_C}dB,
+ \qquad \lim_{a\downarrow0}\frac{\Risk_C(a/k_C)}a
+        =\frac{\mu D}{4k_C^2}.
+\]
+This is a change of time in a linear Gaussian process. The exact range of
+leading errors therefore has squared denominators; its endpoint ratio is at most
+$(h_{\max}/h_{\min})^2$. At equal leading risk, limiting local relaxation
+per call is proportional to $k_C^2$. Multiplying the entire infinitesimal
+update by $s$ sends $(k,D)$ to $(sk,s^2D)$, leaving $D/k^2$ unchanged.
+These statements compare stationary error and local return speed. They do
+not bound the time needed to reach a distant target or the computation time.
+Convergence on fixed time windows also does not determine correlations over
+an unlimited time span or a Gaussian limit for averages over the actual chain.
+
+\subsection{What Changes when Squared-Gradient Memory Is Long}
+Keep the separate scalar distributions, positive $\epsilon,\lambda$, and $\alpha<1$ fixed.
+First take the stationary small-step limit at each admitted $\beta$, then
+let $\beta\uparrow1$. Write $d=1-\beta$, $\nu=\E R^2>0$,
+$\sigma^2=\operatorname{Var}(R^2)$, and
+\[
+ f(v)=(\sqrt v+\epsilon)^{-1},\qquad
+ g=\frac1{\sqrt\nu(\sqrt\nu+\epsilon)^2}=-2f'(\nu).
+\]
+The curvature weight has the following expansion, with an error bound
+that applies to every allowed noise magnitude:
+\begin{equation}\label{eq:slow-kernel}
+ \Psi_\beta(r)=f(\nu)+d\left[
+ \frac{\sigma^2f''(\nu)}4+\frac{\nu g}2-\frac{3r^2g}2\right]
+ +O(d^{3/2}),\qquad 0\leq r\leq R_{\max}.
+\end{equation}
+The same error bound applies to all allowed pairings. In particular
+\[
+ \chi_C-\chi_{C'}=-\tfrac32g(1-\beta)
+  [\E_C(HR^2)-\E_{C'}(HR^2)]+O((1-\beta)^{3/2}).
+\]
+The first term that distinguishes pairings is the average of curvature
+times squared noise.
+Let $M_+,M_-$ be the extrema of $\E HR^2$ under equal and opposite
+quantile orderings.
+The ratio of the largest and smallest leading errors obeys
+\begin{equation}\label{eq:slow-spread}
+ \frac{C_{\max,\beta}}{C_{\min,\beta}}
+ =1+\frac{3g(M_+-M_-)}{2(\lambda+\mu f(\nu))}(1-\beta)
+       +O((1-\beta)^{3/2}).
+\end{equation}
+Appendix~\ref{app:slow} proves the error bound using concentration of the
+squared-gradient average and a Taylor expansion. Its first coefficient is independent
+of fixed $\alpha$. No uniformity in $\alpha\uparrow1$, $\epsilon\downarrow0$
+or $\nu\downarrow0$, and no joint actual-chain $\eta,\beta$ limit, is
+asserted. The 45\% effect measured at $\beta=.2$ therefore gives no estimate
+of its size at memory settings commonly used for language models.
+
+\subsection{An Interacting Matrix Family with the Same Exact Error Range}
+The one-dimensional error range also holds in an explicit family with
+interacting coordinates.
+Take $A=hI+\delta B$ with independent centered bounded symmetric $B$,
+$\|B\|\leq b$, and coordinate-sign-symmetric primitive $(h,e)$ with equal
+coordinate pairs. If
+\[
+ \delta b<h_{\min},\qquad \delta bC_*/\epsilon<\lambda,
+\]
+the exact Jacobian is $\chi I$ and the origin diffusion is $DI$, while
+$u^\top G(u)\geq(\lambda-\delta bC_*/\epsilon)\|u\|^2$ globally.
+Thus total leading risk is exactly $d\mu D/[4(\lambda+\chi)]$,
+independent of this fixed perturbation. Varying only the scalar $h,R$
+pairing retains its exact error range. Smooth $B$ with support in every
+matrix direction gives Hessians without a common eigenbasis. The range is
+exact within this independent-perturbation family; it does not classify all
+possible matrix/noise pairings. Appendix~\ref{app:robust} proves the bound
+on the quotient, which does not grow with dimension, and the stationary result.
+

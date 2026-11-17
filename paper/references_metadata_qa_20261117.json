@@ -1,0 +1,1813 @@
+{
+  "status": "metadata_checks_passed_bibtex_build_delegated_to_root",
+  "source": "research/papers/q2_coupling_phases_20261117/reference_validation.json",
+  "source_sha256": "0236a95c285d67abf53edef57824bed41b4c3461c993a8a1fbf0b72625ddd5dd",
+  "bibliography_sha256": "48ac19332c713d605c612940c53e5211cb221d496ba80ef1d7f942756f3b3dfa",
+  "entry_count": 50,
+  "unique_key_count": 50,
+  "entry_type_counts": {
+    "article": 12,
+    "misc": 8,
+    "inproceedings": 28,
+    "book": 1,
+    "incollection": 1
+  },
+  "all_source_keys_present_exactly_once": true,
+  "all_titles_preserved_with_tex_escaping_and_case_protection": true,
+  "all_urls_preserved_exactly": true,
+  "all_years_equal_validated_record_year": true,
+  "no_corporate_author_protection_of_personal_names": true,
+  "special_family_name_contracts_passed": [
+    {
+      "source": "Enea Monzio Compagnoni",
+      "family": "Monzio Compagnoni",
+      "given": "Enea"
+    },
+    {
+      "source": "Liu Ziyin",
+      "family": "Liu",
+      "given": "Ziyin"
+    },
+    {
+      "source": "Bart van Merriënboer",
+      "family": "van Merriënboer",
+      "given": "Bart"
+    },
+    {
+      "source": "Nicolas Le Roux",
+      "family": "Le Roux",
+      "given": "Nicolas"
+    },
+    {
+      "source": "Philippe von Wurstemberger",
+      "family": "von Wurstemberger",
+      "given": "Philippe"
+    },
+    {
+      "source": "Weinan E",
+      "family": "E",
+      "given": "Weinan"
+    },
+    {
+      "source": "G. George Yin",
+      "family": "Yin",
+      "given": "G. George"
+    },
+    {
+      "source": "Jean-Claude Fort",
+      "family": "Fort",
+      "given": "Jean-Claude"
+    }
+  ],
+  "literal_contracts": {
+    "name_cases": 8,
+    "journal_venue_cases": 3,
+    "accent_cases": 5,
+    "all_passed_before_write": true
+  },
+  "metadata_policy": "Volume, issue and pages are copied from explicit validated fields or parsed from the validated venue string. No missing editors, proceedings pages, publishers or journal identifiers were supplied from memory. su retains accepted status; misc entries retain arXiv status and validated revision notes. Conference publication years remain independent of arXiv upload years.",
+  "source_unchanged": true,
+  "entries": [
+    {
+      "bibkey": "duchi2011adagrad",
+      "entry_type": "article",
+      "title": "Adaptive Subgradient Methods for Online Learning and Stochastic Optimization",
+      "url": "https://jmlr.org/papers/v12/duchi11a.html",
+      "year": 2011,
+      "personal_author_names": [
+        {
+          "source": "John Duchi",
+          "family": "Duchi",
+          "given": "John"
+        },
+        {
+          "source": "Elad Hazan",
+          "family": "Hazan",
+          "given": "Elad"
+        },
+        {
+          "source": "Yoram Singer",
+          "family": "Singer",
+          "given": "Yoram"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "number": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "zeiler2012adadelta",
+      "entry_type": "misc",
+      "title": "ADADELTA: An Adaptive Learning Rate Method",
+      "url": "https://arxiv.org/abs/1212.5701",
+      "year": 2012,
+      "personal_author_names": [
+        {
+          "source": "Matthew D. Zeiler",
+          "family": "Zeiler",
+          "given": "Matthew D."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "kingma2015adam",
+      "entry_type": "inproceedings",
+      "title": "Adam: A Method for Stochastic Optimization",
+      "url": "https://arxiv.org/abs/1412.6980",
+      "year": 2015,
+      "personal_author_names": [
+        {
+          "source": "Diederik P. Kingma",
+          "family": "Kingma",
+          "given": "Diederik P."
+        },
+        {
+          "source": "Jimmy Ba",
+          "family": "Ba",
+          "given": "Jimmy"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "loshchilov2019adamw",
+      "entry_type": "inproceedings",
+      "title": "Decoupled Weight Decay Regularization",
+      "url": "https://arxiv.org/abs/1711.05101",
+      "year": 2019,
+      "personal_author_names": [
+        {
+          "source": "Ilya Loshchilov",
+          "family": "Loshchilov",
+          "given": "Ilya"
+        },
+        {
+          "source": "Frank Hutter",
+          "family": "Hutter",
+          "given": "Frank"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "balles2018dissecting",
+      "entry_type": "inproceedings",
+      "title": "Dissecting Adam: The Sign, Magnitude and Variance of Stochastic Gradients",
+      "url": "https://proceedings.mlr.press/v80/balles18a.html",
+      "year": 2018,
+      "personal_author_names": [
+        {
+          "source": "Lukas Balles",
+          "family": "Balles",
+          "given": "Lukas"
+        },
+        {
+          "source": "Philipp Hennig",
+          "family": "Hennig",
+          "given": "Philipp"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "series": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "bernstein2018signsgd",
+      "entry_type": "inproceedings",
+      "title": "signSGD: Compressed Optimisation for Non-Convex Problems",
+      "url": "https://proceedings.mlr.press/v80/bernstein18a.html",
+      "year": 2018,
+      "personal_author_names": [
+        {
+          "source": "Jeremy Bernstein",
+          "family": "Bernstein",
+          "given": "Jeremy"
+        },
+        {
+          "source": "Yu-Xiang Wang",
+          "family": "Wang",
+          "given": "Yu-Xiang"
+        },
+        {
+          "source": "Kamyar Azizzadenesheli",
+          "family": "Azizzadenesheli",
+          "given": "Kamyar"
+        },
+        {
+          "source": "Animashree Anandkumar",
+          "family": "Anandkumar",
+          "given": "Animashree"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "series": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "zaheer2018adaptive",
+      "entry_type": "inproceedings",
+      "title": "Adaptive Methods for Nonconvex Optimization",
+      "url": "https://proceedings.neurips.cc/paper/2018/hash/90365351ccc7437a1309dc64e4db32a3-Abstract.html",
+      "year": 2018,
+      "personal_author_names": [
+        {
+          "source": "Manzil Zaheer",
+          "family": "Zaheer",
+          "given": "Manzil"
+        },
+        {
+          "source": "Sashank J. Reddi",
+          "family": "Reddi",
+          "given": "Sashank J."
+        },
+        {
+          "source": "Devendra Sachan",
+          "family": "Sachan",
+          "given": "Devendra"
+        },
+        {
+          "source": "Satyen Kale",
+          "family": "Kale",
+          "given": "Satyen"
+        },
+        {
+          "source": "Sanjiv Kumar",
+          "family": "Kumar",
+          "given": "Sanjiv"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "chen2019adamtype",
+      "entry_type": "inproceedings",
+      "title": "On the Convergence of A Class of Adam-Type Algorithms for Non-Convex Optimization",
+      "url": "https://arxiv.org/pdf/1808.02941",
+      "year": 2019,
+      "personal_author_names": [
+        {
+          "source": "Xiangyi Chen",
+          "family": "Chen",
+          "given": "Xiangyi"
+        },
+        {
+          "source": "Sijia Liu",
+          "family": "Liu",
+          "given": "Sijia"
+        },
+        {
+          "source": "Ruoyu Sun",
+          "family": "Sun",
+          "given": "Ruoyu"
+        },
+        {
+          "source": "Mingyi Hong",
+          "family": "Hong",
+          "given": "Mingyi"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "zou2019sufficient",
+      "entry_type": "inproceedings",
+      "title": "A Sufficient Condition for Convergences of Adam and RMSProp",
+      "url": "https://arxiv.org/abs/1811.09358",
+      "year": 2019,
+      "personal_author_names": [
+        {
+          "source": "Fangyu Zou",
+          "family": "Zou",
+          "given": "Fangyu"
+        },
+        {
+          "source": "Li Shen",
+          "family": "Shen",
+          "given": "Li"
+        },
+        {
+          "source": "Zequn Jie",
+          "family": "Jie",
+          "given": "Zequn"
+        },
+        {
+          "source": "Weizhong Zhang",
+          "family": "Zhang",
+          "given": "Weizhong"
+        },
+        {
+          "source": "Wei Liu",
+          "family": "Liu",
+          "given": "Wei"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "defossez2022simple",
+      "entry_type": "article",
+      "title": "A Simple Convergence Proof of Adam and Adagrad",
+      "url": "https://arxiv.org/pdf/2003.02395",
+      "year": 2022,
+      "personal_author_names": [
+        {
+          "source": "Alexandre Défossez",
+          "family": "Défossez",
+          "given": "Alexandre"
+        },
+        {
+          "source": "Léon Bottou",
+          "family": "Bottou",
+          "given": "Léon"
+        },
+        {
+          "source": "Francis Bach",
+          "family": "Bach",
+          "given": "Francis"
+        },
+        {
+          "source": "Nicolas Usunier",
+          "family": "Usunier",
+          "given": "Nicolas"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "validated venue",
+        "month": "validated venue: October 2022",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "zhang2022adam",
+      "entry_type": "inproceedings",
+      "title": "Adam Can Converge Without Any Modification On Update Rules",
+      "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/b6260ae5566442da053e5ab5d691067a-Abstract-Conference.html",
+      "year": 2022,
+      "personal_author_names": [
+        {
+          "source": "Yushun Zhang",
+          "family": "Zhang",
+          "given": "Yushun"
+        },
+        {
+          "source": "Congliang Chen",
+          "family": "Chen",
+          "given": "Congliang"
+        },
+        {
+          "source": "Naichen Shi",
+          "family": "Shi",
+          "given": "Naichen"
+        },
+        {
+          "source": "Ruoyu Sun",
+          "family": "Sun",
+          "given": "Ruoyu"
+        },
+        {
+          "source": "Zhi-Quan Luo",
+          "family": "Luo",
+          "given": "Zhi-Quan"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "zhuang2020adabelief",
+      "entry_type": "inproceedings",
+      "title": "AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/d9d4f495e875a2e075a1a4a6e1b9770f-Abstract.html",
+      "year": 2020,
+      "personal_author_names": [
+        {
+          "source": "Juntang Zhuang",
+          "family": "Zhuang",
+          "given": "Juntang"
+        },
+        {
+          "source": "Tommy Tang",
+          "family": "Tang",
+          "given": "Tommy"
+        },
+        {
+          "source": "Yifan Ding",
+          "family": "Ding",
+          "given": "Yifan"
+        },
+        {
+          "source": "Sekhar C. Tatikonda",
+          "family": "Tatikonda",
+          "given": "Sekhar C."
+        },
+        {
+          "source": "Nicha Dvornek",
+          "family": "Dvornek",
+          "given": "Nicha"
+        },
+        {
+          "source": "Xenophon Papademetris",
+          "family": "Papademetris",
+          "given": "Xenophon"
+        },
+        {
+          "source": "James S. Duncan",
+          "family": "Duncan",
+          "given": "James S."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "dj2024",
+      "entry_type": "misc",
+      "title": "Convergence rates for the Adam optimizer",
+      "url": "https://arxiv.org/abs/2407.21078",
+      "year": 2024,
+      "personal_author_names": [
+        {
+          "source": "Steffen Dereich",
+          "family": "Dereich",
+          "given": "Steffen"
+        },
+        {
+          "source": "Arnulf Jentzen",
+          "family": "Jentzen",
+          "given": "Arnulf"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "dj2026",
+      "entry_type": "misc",
+      "title": "Central limit theorem for the averaged Adam optimizer",
+      "url": "https://arxiv.org/abs/2606.21433",
+      "year": 2026,
+      "personal_author_names": [
+        {
+          "source": "Steffen Dereich",
+          "family": "Dereich",
+          "given": "Steffen"
+        },
+        {
+          "source": "Arnulf Jentzen",
+          "family": "Jentzen",
+          "given": "Arnulf"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "symmetry",
+      "entry_type": "misc",
+      "title": "Adam symmetry theorem: characterization of the convergence of the stochastic Adam optimizer",
+      "url": "https://arxiv.org/abs/2511.06675",
+      "year": 2025,
+      "personal_author_names": [
+        {
+          "source": "Steffen Dereich",
+          "family": "Dereich",
+          "given": "Steffen"
+        },
+        {
+          "source": "Thang Do",
+          "family": "Do",
+          "given": "Thang"
+        },
+        {
+          "source": "Arnulf Jentzen",
+          "family": "Jentzen",
+          "given": "Arnulf"
+        },
+        {
+          "source": "Philippe von Wurstemberger",
+          "family": "von Wurstemberger",
+          "given": "Philippe"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "note": "explicit validated revision_year",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "reddi",
+      "entry_type": "inproceedings",
+      "title": "On the Convergence of Adam and Beyond",
+      "url": "https://arxiv.org/abs/1904.09237",
+      "year": 2018,
+      "personal_author_names": [
+        {
+          "source": "Sashank J. Reddi",
+          "family": "Reddi",
+          "given": "Sashank J."
+        },
+        {
+          "source": "Satyen Kale",
+          "family": "Kale",
+          "given": "Satyen"
+        },
+        {
+          "source": "Sanjiv Kumar",
+          "family": "Kumar",
+          "given": "Sanjiv"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "su",
+      "entry_type": "inproceedings",
+      "title": "A Stability Analysis of AdamW: Unstable Equilibria and Non-Convergence",
+      "url": "https://arxiv.org/abs/2611.11526",
+      "year": 2026,
+      "personal_author_names": [
+        {
+          "source": "Baiyu Su",
+          "family": "Su",
+          "given": "Baiyu"
+        },
+        {
+          "source": "Lizhang Chen",
+          "family": "Chen",
+          "given": "Lizhang"
+        },
+        {
+          "source": "Qiang Liu",
+          "family": "Liu",
+          "given": "Qiang"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue",
+        "note": "validated acceptance qualification; proceedings publication not inferred",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "cohen_edge",
+      "entry_type": "inproceedings",
+      "title": "Gradient Descent on Neural Networks Typically Occurs at the Edge of Stability",
+      "url": "https://arxiv.org/abs/2103.00065",
+      "year": 2021,
+      "personal_author_names": [
+        {
+          "source": "Jeremy M. Cohen",
+          "family": "Cohen",
+          "given": "Jeremy M."
+        },
+        {
+          "source": "Simran Kaur",
+          "family": "Kaur",
+          "given": "Simran"
+        },
+        {
+          "source": "Yuanzhi Li",
+          "family": "Li",
+          "given": "Yuanzhi"
+        },
+        {
+          "source": "J. Zico Kolter",
+          "family": "Kolter",
+          "given": "J. Zico"
+        },
+        {
+          "source": "Ameet Talwalkar",
+          "family": "Talwalkar",
+          "given": "Ameet"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "adaptive_edge",
+      "entry_type": "misc",
+      "title": "Adaptive Gradient Methods at the Edge of Stability",
+      "url": "https://arxiv.org/abs/2207.14484",
+      "year": 2022,
+      "personal_author_names": [
+        {
+          "source": "Jeremy M. Cohen",
+          "family": "Cohen",
+          "given": "Jeremy M."
+        },
+        {
+          "source": "Behrooz Ghorbani",
+          "family": "Ghorbani",
+          "given": "Behrooz"
+        },
+        {
+          "source": "Shankar Krishnan",
+          "family": "Krishnan",
+          "given": "Shankar"
+        },
+        {
+          "source": "Naman Agarwal",
+          "family": "Agarwal",
+          "given": "Naman"
+        },
+        {
+          "source": "Sourabh Medapati",
+          "family": "Medapati",
+          "given": "Sourabh"
+        },
+        {
+          "source": "Michal Badura",
+          "family": "Badura",
+          "given": "Michal"
+        },
+        {
+          "source": "Daniel Suo",
+          "family": "Suo",
+          "given": "Daniel"
+        },
+        {
+          "source": "David Cardoze",
+          "family": "Cardoze",
+          "given": "David"
+        },
+        {
+          "source": "Zachary Nado",
+          "family": "Nado",
+          "given": "Zachary"
+        },
+        {
+          "source": "George E. Dahl",
+          "family": "Dahl",
+          "given": "George E."
+        },
+        {
+          "source": "Justin Gilmer",
+          "family": "Gilmer",
+          "given": "Justin"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "note": "explicit validated revision_year",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "eos",
+      "entry_type": "misc",
+      "title": "Adam at the Edge of Stability: Adaptive Feedback, Provable Oscillation, and Gradient Reversal",
+      "url": "https://arxiv.org/abs/2608.20638",
+      "year": 2026,
+      "personal_author_names": [
+        {
+          "source": "Yiman Fong",
+          "family": "Fong",
+          "given": "Yiman"
+        },
+        {
+          "source": "Heng Yang",
+          "family": "Yang",
+          "given": "Heng"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "note": "explicit validated revision_year",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "singh",
+      "entry_type": "misc",
+      "title": "Same Loss, Same Noise, Opposite Schedules: Noise Structure and Optimizer Normalization Jointly Determine Whether Learning-Rate Cooldown Helps",
+      "url": "https://arxiv.org/abs/2607.12360",
+      "year": 2026,
+      "personal_author_names": [
+        {
+          "source": "Subham Singh",
+          "family": "Singh",
+          "given": "Subham"
+        },
+        {
+          "source": "Ashutosh Mishra",
+          "family": "Mishra",
+          "given": "Ashutosh"
+        },
+        {
+          "source": "Subha Raut",
+          "family": "Raut",
+          "given": "Subha"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "robbinsmonro1951",
+      "entry_type": "article",
+      "title": "A Stochastic Approximation Method",
+      "url": "https://doi.org/10.1214/aoms/1177729586",
+      "year": 1951,
+      "personal_author_names": [
+        {
+          "source": "Herbert Robbins",
+          "family": "Robbins",
+          "given": "Herbert"
+        },
+        {
+          "source": "Sutton Monro",
+          "family": "Monro",
+          "given": "Sutton"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "number": "parsed from validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "kushneryin2003",
+      "entry_type": "book",
+      "title": "Stochastic Approximation and Recursive Algorithms and Applications",
+      "url": "https://link.springer.com/book/10.1007/b97441",
+      "year": 2003,
+      "personal_author_names": [
+        {
+          "source": "Harold J. Kushner",
+          "family": "Kushner",
+          "given": "Harold J."
+        },
+        {
+          "source": "G. George Yin",
+          "family": "Yin",
+          "given": "G. George"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "publisher": "validated venue/edition",
+        "series": "validated venue/edition",
+        "volume": "validated venue/edition",
+        "edition": "validated venue/edition",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "benaim1999",
+      "entry_type": "incollection",
+      "title": "Dynamics of stochastic approximation algorithms",
+      "url": "https://numdam.org/item/SPS_1999__33__1_0/",
+      "year": 1999,
+      "personal_author_names": [
+        {
+          "source": "Michel Benaïm",
+          "family": "Benaïm",
+          "given": "Michel"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "parsed from validated venue string",
+        "publisher": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "borkarmeyn2000",
+      "entry_type": "article",
+      "title": "The O.D.E. Method for Convergence of Stochastic Approximation and Reinforcement Learning",
+      "url": "https://epubs.siam.org/doi/abs/10.1137/S0363012997331639",
+      "year": 2000,
+      "personal_author_names": [
+        {
+          "source": "V. S. Borkar",
+          "family": "Borkar",
+          "given": "V. S."
+        },
+        {
+          "source": "S. P. Meyn",
+          "family": "Meyn",
+          "given": "S. P."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "number": "parsed from validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "pemantle1990",
+      "entry_type": "article",
+      "title": "Nonconvergence to Unstable Points in Urn Models and Stochastic Approximations",
+      "url": "https://doi.org/10.1214/aop/1176990853",
+      "year": 1990,
+      "personal_author_names": [
+        {
+          "source": "Robin Pemantle",
+          "family": "Pemantle",
+          "given": "Robin"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "number": "parsed from validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "fortpages",
+      "entry_type": "article",
+      "title": "Asymptotic Behavior of a Markovian Stochastic Algorithm with Constant Step",
+      "url": "https://epubs.siam.org/doi/abs/10.1137/S0363012997328610",
+      "year": 1999,
+      "personal_author_names": [
+        {
+          "source": "Jean-Claude Fort",
+          "family": "Fort",
+          "given": "Jean-Claude"
+        },
+        {
+          "source": "Gilles Pagès",
+          "family": "Pagès",
+          "given": "Gilles"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "validated venue",
+        "volume": "explicit validated volume",
+        "number": "explicit validated issue",
+        "pages": "explicit validated pages",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "ddb",
+      "entry_type": "article",
+      "title": "Bridging the gap between constant step size stochastic gradient descent and Markov chains",
+      "url": "https://arxiv.org/abs/1707.06386",
+      "year": 2020,
+      "personal_author_names": [
+        {
+          "source": "Aymeric Dieuleveut",
+          "family": "Dieuleveut",
+          "given": "Aymeric"
+        },
+        {
+          "source": "Alain Durmus",
+          "family": "Durmus",
+          "given": "Alain"
+        },
+        {
+          "source": "Francis Bach",
+          "family": "Bach",
+          "given": "Francis"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "validated venue",
+        "volume": "explicit validated volume",
+        "number": "explicit validated issue",
+        "pages": "explicit validated pages",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "chenmoumaguluri2022",
+      "entry_type": "article",
+      "title": "Stationary Behavior of Constant Stepsize SGD Type Algorithms: An Asymptotic Characterization",
+      "url": "https://doi.org/10.1145/3508039",
+      "year": 2022,
+      "personal_author_names": [
+        {
+          "source": "Zaiwei Chen",
+          "family": "Chen",
+          "given": "Zaiwei"
+        },
+        {
+          "source": "Shancong Mou",
+          "family": "Mou",
+          "given": "Shancong"
+        },
+        {
+          "source": "Siva Theja Maguluri",
+          "family": "Maguluri",
+          "given": "Siva Theja"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "number": "parsed from validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "yaida2019",
+      "entry_type": "inproceedings",
+      "title": "Fluctuation-dissipation relations for stochastic gradient descent",
+      "url": "https://arxiv.org/abs/1810.00004",
+      "year": 2019,
+      "personal_author_names": [
+        {
+          "source": "Sho Yaida",
+          "family": "Yaida",
+          "given": "Sho"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "fort2015",
+      "entry_type": "article",
+      "title": "Central limit theorems for stochastic approximation with controlled Markov chain dynamics",
+      "url": "https://www.numdam.org/item/PS_2015__19__60_0/",
+      "year": 2015,
+      "personal_author_names": [
+        {
+          "source": "Gersende Fort",
+          "family": "Fort",
+          "given": "Gersende"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "polyakjuditsky1992",
+      "entry_type": "article",
+      "title": "Acceleration of Stochastic Approximation by Averaging",
+      "url": "https://epubs.siam.org/doi/abs/10.1137/0330046",
+      "year": 1992,
+      "personal_author_names": [
+        {
+          "source": "B. T. Polyak",
+          "family": "Polyak",
+          "given": "B. T."
+        },
+        {
+          "source": "A. B. Juditsky",
+          "family": "Juditsky",
+          "given": "A. B."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "number": "parsed from validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "mouetal2020",
+      "entry_type": "inproceedings",
+      "title": "On Linear Stochastic Approximation: Fine-grained Polyak-Ruppert and Non-Asymptotic Concentration",
+      "url": "https://proceedings.mlr.press/v125/mou20a.html",
+      "year": 2020,
+      "personal_author_names": [
+        {
+          "source": "Wenlong Mou",
+          "family": "Mou",
+          "given": "Wenlong"
+        },
+        {
+          "source": "Chris Junchi Li",
+          "family": "Li",
+          "given": "Chris Junchi"
+        },
+        {
+          "source": "Martin J. Wainwright",
+          "family": "Wainwright",
+          "given": "Martin J."
+        },
+        {
+          "source": "Peter L. Bartlett",
+          "family": "Bartlett",
+          "given": "Peter L."
+        },
+        {
+          "source": "Michael I. Jordan",
+          "family": "Jordan",
+          "given": "Michael I."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "series": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "litaie2017",
+      "entry_type": "inproceedings",
+      "title": "Stochastic Modified Equations and Adaptive Stochastic Gradient Algorithms",
+      "url": "https://proceedings.mlr.press/v70/li17f.html",
+      "year": 2017,
+      "personal_author_names": [
+        {
+          "source": "Qianxiao Li",
+          "family": "Li",
+          "given": "Qianxiao"
+        },
+        {
+          "source": "Cheng Tai",
+          "family": "Tai",
+          "given": "Cheng"
+        },
+        {
+          "source": "Weinan E",
+          "family": "E",
+          "given": "Weinan"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "series": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "malladi",
+      "entry_type": "inproceedings",
+      "title": "On the SDEs and Scaling Rules for Adaptive Gradient Algorithms",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/32ac710102f0620d0f28d5d05a44fe08-Abstract.html",
+      "year": 2022,
+      "personal_author_names": [
+        {
+          "source": "Sadhika Malladi",
+          "family": "Malladi",
+          "given": "Sadhika"
+        },
+        {
+          "source": "Kaifeng Lyu",
+          "family": "Lyu",
+          "given": "Kaifeng"
+        },
+        {
+          "source": "Abhishek Panigrahi",
+          "family": "Panigrahi",
+          "given": "Abhishek"
+        },
+        {
+          "source": "Sanjeev Arora",
+          "family": "Arora",
+          "given": "Sanjeev"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "compagnoni",
+      "entry_type": "inproceedings",
+      "title": "Adaptive Methods through the Lens of SDEs: Theoretical Insights on the Role of Noise",
+      "url": "https://arxiv.org/abs/2411.15958",
+      "year": 2025,
+      "personal_author_names": [
+        {
+          "source": "Enea Monzio Compagnoni",
+          "family": "Monzio Compagnoni",
+          "given": "Enea"
+        },
+        {
+          "source": "Tianlin Liu",
+          "family": "Liu",
+          "given": "Tianlin"
+        },
+        {
+          "source": "Rustem Islamov",
+          "family": "Islamov",
+          "given": "Rustem"
+        },
+        {
+          "source": "Frank Norbert Proske",
+          "family": "Proske",
+          "given": "Frank Norbert"
+        },
+        {
+          "source": "Antonio Orvieto",
+          "family": "Orvieto",
+          "given": "Antonio"
+        },
+        {
+          "source": "Aurelien Lucchi",
+          "family": "Lucchi",
+          "given": "Aurelien"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "mandt2017",
+      "entry_type": "article",
+      "title": "Stochastic Gradient Descent as Approximate Bayesian Inference",
+      "url": "https://jmlr.org/papers/v18/17-214.html",
+      "year": 2017,
+      "personal_author_names": [
+        {
+          "source": "Stephan Mandt",
+          "family": "Mandt",
+          "given": "Stephan"
+        },
+        {
+          "source": "Matthew D. Hoffman",
+          "family": "Hoffman",
+          "given": "Matthew D."
+        },
+        {
+          "source": "David M. Blei",
+          "family": "Blei",
+          "given": "David M."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "number": "parsed from validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "smithle2018",
+      "entry_type": "inproceedings",
+      "title": "A Bayesian Perspective on Generalization and Stochastic Gradient Descent",
+      "url": "https://arxiv.org/abs/1710.06451",
+      "year": 2018,
+      "personal_author_names": [
+        {
+          "source": "Samuel L. Smith",
+          "family": "Smith",
+          "given": "Samuel L."
+        },
+        {
+          "source": "Quoc V. Le",
+          "family": "Le",
+          "given": "Quoc V."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "chaudharisoatto2018",
+      "entry_type": "inproceedings",
+      "title": "Stochastic gradient descent performs variational inference, converges to limit cycles for deep networks",
+      "url": "https://arxiv.org/abs/1710.11029",
+      "year": 2018,
+      "personal_author_names": [
+        {
+          "source": "Pratik Chaudhari",
+          "family": "Chaudhari",
+          "given": "Pratik"
+        },
+        {
+          "source": "Stefano Soatto",
+          "family": "Soatto",
+          "given": "Stefano"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "thomas",
+      "entry_type": "inproceedings",
+      "title": "On the interplay between noise and curvature and its effect on optimization and generalization",
+      "url": "https://proceedings.mlr.press/v108/thomas20a.html",
+      "year": 2020,
+      "personal_author_names": [
+        {
+          "source": "Valentin Thomas",
+          "family": "Thomas",
+          "given": "Valentin"
+        },
+        {
+          "source": "Fabian Pedregosa",
+          "family": "Pedregosa",
+          "given": "Fabian"
+        },
+        {
+          "source": "Bart van Merriënboer",
+          "family": "van Merriënboer",
+          "given": "Bart"
+        },
+        {
+          "source": "Pierre-Antoine Manzagol",
+          "family": "Manzagol",
+          "given": "Pierre-Antoine"
+        },
+        {
+          "source": "Yoshua Bengio",
+          "family": "Bengio",
+          "given": "Yoshua"
+        },
+        {
+          "source": "Nicolas Le Roux",
+          "family": "Le Roux",
+          "given": "Nicolas"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "series": "validated venue suffix",
+        "volume": "explicit validated volume",
+        "pages": "explicit validated pages",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "liu2021",
+      "entry_type": "inproceedings",
+      "title": "Noise and Fluctuation of Finite Learning Rate Stochastic Gradient Descent",
+      "url": "https://proceedings.mlr.press/v139/liu21ad.html",
+      "year": 2021,
+      "personal_author_names": [
+        {
+          "source": "Kangqiao Liu",
+          "family": "Liu",
+          "given": "Kangqiao"
+        },
+        {
+          "source": "Liu Ziyin",
+          "family": "Liu",
+          "given": "Ziyin"
+        },
+        {
+          "source": "Masahito Ueda",
+          "family": "Ueda",
+          "given": "Masahito"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "series": "validated venue suffix",
+        "volume": "explicit validated volume",
+        "pages": "explicit validated pages",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "liwenlyu",
+      "entry_type": "inproceedings",
+      "title": "Adam Reduces a Unique Form of Sharpness: Theoretical Insights Near the Minimizer Manifold",
+      "url": "https://arxiv.org/abs/2511.02773",
+      "year": 2025,
+      "personal_author_names": [
+        {
+          "source": "Xinghan Li",
+          "family": "Li",
+          "given": "Xinghan"
+        },
+        {
+          "source": "Haodong Wen",
+          "family": "Wen",
+          "given": "Haodong"
+        },
+        {
+          "source": "Kaifeng Lyu",
+          "family": "Lyu",
+          "given": "Kaifeng"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "das",
+      "entry_type": "misc",
+      "title": "Towards Quantifying the Preconditioning Effect of Adam",
+      "url": "https://arxiv.org/abs/2402.07114",
+      "year": 2024,
+      "personal_author_names": [
+        {
+          "source": "Rudrajit Das",
+          "family": "Das",
+          "given": "Rudrajit"
+        },
+        {
+          "source": "Naman Agarwal",
+          "family": "Agarwal",
+          "given": "Naman"
+        },
+        {
+          "source": "Sujay Sanghavi",
+          "family": "Sanghavi",
+          "given": "Sujay"
+        },
+        {
+          "source": "Inderjit S. Dhillon",
+          "family": "Dhillon",
+          "given": "Inderjit S."
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "howpublished": "validated arXiv venue and URL identifier",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "cattaneo",
+      "entry_type": "inproceedings",
+      "title": "On the Implicit Bias of Adam",
+      "url": "https://proceedings.mlr.press/v235/cattaneo24a.html",
+      "year": 2024,
+      "personal_author_names": [
+        {
+          "source": "Matias D. Cattaneo",
+          "family": "Cattaneo",
+          "given": "Matias D."
+        },
+        {
+          "source": "Jason Matthew Klusowski",
+          "family": "Klusowski",
+          "given": "Jason Matthew"
+        },
+        {
+          "source": "Boris Shigida",
+          "family": "Shigida",
+          "given": "Boris"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "series": "validated venue suffix",
+        "volume": "explicit validated volume",
+        "pages": "explicit validated pages",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "simsekli",
+      "entry_type": "inproceedings",
+      "title": "A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks",
+      "url": "https://proceedings.mlr.press/v97/simsekli19a.html",
+      "year": 2019,
+      "personal_author_names": [
+        {
+          "source": "Umut Simsekli",
+          "family": "Simsekli",
+          "given": "Umut"
+        },
+        {
+          "source": "Levent Sagun",
+          "family": "Sagun",
+          "given": "Levent"
+        },
+        {
+          "source": "Mert Gurbuzbalaban",
+          "family": "Gurbuzbalaban",
+          "given": "Mert"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "volume": "explicit validated volume",
+        "pages": "explicit validated pages",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "zhang_attention",
+      "entry_type": "inproceedings",
+      "title": "Why are Adaptive Methods Good for Attention Models?",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/b05b57f6add810d3b7490866d74c0053-Abstract.html",
+      "year": 2020,
+      "personal_author_names": [
+        {
+          "source": "Jingzhao Zhang",
+          "family": "Zhang",
+          "given": "Jingzhao"
+        },
+        {
+          "source": "Sai Praneeth Karimireddy",
+          "family": "Karimireddy",
+          "given": "Sai Praneeth"
+        },
+        {
+          "source": "Andreas Veit",
+          "family": "Veit",
+          "given": "Andreas"
+        },
+        {
+          "source": "Seungyeon Kim",
+          "family": "Kim",
+          "given": "Seungyeon"
+        },
+        {
+          "source": "Sashank Reddi",
+          "family": "Reddi",
+          "given": "Sashank"
+        },
+        {
+          "source": "Sanjiv Kumar",
+          "family": "Kumar",
+          "given": "Sanjiv"
+        },
+        {
+          "source": "Suvrit Sra",
+          "family": "Sra",
+          "given": "Suvrit"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "zhang_hessian",
+      "entry_type": "inproceedings",
+      "title": "Why Transformers Need Adam: A Hessian Perspective",
+      "url": "https://papers.nips.cc/paper_files/paper/2024/hash/ee0e45ff4de76cbfdf07015a7839f339-Abstract-Conference.html",
+      "year": 2024,
+      "personal_author_names": [
+        {
+          "source": "Yushun Zhang",
+          "family": "Zhang",
+          "given": "Yushun"
+        },
+        {
+          "source": "Congliang Chen",
+          "family": "Chen",
+          "given": "Congliang"
+        },
+        {
+          "source": "Tian Ding",
+          "family": "Ding",
+          "given": "Tian"
+        },
+        {
+          "source": "Ziniu Li",
+          "family": "Li",
+          "given": "Ziniu"
+        },
+        {
+          "source": "Ruoyu Sun",
+          "family": "Sun",
+          "given": "Ruoyu"
+        },
+        {
+          "source": "Zhi-Quan Luo",
+          "family": "Luo",
+          "given": "Zhi-Quan"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "kunstner2023noise",
+      "entry_type": "inproceedings",
+      "title": "Noise Is Not the Main Factor Behind the Gap Between SGD and Adam on Transformers, but Sign Descent Might Be",
+      "url": "https://arxiv.org/pdf/2304.13960",
+      "year": 2023,
+      "personal_author_names": [
+        {
+          "source": "Frederik Kunstner",
+          "family": "Kunstner",
+          "given": "Frederik"
+        },
+        {
+          "source": "Jacques Chen",
+          "family": "Chen",
+          "given": "Jacques"
+        },
+        {
+          "source": "Jonathan Wilder Lavington",
+          "family": "Lavington",
+          "given": "Jonathan Wilder"
+        },
+        {
+          "source": "Mark Schmidt",
+          "family": "Schmidt",
+          "given": "Mark"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "wilson2017marginal",
+      "entry_type": "inproceedings",
+      "title": "The Marginal Value of Adaptive Gradient Methods in Machine Learning",
+      "url": "https://proceedings.neurips.cc/paper/2017/hash/81b3833e2504647f9d794f7d7b9bf341-Abstract.html",
+      "year": 2017,
+      "personal_author_names": [
+        {
+          "source": "Ashia C. Wilson",
+          "family": "Wilson",
+          "given": "Ashia C."
+        },
+        {
+          "source": "Rebecca Roelofs",
+          "family": "Roelofs",
+          "given": "Rebecca"
+        },
+        {
+          "source": "Mitchell Stern",
+          "family": "Stern",
+          "given": "Mitchell"
+        },
+        {
+          "source": "Nati Srebro",
+          "family": "Srebro",
+          "given": "Nati"
+        },
+        {
+          "source": "Benjamin Recht",
+          "family": "Recht",
+          "given": "Benjamin"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "booktitle": "validated venue string",
+        "url": "exact validated URL"
+      }
+    },
+    {
+      "bibkey": "cambanissimonsstout1976",
+      "entry_type": "article",
+      "title": "Inequalities for E k(X, Y) when the marginals are fixed",
+      "url": "https://link.springer.com/article/10.1007/BF00532695",
+      "year": 1976,
+      "personal_author_names": [
+        {
+          "source": "Stamatis Cambanis",
+          "family": "Cambanis",
+          "given": "Stamatis"
+        },
+        {
+          "source": "Gordon Simons",
+          "family": "Simons",
+          "given": "Gordon"
+        },
+        {
+          "source": "William Stout",
+          "family": "Stout",
+          "given": "William"
+        }
+      ],
+      "field_sources": {
+        "author": "validated authors; explicit personal-name parsing",
+        "title": "validated title; full case protected",
+        "year": "validated publication/preprint year",
+        "journal": "parsed from validated venue string",
+        "volume": "parsed from validated venue string",
+        "pages": "parsed from validated venue string",
+        "doi": "explicit validated doi; an arXiv DOI remains an arXiv DOI",
+        "url": "exact validated URL"
+      }
+    }
+  ]
+}

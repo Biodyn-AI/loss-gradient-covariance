@@ -1,0 +1,87 @@
+{
+  "source_sha256": "4a402a1a15a88017141e27f848319fe82cff35823142d4897bd10ecd31b97bd2",
+  "original_producer_sha256": "110beda5ca28d5e23c36b457c648530694c1fc74be95b3cdb1ab9439070f0b9b",
+  "certificate_sha256": "0069acf768524174571e5a729693e878527fd991282f60a3f7bb89cceedaa2a8",
+  "width_mm": 119.0,
+  "height_mm": 53.86315789473684,
+  "minimum_text_size_pt": 8.0,
+  "scientific_random_draws": 0,
+  "fitted_parameters": 0,
+  "conditional_coordinate_responses": {
+    "independent": [
+      [
+        "3/4",
+        "3/4"
+      ],
+      [
+        "3/4",
+        "3/4"
+      ]
+    ],
+    "coupled": [
+      [
+        "-1/4",
+        "7/4"
+      ],
+      [
+        "-1/4",
+        "7/4"
+      ]
+    ]
+  },
+  "kernel_bounds": {
+    "quiet": [
+      "5.70320091790959235729464161416933304045833676654",
+      "5.81697936235403685437220203119869406757986900959"
+    ],
+    "noisy": [
+      "0.126867637786952325614487415400935859110761138257",
+      "0.240646082231396822692047832430296886232293297344"
+    ]
+  },
+  "local_rate_bounds": {
+    "independent": [
+      "2.28627570838620426164203850921463353945657005474",
+      "2.37160954171953763445020882198665430979771920557"
+    ],
+    "coupled": [
+      "-0.516113237230671316332733642298235179607409289776",
+      "-0.402334792786226819255173225268874152485877120180"
+    ]
+  },
+  "displayed_outward_kernel_enclosures": {
+    "quiet": [
+      "5.70",
+      "5.82"
+    ],
+    "noisy": [
+      "0.12",
+      "0.25"
+    ]
+  },
+  "displayed_outward_rate_enclosures": {
+    "independent": [
+      "2.28",
+      "2.38"
+    ],
+    "coupled": [
+      "-0.52",
+      "-0.40"
+    ]
+  },
+  "scope": "Unchanged certified atomic example; local averaged drift signs only. Bounds are deterministic, not confidence intervals. Full-history weights, not instantaneous inverse-noise factors. No trajectories or stationarity conclusion is inferred from arrows.",
+  "artifacts": {
+    "pairing_mechanism.pdf": {
+      "sha256": "94306a2ae18534cbb3386fcb78e25009298927bd87e8525647a1ebf51d2afab0",
+      "bytes": 27139
+    },
+    "pairing_mechanism.svg": {
+      "sha256": "dc3c8041f5dbe8450d067aadaa422127c4d466b4fb5988c633adec7af6fa1d0a",
+      "bytes": 23013
+    },
+    "pairing_mechanism.png": {
+      "sha256": "d63700a2ff1d31a52739c2689ed0cdb9ebf788d3eb384a03a39c20ea158d9e4c",
+      "bytes": 78317
+    }
+  }
+}

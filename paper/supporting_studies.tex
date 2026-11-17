@@ -1,0 +1,88 @@
+\subsection{The One-Dimensional Pairing Experiment}
+Take $H\sim\operatorname{Unif}[1,4]$ and
+$R\sim\operatorname{Unif}[.01,1]$, with equal versus opposite quantile
+pairing and independent fair noise signs. Both full separate distributions
+and \eqref{eq:matched-kernel} agree. Here noise magnitude is a fixed function
+of curvature, so the joint distribution lies on curves rather than having
+a smooth density in both variables. Implementation uses
+uniform 52-bit midpoint integers and the same rounded affine map at $U$
+and $1-U$, making implemented Hessian marginals exactly equal.
+
+Use $\alpha=.1$, $\beta=.2$, $\epsilon=.03$, $\lambda=.1$ and three
+fixed learning rates. Each arm has 256 paired runs, starts $0,\pm8\sqrt\eta$
+and three 17-sample windows at rescaled times $16{:}32$, $48{:}64$,
+$112{:}128$. An independent calculation made before these simulations gives
+a joint 99\% interval $[.472216,.633164]$ for the limiting
+opposite-rank/equal-rank AdamW error ratio. Table~\ref{tab:scalar-errors} uses the zero start
+and final observation window:
+\begin{table}[htbp]
+\caption{Supporting One-Dimensional Pairing Comparison}\label{tab:scalar-errors}
+\centering
+
+\begin{tabular}{ccc}
+\toprule
+$\eta$ & Opposite/matching error & Approx. pointwise 95\% interval\\
+\midrule
+$5\cdot10^{-4}$ & $.550718$ & $[.540987,.560802]$\\
+$2\cdot10^{-4}$ & $.543005$ & $[.533611,.552703]$\\
+$8\cdot10^{-5}$ & $.544562$ & $[.534866,.554215]$\\
+\bottomrule
+\end{tabular}
+\end{table}
+Figure~\ref{fig:scalar-couplings} also shows the absolute normalized errors
+and the independent prediction intervals. All 27 paired AdamW differences
+have negative upper endpoints in the planned approximate simultaneous band.
+All 54 comparisons with exact SGD errors have intervals containing zero.
+Both AdamW arms have higher absolute error than SGD at these learning rates.
+
+The independent calculation gives point values $k_{\rm equal}=1.965666$,
+$k_{\rm opposite}=3.583588$ and $D=.781407$. They predict common-step
+risk ratio $.548519$, error ratio $.300873$ at matched local return speed,
+and local return-speed ratio $3.323661$ at equal leading error.
+The respective efficiency quantities
+$D/k^2$ are $.202236$, $.0608473$, and $.0498077$ for equal AdamW,
+opposite AdamW, and SGD. Lower values mean less error at the same local
+return speed. The pairing effect remains, and SGD still has the lowest
+value in this example.
+
+\subsection{An Exploratory Check of Correlations Over Time}
+The limiting stationary process and fourth-moment bounds imply
+\[
+ \lim_{\eta\downarrow0}
+ \frac{\E[u_0u_{\lfloor t/\eta\rfloor}]}\eta
+       =\frac D{2k}e^{-k|t|}.
+\]
+A check chosen after examining the data uses all saved adjacent-time pairs
+and every setting, start and time window, with the existing 10,000 recorded
+resamples of whole runs. It draws no new values and fits no drift. The
+uncentered mean product at the two times is divided by their average squared parameter value;
+the independent prediction uses exact integer time differences.
+All 108 approximate simultaneous bands intersect the independently predicted
+limiting intervals. At all 27 AdamW learning-rate/start/window combinations,
+the equal-rank arm's simultaneous lower endpoint exceeds the opposite-rank
+arm's upper endpoint. These quantities are correlated. The check is
+exploratory and gives no prospective test of time to stationarity.
+
+\subsection{Earlier Disagreements and a More Direct Response Test}
+A separate earlier rare-pulse study let the denominator offset tend to zero.
+The main theorem here instead keeps it fixed and positive. The earlier grid
+missed the leading predictions: only 15 of 108 planned simultaneous moment
+bands intersected the independent prediction bounds. After examining those
+data, we derived a first correction and fixed a new test at smaller learning
+rates before generating its trajectories. Its 36 correlated point estimates
+lie inside the corrected prediction intervals, but all 36 simultaneous bands
+intersect both the leading and corrected intervals. Unknown finite-step
+errors and different observation clocks prevent a decisive distinction.
+The companion archive keeps those results and proofs; none is needed for
+Theorem~\ref{thm:main}.
+
+A new experiment compares two weight decays while holding the gradient
+sampler and observation clock fixed. Subtracting the two results cancels the
+shared leading prediction. All 18 planned paired differences have negative
+upper endpoints in the approximate simultaneous band, as predicted by the
+independently calculated first correction. Their normalized values are
+compatible with its prediction intervals. Appendix~\ref{app:empirical}
+gives both rates and the limits of this comparison. This stronger response
+evidence leaves the earlier disagreements and the unknown finite-step
+error bounds unresolved.
+

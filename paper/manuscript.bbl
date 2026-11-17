@@ -1,0 +1,374 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{balles2018dissecting}
+Balles, L., Hennig, P.: {Dissecting Adam: The Sign, Magnitude and Variance of
+  Stochastic Gradients}.
+\newblock In: Proceedings of the 35th International Conference on Machine
+  Learning, \emph{PMLR}, vol.~80, pp. 404--413 (2018).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v80/balles18a.html}
+
+\bibitem{benaim1999}
+Bena{\"i}m, M.: {Dynamics of stochastic approximation algorithms}.
+\newblock In: S{\'e}minaire de Probabilit{\'e}s XXXIII, pp. 1--68. Springer
+  (1999).
+\newblock \urlprefix\url{https://numdam.org/item/SPS_1999__33__1_0/}
+
+\bibitem{bernstein2018signsgd}
+Bernstein, J., Wang, Y.X., Azizzadenesheli, K., Anandkumar, A.: {signSGD:
+  Compressed Optimisation for Non-Convex Problems}.
+\newblock In: Proceedings of the 35th International Conference on Machine
+  Learning, \emph{PMLR}, vol.~80, pp. 560--569 (2018).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v80/bernstein18a.html}
+
+\bibitem{borkarmeyn2000}
+Borkar, V.S., Meyn, S.P.: {The O.D.E. Method for Convergence of Stochastic
+  Approximation and Reinforcement Learning}.
+\newblock SIAM Journal on Control and Optimization \textbf{38}(2), 447--469
+  (2000).
+\newblock \doi{10.1137/S0363012997331639}.
+\newblock
+  \urlprefix\url{https://epubs.siam.org/doi/abs/10.1137/S0363012997331639}
+
+\bibitem{cambanissimonsstout1976}
+Cambanis, S., Simons, G., Stout, W.: {Inequalities for E k(X, Y) when the
+  marginals are fixed}.
+\newblock Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und Verwandte Gebiete
+  \textbf{36}, 285--294 (1976).
+\newblock \doi{10.1007/BF00532695}.
+\newblock \urlprefix\url{https://link.springer.com/article/10.1007/BF00532695}
+
+\bibitem{cattaneo}
+Cattaneo, M.D., Klusowski, J.M., Shigida, B.: {On the Implicit Bias of Adam}.
+\newblock In: Proceedings of the 41st International Conference on Machine
+  Learning (ICML), \emph{PMLR}, vol. 235, pp. 5862--5906 (2024).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v235/cattaneo24a.html}
+
+\bibitem{chaudharisoatto2018}
+Chaudhari, P., Soatto, S.: {Stochastic gradient descent performs variational
+  inference, converges to limit cycles for deep networks}.
+\newblock In: International Conference on Learning Representations (ICLR 2018)
+  (2018).
+\newblock \urlprefix\url{https://arxiv.org/abs/1710.11029}
+
+\bibitem{chen2019adamtype}
+Chen, X., Liu, S., Sun, R., Hong, M.: {On the Convergence of A Class of
+  Adam-Type Algorithms for Non-Convex Optimization}.
+\newblock In: International Conference on Learning Representations (ICLR 2019)
+  (2019).
+\newblock \urlprefix\url{https://arxiv.org/pdf/1808.02941}
+
+\bibitem{chenmoumaguluri2022}
+Chen, Z., Mou, S., Maguluri, S.T.: {Stationary Behavior of Constant Stepsize
+  SGD Type Algorithms: An Asymptotic Characterization}.
+\newblock Proceedings of the ACM on Measurement and Analysis of Computing
+  Systems \textbf{6}(1), 1--24 (2022).
+\newblock \doi{10.1145/3508039}.
+\newblock \urlprefix\url{https://doi.org/10.1145/3508039}
+
+\bibitem{cohen_edge}
+Cohen, J.M., Kaur, S., Li, Y., Kolter, J.Z., Talwalkar, A.: {Gradient Descent
+  on Neural Networks Typically Occurs at the Edge of Stability}.
+\newblock In: International Conference on Learning Representations (2021).
+\newblock \urlprefix\url{https://arxiv.org/abs/2103.00065}
+
+\bibitem{adaptive_edge}
+Cohen, J.M., Ghorbani, B., Krishnan, S., Agarwal, N., Medapati, S., Badura, M.,
+  Suo, D., Cardoze, D., Nado, Z., Dahl, G.E., Gilmer, J.: {Adaptive Gradient
+  Methods at the Edge of Stability}.
+\newblock arXiv preprint arXiv:2207.14484 (2022).
+\newblock \urlprefix\url{https://arxiv.org/abs/2207.14484}.
+\newblock Revised 2024
+
+\bibitem{das}
+Das, R., Agarwal, N., Sanghavi, S., Dhillon, I.S.: {Towards Quantifying the
+  Preconditioning Effect of Adam}.
+\newblock arXiv preprint arXiv:2402.07114 (2024).
+\newblock \doi{10.48550/arXiv.2402.07114}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2402.07114}
+
+\bibitem{defossez2022simple}
+D{\'e}fossez, A., Bottou, L., Bach, F., Usunier, N.: {A Simple Convergence
+  Proof of Adam and Adagrad}.
+\newblock Transactions on Machine Learning Research  (2022).
+\newblock \urlprefix\url{https://arxiv.org/pdf/2003.02395}
+
+\bibitem{symmetry}
+Dereich, S., Do, T., Jentzen, A., von Wurstemberger, P.: {Adam symmetry
+  theorem: characterization of the convergence of the stochastic Adam
+  optimizer}.
+\newblock arXiv preprint arXiv:2511.06675 (2025).
+\newblock \doi{10.48550/arXiv.2511.06675}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2511.06675}.
+\newblock Revised 2026
+
+\bibitem{dj2024}
+Dereich, S., Jentzen, A.: {Convergence rates for the Adam optimizer}.
+\newblock arXiv preprint arXiv:2407.21078 (2024).
+\newblock \doi{10.48550/arXiv.2407.21078}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2407.21078}
+
+\bibitem{dj2026}
+Dereich, S., Jentzen, A.: {Central limit theorem for the averaged Adam
+  optimizer}.
+\newblock arXiv preprint arXiv:2606.21433 (2026).
+\newblock \doi{10.48550/arXiv.2606.21433}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2606.21433}
+
+\bibitem{ddb}
+Dieuleveut, A., Durmus, A., Bach, F.: {Bridging the gap between constant step
+  size stochastic gradient descent and Markov chains}.
+\newblock The Annals of Statistics \textbf{48}(3), 1348--1382 (2020).
+\newblock \doi{10.1214/19-AOS1850}.
+\newblock \urlprefix\url{https://arxiv.org/abs/1707.06386}
+
+\bibitem{duchi2011adagrad}
+Duchi, J., Hazan, E., Singer, Y.: {Adaptive Subgradient Methods for Online
+  Learning and Stochastic Optimization}.
+\newblock Journal of Machine Learning Research \textbf{12}(61), 2121--2159
+  (2011).
+\newblock \urlprefix\url{https://jmlr.org/papers/v12/duchi11a.html}
+
+\bibitem{eos}
+Fong, Y., Yang, H.: {Adam at the Edge of Stability: Adaptive Feedback, Provable
+  Oscillation, and Gradient Reversal}.
+\newblock arXiv preprint arXiv:2608.20638 (2026).
+\newblock \doi{10.48550/arXiv.2608.20638}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2608.20638}.
+\newblock Revised 2026
+
+\bibitem{fort2015}
+Fort, G.: {Central limit theorems for stochastic approximation with controlled
+  Markov chain dynamics}.
+\newblock ESAIM: Probability and Statistics \textbf{19}, 60--80 (2015).
+\newblock \doi{10.1051/ps/2014013}.
+\newblock \urlprefix\url{https://www.numdam.org/item/PS_2015__19__60_0/}
+
+\bibitem{fortpages}
+Fort, J.C., Pag{\`e}s, G.: {Asymptotic Behavior of a Markovian Stochastic
+  Algorithm with Constant Step}.
+\newblock SIAM Journal on Control and Optimization \textbf{37}(5), 1456--1482
+  (1999).
+\newblock \doi{10.1137/S0363012997328610}.
+\newblock
+  \urlprefix\url{https://epubs.siam.org/doi/abs/10.1137/S0363012997328610}
+
+\bibitem{kingma2015adam}
+Kingma, D.P., Ba, J.: {Adam: A Method for Stochastic Optimization}.
+\newblock In: 3rd International Conference on Learning Representations (ICLR
+  2015) (2015).
+\newblock \urlprefix\url{https://arxiv.org/abs/1412.6980}
+
+\bibitem{kunstner2023noise}
+Kunstner, F., Chen, J., Lavington, J.W., Schmidt, M.: {Noise Is Not the Main
+  Factor Behind the Gap Between SGD and Adam on Transformers, but Sign Descent
+  Might Be}.
+\newblock In: International Conference on Learning Representations (ICLR 2023)
+  (2023).
+\newblock \urlprefix\url{https://arxiv.org/pdf/2304.13960}
+
+\bibitem{kushneryin2003}
+Kushner, H.J., Yin, G.G.: {Stochastic Approximation and Recursive Algorithms
+  and Applications}, \emph{Stochastic Modelling and Applied Probability},
+  vol.~35, 2 edn.
+\newblock Springer (2003).
+\newblock \doi{10.1007/b97441}.
+\newblock \urlprefix\url{https://link.springer.com/book/10.1007/b97441}
+
+\bibitem{litaie2017}
+Li, Q., Tai, C., E, W.: {Stochastic Modified Equations and Adaptive Stochastic
+  Gradient Algorithms}.
+\newblock In: Proceedings of the 34th International Conference on Machine
+  Learning, \emph{PMLR}, vol.~70, pp. 2101--2110 (2017).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v70/li17f.html}
+
+\bibitem{liwenlyu}
+Li, X., Wen, H., Lyu, K.: {Adam Reduces a Unique Form of Sharpness: Theoretical
+  Insights Near the Minimizer Manifold}.
+\newblock In: Thirty-Ninth Conference on Neural Information Processing Systems
+  (NeurIPS 2025) (2025).
+\newblock \doi{10.48550/arXiv.2511.02773}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2511.02773}
+
+\bibitem{liu2021}
+Liu, K., Liu, Z., Ueda, M.: {Noise and Fluctuation of Finite Learning Rate
+  Stochastic Gradient Descent}.
+\newblock In: Proceedings of the 38th International Conference on Machine
+  Learning (ICML), \emph{PMLR}, vol. 139, pp. 7045--7056 (2021).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v139/liu21ad.html}
+
+\bibitem{loshchilov2019adamw}
+Loshchilov, I., Hutter, F.: {Decoupled Weight Decay Regularization}.
+\newblock In: International Conference on Learning Representations (ICLR 2019)
+  (2019).
+\newblock \urlprefix\url{https://arxiv.org/abs/1711.05101}
+
+\bibitem{malladi}
+Malladi, S., Lyu, K., Panigrahi, A., Arora, S.: {On the SDEs and Scaling Rules
+  for Adaptive Gradient Algorithms}.
+\newblock In: Advances in Neural Information Processing Systems 35 (2022).
+\newblock \doi{10.52202/068431-0559}.
+\newblock
+  \urlprefix\url{https://proceedings.neurips.cc/paper_files/paper/2022/hash/32ac710102f0620d0f28d5d05a44fe08-Abstract.html}
+
+\bibitem{mandt2017}
+Mandt, S., Hoffman, M.D., Blei, D.M.: {Stochastic Gradient Descent as
+  Approximate Bayesian Inference}.
+\newblock Journal of Machine Learning Research \textbf{18}(134), 1--35 (2017).
+\newblock \urlprefix\url{https://jmlr.org/papers/v18/17-214.html}
+
+\bibitem{compagnoni}
+Monzio~Compagnoni, E., Liu, T., Islamov, R., Proske, F.N., Orvieto, A., Lucchi,
+  A.: {Adaptive Methods through the Lens of SDEs: Theoretical Insights on the
+  Role of Noise}.
+\newblock In: International Conference on Learning Representations (2025).
+\newblock \urlprefix\url{https://arxiv.org/abs/2411.15958}
+
+\bibitem{mouetal2020}
+Mou, W., Li, C.J., Wainwright, M.J., Bartlett, P.L., Jordan, M.I.: {On Linear
+  Stochastic Approximation: Fine-grained Polyak-Ruppert and Non-Asymptotic
+  Concentration}.
+\newblock In: Proceedings of the 33rd Conference on Learning Theory,
+  \emph{PMLR}, vol. 125, pp. 2947--2997 (2020).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v125/mou20a.html}
+
+\bibitem{pemantle1990}
+Pemantle, R.: {Nonconvergence to Unstable Points in Urn Models and Stochastic
+  Approximations}.
+\newblock The Annals of Probability \textbf{18}(2), 698--712 (1990).
+\newblock \doi{10.1214/aop/1176990853}.
+\newblock \urlprefix\url{https://doi.org/10.1214/aop/1176990853}
+
+\bibitem{polyakjuditsky1992}
+Polyak, B.T., Juditsky, A.B.: {Acceleration of Stochastic Approximation by
+  Averaging}.
+\newblock SIAM Journal on Control and Optimization \textbf{30}(4), 838--855
+  (1992).
+\newblock \doi{10.1137/0330046}.
+\newblock \urlprefix\url{https://epubs.siam.org/doi/abs/10.1137/0330046}
+
+\bibitem{reddi}
+Reddi, S.J., Kale, S., Kumar, S.: {On the Convergence of Adam and Beyond}.
+\newblock In: International Conference on Learning Representations (ICLR)
+  (2018).
+\newblock \doi{10.48550/arXiv.1904.09237}.
+\newblock \urlprefix\url{https://arxiv.org/abs/1904.09237}
+
+\bibitem{robbinsmonro1951}
+Robbins, H., Monro, S.: {A Stochastic Approximation Method}.
+\newblock The Annals of Mathematical Statistics \textbf{22}(3), 400--407
+  (1951).
+\newblock \doi{10.1214/aoms/1177729586}.
+\newblock \urlprefix\url{https://doi.org/10.1214/aoms/1177729586}
+
+\bibitem{simsekli}
+Simsekli, U., Sagun, L., Gurbuzbalaban, M.: {A Tail-Index Analysis of
+  Stochastic Gradient Noise in Deep Neural Networks}.
+\newblock In: Proceedings of the 36th International Conference on Machine
+  Learning, vol.~97, pp. 5827--5837 (2019).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v97/simsekli19a.html}
+
+\bibitem{singh}
+Singh, S., Mishra, A., Raut, S.: {Same Loss, Same Noise, Opposite Schedules:
+  Noise Structure and Optimizer Normalization Jointly Determine Whether
+  Learning-Rate Cooldown Helps}.
+\newblock arXiv preprint arXiv:2607.12360 (2026).
+\newblock \doi{10.48550/arXiv.2607.12360}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2607.12360}
+
+\bibitem{smithle2018}
+Smith, S.L., Le, Q.V.: {A Bayesian Perspective on Generalization and Stochastic
+  Gradient Descent}.
+\newblock In: International Conference on Learning Representations (ICLR 2018)
+  (2018).
+\newblock \urlprefix\url{https://arxiv.org/abs/1710.06451}
+
+\bibitem{su}
+Su, B., Chen, L., Liu, Q.: {A Stability Analysis of AdamW: Unstable Equilibria
+  and Non-Convergence}.
+\newblock In: NeurIPS 2026 (2026).
+\newblock \doi{10.48550/arXiv.2611.11526}.
+\newblock \urlprefix\url{https://arxiv.org/abs/2611.11526}.
+\newblock Accepted, as stated on the authors' arXiv record
+
+\bibitem{thomas}
+Thomas, V., Pedregosa, F., van Merri{\"e}nboer, B., Manzagol, P.A., Bengio, Y.,
+  Le~Roux, N.: {On the interplay between noise and curvature and its effect on
+  optimization and generalization}.
+\newblock In: Proceedings of the Twenty Third International Conference on
+  Artificial Intelligence and Statistics (AISTATS), \emph{PMLR}, vol. 108, pp.
+  3503--3513 (2020).
+\newblock \urlprefix\url{https://proceedings.mlr.press/v108/thomas20a.html}
+
+\bibitem{wilson2017marginal}
+Wilson, A.C., Roelofs, R., Stern, M., Srebro, N., Recht, B.: {The Marginal
+  Value of Adaptive Gradient Methods in Machine Learning}.
+\newblock In: Advances in Neural Information Processing Systems 30 (NIPS 2017)
+  (2017).
+\newblock
+  \urlprefix\url{https://proceedings.neurips.cc/paper/2017/hash/81b3833e2504647f9d794f7d7b9bf341-Abstract.html}
+
+\bibitem{yaida2019}
+Yaida, S.: {Fluctuation-dissipation relations for stochastic gradient descent}.
+\newblock In: International Conference on Learning Representations (ICLR 2019)
+  (2019).
+\newblock \urlprefix\url{https://arxiv.org/abs/1810.00004}
+
+\bibitem{zaheer2018adaptive}
+Zaheer, M., Reddi, S.J., Sachan, D., Kale, S., Kumar, S.: {Adaptive Methods for
+  Nonconvex Optimization}.
+\newblock In: Advances in Neural Information Processing Systems 31 (NeurIPS
+  2018) (2018).
+\newblock
+  \urlprefix\url{https://proceedings.neurips.cc/paper/2018/hash/90365351ccc7437a1309dc64e4db32a3-Abstract.html}
+
+\bibitem{zeiler2012adadelta}
+Zeiler, M.D.: {ADADELTA: An Adaptive Learning Rate Method}.
+\newblock arXiv preprint arXiv:1212.5701 (2012).
+\newblock \urlprefix\url{https://arxiv.org/abs/1212.5701}
+
+\bibitem{zhang_attention}
+Zhang, J., Karimireddy, S.P., Veit, A., Kim, S., Reddi, S., Kumar, S., Sra, S.:
+  {Why are Adaptive Methods Good for Attention Models?}
+\newblock In: Advances in Neural Information Processing Systems 33 (2020).
+\newblock
+  \urlprefix\url{https://proceedings.neurips.cc/paper/2020/hash/b05b57f6add810d3b7490866d74c0053-Abstract.html}
+
+\bibitem{zhang2022adam}
+Zhang, Y., Chen, C., Shi, N., Sun, R., Luo, Z.Q.: {Adam Can Converge Without
+  Any Modification On Update Rules}.
+\newblock In: Advances in Neural Information Processing Systems 35 (NeurIPS
+  2022) (2022).
+\newblock
+  \urlprefix\url{https://papers.neurips.cc/paper_files/paper/2022/hash/b6260ae5566442da053e5ab5d691067a-Abstract-Conference.html}
+
+\bibitem{zhang_hessian}
+Zhang, Y., Chen, C., Ding, T., Li, Z., Sun, R., Luo, Z.Q.: {Why Transformers
+  Need Adam: A Hessian Perspective}.
+\newblock In: Advances in Neural Information Processing Systems 37 (2024).
+\newblock \doi{10.52202/079017-4190}.
+\newblock
+  \urlprefix\url{https://papers.nips.cc/paper_files/paper/2024/hash/ee0e45ff4de76cbfdf07015a7839f339-Abstract-Conference.html}
+
+\bibitem{zhuang2020adabelief}
+Zhuang, J., Tang, T., Ding, Y., Tatikonda, S.C., Dvornek, N., Papademetris, X.,
+  Duncan, J.S.: {AdaBelief Optimizer: Adapting Stepsizes by the Belief in
+  Observed Gradients}.
+\newblock In: Advances in Neural Information Processing Systems 33 (NeurIPS
+  2020) (2020).
+\newblock
+  \urlprefix\url{https://proceedings.neurips.cc/paper/2020/hash/d9d4f495e875a2e075a1a4a6e1b9770f-Abstract.html}
+
+\bibitem{zou2019sufficient}
+Zou, F., Shen, L., Jie, Z., Zhang, W., Liu, W.: {A Sufficient Condition for
+  Convergences of Adam and RMSProp}.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR 2019), pp. 11,127--11,135 (2019).
+\newblock \urlprefix\url{https://arxiv.org/abs/1811.09358}
+
+\end{thebibliography}

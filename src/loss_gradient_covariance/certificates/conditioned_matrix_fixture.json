@@ -1,0 +1,109 @@
+{
+  "status": "finished",
+  "certificate_complete": true,
+  "instability_verified": true,
+  "scientific_random_draws": 0,
+  "coefficient_fit": false,
+  "adaptive_input": false,
+  "fixture_selected_before_2d_trajectories": true,
+  "parameters": {
+    "alpha": 0.1,
+    "beta": 0.2,
+    "epsilon": 0.03,
+    "decay": 0.1,
+    "noise_axis_amplitude": 1.0,
+    "matrices": [
+      [
+        [
+          1.0,
+          1.25
+        ],
+        [
+          1.25,
+          3.0
+        ]
+      ],
+      [
+        [
+          3.0,
+          1.25
+        ],
+        [
+          1.25,
+          1.0
+        ]
+      ]
+    ]
+  },
+  "method": "Directed interval propagation of exhaustive old marginal-noise kernel bounds to a new fixed moderate-condition Hessian geometry",
+  "source_kernel_certificate_sha256": "50c12257117198e4c3c523e07a06807d10fc5fcbab0cc4add86b914f24ddf0d4",
+  "input_sha256_before": {
+    "results/q2_matrix_susceptibility_certificate_20261117.json": "50c12257117198e4c3c523e07a06807d10fc5fcbab0cc4add86b914f24ddf0d4"
+  },
+  "source_sha256_before": {
+    "experiments/q2_conditioned_matrix_fixture_20261117.py": "b2fb1bccaf4b813e9b03e016be427220428338f578c64cb03779d7b0f7a983b6",
+    "tests/test_q2_conditioned_matrix_fixture_20261117.py": "bbf46f8821fe7a5e09f859ea2bcecb883042adb4fc0a3327167aa27de20df216",
+    "experiments/q2_matrix_susceptibility_certificate_20261117.py": "eda13382f7e4798d1e865bf3894c4875ec890efba2ae808fd3acad072f409a99"
+  },
+  "kernel_bounds": {
+    "quiet": [
+      "5.70320091790959235729464161416933304045833676654",
+      "5.81697936235403685437220203119869406757986900959"
+    ],
+    "noisy": [
+      "0.126867637786952325614487415400935859110761138257",
+      "0.240646082231396822692047832430296886232293297344"
+    ]
+  },
+  "decay_plus_field_eigenvalue_bounds": {
+    "coupled_antisymmetric": [
+      "-0.516113237230671316332733642298235179607409289776",
+      "-0.402334792786226819255173225268874152485877120180"
+    ],
+    "coupled_symmetric": [
+      "6.78569476294556509943837269679327107324415462155",
+      "7.15547470739000971494044405213869441138913423316"
+    ],
+    "independent_antisymmetric": [
+      "2.28627570838620426164203850921463353945657005474",
+      "2.37160954171953763445020882198665430979771920557"
+    ],
+    "independent_symmetric": [
+      "9.57386140300688511527844979617746966391794243571",
+      "9.94364134745132973078052115152289300206292208924"
+    ],
+    "sample_hessian_minimum": [
+      "0.399218940641787828377945581344546683869894966840",
+      "0.399218940641787828377945581344546683869894966850"
+    ],
+    "sample_hessian_maximum": [
+      "3.60078105935821217162205441865545331613010503315",
+      "3.60078105935821217162205441865545331613010503316"
+    ],
+    "sample_condition_number": [
+      "9.01956468690980778190484707799778314053594443992",
+      "9.01956468690980778190484707799778314053594444024"
+    ],
+    "population_hessian_minimum": [
+      "0.75",
+      "0.75"
+    ],
+    "population_hessian_maximum": [
+      "3.25",
+      "3.25"
+    ]
+  },
+  "commutator_off_diagonal": "-5",
+  "scope": "Exact matching and eigenvalue certificate for the atomic fixture; the smooth-law risk-exponent theorem follows separately by fixed small symmetric smoothing. No numerical smoothing threshold, finite-rate remainder or mixing bound is certified.",
+  "input_sha256_after": {
+    "results/q2_matrix_susceptibility_certificate_20261117.json": "50c12257117198e4c3c523e07a06807d10fc5fcbab0cc4add86b914f24ddf0d4"
+  },
+  "source_sha256_after": {
+    "experiments/q2_conditioned_matrix_fixture_20261117.py": "b2fb1bccaf4b813e9b03e016be427220428338f578c64cb03779d7b0f7a983b6",
+    "tests/test_q2_conditioned_matrix_fixture_20261117.py": "bbf46f8821fe7a5e09f859ea2bcecb883042adb4fc0a3327167aa27de20df216",
+    "experiments/q2_matrix_susceptibility_certificate_20261117.py": "eda13382f7e4798d1e865bf3894c4875ec890efba2ae808fd3acad072f409a99"
+  },
+  "elapsed_seconds": 0.0004130840000016178,
+  "sources_unchanged": true,
+  "inputs_unchanged": true
+}

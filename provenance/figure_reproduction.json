@@ -1,0 +1,101 @@
+{
+  "status": "complete",
+  "scientific_random_draws": 0,
+  "fitted_parameters": 0,
+  "new_scientific_statistics": 0,
+  "input_sha256_before": {
+    "results/q2_matrix_analysis_20261117/run/summary.json": "93bfb6d29724b8a73bae260eb1627258313f14c744bce7897a2aee4843e33148",
+    "results/q2_matrix_validation_20261117/run/summary.json": "33fff2e3897f3bd9be0134e34e98bb890b35e98eb2b45fd30809e8c738a12a17",
+    "results/q2_quadratic_analysis_20261116/run/summary.json": "2cacd0b19a00c04cf2c3909f848023ca6e9923113bc7ceccf90d9431cda5499c",
+    "results/q2_matrix_validation_20261117/run/samples_and_terminal.npz": "f1df66757c55324655df8eb9d4139ce28740742ad937ad835134bf5f57ec2115",
+    "experiments/q2_phase_paper_figures_20261117.py": "9ff88d7c24ee3fa6710c13cb134ee35b44458b51bee77492ad968991e45d6e0f",
+    "experiments/q2_stationary_figures.py": "702cac53e79a11f6148c5f72b0db1e68a2e303bbd22ca8d069312976a62bb888",
+    "results/q2_decay_contrast_analysis_20261117/run/summary.json": "db1802a09c53214dc21e62f53829b7a1b9afb140ca717de83a04149aba3e201a",
+    "experiments/q2_pairing_mechanism_figure_20261117.py": "110beda5ca28d5e23c36b457c648530694c1fc74be95b3cdb1ab9439070f0b9b",
+    "results/q2_conditioned_matrix_fixture_20261117.json": "0069acf768524174571e5a729693e878527fd991282f60a3f7bb89cceedaa2a8"
+  },
+  "input_sha256_after": {
+    "results/q2_matrix_analysis_20261117/run/summary.json": "93bfb6d29724b8a73bae260eb1627258313f14c744bce7897a2aee4843e33148",
+    "results/q2_matrix_validation_20261117/run/summary.json": "33fff2e3897f3bd9be0134e34e98bb890b35e98eb2b45fd30809e8c738a12a17",
+    "results/q2_quadratic_analysis_20261116/run/summary.json": "2cacd0b19a00c04cf2c3909f848023ca6e9923113bc7ceccf90d9431cda5499c",
+    "results/q2_matrix_validation_20261117/run/samples_and_terminal.npz": "f1df66757c55324655df8eb9d4139ce28740742ad937ad835134bf5f57ec2115",
+    "experiments/q2_phase_paper_figures_20261117.py": "9ff88d7c24ee3fa6710c13cb134ee35b44458b51bee77492ad968991e45d6e0f",
+    "experiments/q2_stationary_figures.py": "702cac53e79a11f6148c5f72b0db1e68a2e303bbd22ca8d069312976a62bb888",
+    "results/q2_decay_contrast_analysis_20261117/run/summary.json": "db1802a09c53214dc21e62f53829b7a1b9afb140ca717de83a04149aba3e201a",
+    "experiments/q2_pairing_mechanism_figure_20261117.py": "110beda5ca28d5e23c36b457c648530694c1fc74be95b3cdb1ab9439070f0b9b",
+    "results/q2_conditioned_matrix_fixture_20261117.json": "0069acf768524174571e5a729693e878527fd991282f60a3f7bb89cceedaa2a8"
+  },
+  "scientific_inputs_unchanged": true,
+  "wrapper_source_sha256": "e7c777aca188a3f183884231c209a66350dfe3308395fa394ce6b8b5d90ddacb",
+  "producer_sha256_before": {
+    "figure_typography_20261117.py": "e53dc967b179d61628e44c35b8780d2a211648e5e517552d2dad7f31f37941cd",
+    "figure1_journal_typography_20261117.py": "3e2b100f5872e057f4c9e8ee403cea832ccc4d39c5e450200a94e281ccdbf354",
+    "decay_figure_typography_20261117.py": "ec3549c48b0a72f8bc23637ea48d8dec74eedb106b6543e6d3090ed0aeb63835"
+  },
+  "producer_sha256_after": {
+    "figure_typography_20261117.py": "e53dc967b179d61628e44c35b8780d2a211648e5e517552d2dad7f31f37941cd",
+    "figure1_journal_typography_20261117.py": "3e2b100f5872e057f4c9e8ee403cea832ccc4d39c5e450200a94e281ccdbf354",
+    "decay_figure_typography_20261117.py": "ec3549c48b0a72f8bc23637ea48d8dec74eedb106b6543e6d3090ed0aeb63835"
+  },
+  "retained_display": {
+    "matrix_curves": 4,
+    "matrix_steps": 3,
+    "terminal_clouds": 4,
+    "replicas_per_cloud": 256,
+    "scalar_curves": 4,
+    "scalar_ratio_curves": 2,
+    "scalar_steps": 3,
+    "decay_points": 2
+  },
+  "scope": "Saved declared displays and certified local mechanism only. No trajectories, resamples, fitted exponents or new uncertainty estimates. Matrix intervals: approximate simultaneous 95%; scalar: approximate pointwise 95% and separate joint 99% oracle; decay: approximate simultaneous 95% and separate joint 98% functional enclosure. Unknown finite-step and equilibration errors remain excluded. Regeneration does not prove stationarity or mixing.",
+  "artifacts": {
+    "pairing_mechanism.pdf": {
+      "bytes": 27137,
+      "sha256": "de509710e8d5510c71e568cd55764231268c6c13063b05114201e9d2140d9054"
+    },
+    "pairing_mechanism.svg": {
+      "bytes": 23013,
+      "sha256": "518aa1f315c5fa5118518a1ac752a53eee44953d94b922db8fd7710237740858"
+    },
+    "pairing_mechanism.png": {
+      "bytes": 79203,
+      "sha256": "9283cfa731866b73c16a51e0bd5b77cd14df2b4e2359442f52e9e453407835b4"
+    },
+    "matrix_phases.pdf": {
+      "bytes": 48449,
+      "sha256": "8310327dcc2b322b0ac4570ae4c21bccbf90181aae87299ae25bcebf665baed1"
+    },
+    "matrix_phases.svg": {
+      "bytes": 320156,
+      "sha256": "9cdaa21f5bd76bae31b48910bf19f67493c6d76476b05dd6eecc685a27073500"
+    },
+    "matrix_phases.png": {
+      "bytes": 99483,
+      "sha256": "833d0523cbb3a1f5b28c59844e92150604d574fa398e05aaac17a1b795eff3e9"
+    },
+    "scalar_couplings.pdf": {
+      "bytes": 19898,
+      "sha256": "2f80631e4be830fa8888c500228bdfd222f57e30346c20e806e66e3a1d9da1eb"
+    },
+    "scalar_couplings.svg": {
+      "bytes": 37609,
+      "sha256": "badceea12ddd5763f1be139d276a96ff26b764efb548ed8c5daf873de920f9cf"
+    },
+    "scalar_couplings.png": {
+      "bytes": 69305,
+      "sha256": "aed09300961b0e8916589260d892ae2f64386fb4e5d08dba3f20314d251576f0"
+    },
+    "decay_contrast.pdf": {
+      "bytes": 21165,
+      "sha256": "be94afb218f221a1757aad8636415d7df70aa7939de0e0513964e3efd0bf1c28"
+    },
+    "decay_contrast.svg": {
+      "bytes": 19697,
+      "sha256": "0be1600a4729c93da6471929e74c0659de3950b67db378151e98412d0ad47bde"
+    },
+    "decay_contrast.png": {
+      "bytes": 73412,
+      "sha256": "c68c5bde2de3f37cac558a74341d6725d00d8ce77443bba96c6e04d4d10d87ee"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loss-gradient-covariance"
+version = "1.0.0"
+description = "Exact matched-law examples and reproducibility tools for adaptive optimization"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT (original code); see LICENSE_SCOPE.md for other materials"}
+authors = [{name = "Ihor Kendiukhov"}]
+dependencies = []
+
+[project.optional-dependencies]
+reproduce = ["numpy==1.26.4", "matplotlib==3.10.8", "scipy==1.15.2"]
+
+[project.urls]
+Repository = "https://github.com/Biodyn-AI/loss-gradient-covariance"
+Issues = "https://github.com/Biodyn-AI/loss-gradient-covariance/issues"
+
+[project.scripts]
+loss-gradient-covariance = "loss_gradient_covariance.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+loss_gradient_covariance = ["release.json", "certificates/*.json"]

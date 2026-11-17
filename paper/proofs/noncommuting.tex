@@ -1,0 +1,76 @@
+\section{Scalar Risk Bounds Inside an Interacting Matrix Family}
+\label{app:robust}
+
+Let the bounded scalar and vector random variables $(h,e)$ satisfy
+$0<h_{\min}\leq h\leq h_{\max}$, individual coordinate sign invariance
+conditional on $h$, and identical coordinate pairs $(h,e_i)$. Independently
+let $B$ be a bounded centered symmetric matrix, $\|B\|_{\rm op}\leq b$.
+Take $A=hI+\delta B$ with fixed positive $\delta$ satisfying
+\[
+ \delta b<h_{\min},\qquad \delta bC_*/\epsilon<\lambda.
+\]
+Then sample matrices are uniformly positive definite. The exact row identity
+and independence give
+\[
+ J_{ik}=\ind\{i=k\}\E[h\Psi(|e_i|)]
+              +\delta\E B_{ik}\E\Psi(|e_i|)
+       =\chi\ind\{i=k\}.
+\]
+At zero parameters the update uses only $e$. Its coordinate-sign
+symmetries and common coordinate distributions give fluctuation
+covariance $DI$.
+
+The history quotient has global Lipschitz constant $C_*/\epsilon$:
+in the derivative representation in Appendix~\ref{app:transfer}, the
+multiplier $I-r(z\otimes z)/(r+\epsilon)$ has operator norm at most one.
+Let $F_\delta$ be the frozen field and $F_0$ the field with $B$ removed,
+using the same primitive histories. Applying the quotient bound in each
+coordinate and summing squares yields
+\[
+ \|f_\delta(u,Z)-f_0(u,Z)\|^2
+ \leq\frac{\delta^2C_*^2}{\epsilon^2}
+                 \sum_jd_j\|B_{-j}u\|^2
+ \leq\frac{\delta^2b^2C_*^2}{\epsilon^2}\|u\|^2.
+\]
+There is no dimension factor. Taking expectations gives the same bound
+on the averaged field difference. The scalar drift points toward zero, giving $u_iF_{0,i}(u_i)\geq0$. Hence
+\[
+ u^\top G_\delta(u)\geq
+        (\lambda-\delta bC_*/\epsilon)\|u\|^2.
+\]
+Apply Lemma~\ref{lem:regular-transfer} with ordinary squared distance as the metric. Its
+limiting drift is $(\lambda+\chi)I$ and covariance
+$D I/[2(\lambda+\chi)]$. Since $\E A=\mu I$, $\mu=\E h$,
+\[
+ \lim\frac{\E L(u)}\eta=\frac{d\mu D}{4(\lambda+\chi)}.
+\]
+The fixed perturbation therefore leaves the full leading scalar risk
+interval unchanged within this family.
+
+For $e_i=RS_i$ with independent fair signs conditional on $(h,R)$, fixing
+the complete separate $h,R,B$ distributions and changing only the
+dependence between $h,R$ fixes
+the complete matrix-Hessian and vector-noise laws. The covariance between gradients of the same sampled loss at two inputs is
+\[
+ \Cov(g(u),g(v))=\operatorname{Var}(h)uv^\top
+        +\delta^2\E[Buv^\top B]+\E R^2I.
+\]
+All mixed terms vanish by the signs, centering and independence. The scalar
+sharp risk endpoints and all intermediate values remain exactly attainable,
+with total risk multiplied by dimension. This does not classify arbitrary
+matrix/noise dependence outside the independent-$B$ family. The SGD
+covariance equation in Appendix~\ref{app:reference} also gives exact
+equality of its complete stationary covariance across this family.
+
+Noncommuting symmetric matrices cannot all be diagonalized in one shared
+coordinate system. To make this explicit in dimension two, $B$ can be
+equally likely
+$\pm\begin{psmallmatrix}1&0\\0&-1\end{psmallmatrix}$ and
+$\pm\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$. The two matrix products in opposite orders differ, so their commutator
+is nonzero; off-diagonal samples couple coordinates. Alternatively a
+centered radial smooth bump on a Frobenius ball in $\operatorname{Sym}_d$
+gives a density in all symmetric-matrix coordinates and almost-sure
+noncommutation of
+independent samples when $d\geq2$. The perturbation may have to be small;
+it is positive and fixed before $\eta$ decreases. The bounds are not claimed to hold uniformly as damping vanishes or
+dimension grows.

@@ -1,0 +1,38 @@
+\input{preamble}
+\IfFileExists{manuscript.aux}{\externaldocument{manuscript}}{\externaldocument{xref_cache/manuscript}[manuscript.pdf]}
+\begin{document}
+\title{Online Resource 1: Extension Proofs and Supporting Numerical Studies}
+\titlerunning{Online Resource 1}
+\author{Ihor Kendiukhov}
+\authorrunning{Ihor Kendiukhov}
+\institute{Ihor Kendiukhov (corresponding author) \at
+Institute of Medical Genetics and Applied Genomics, University of T\"ubingen, T\"ubingen, Germany\\
+\email{ihor.kendiukhov@student.uni-tuebingen.de}}
+\date{}
+\hypersetup{pdftitle={Online Resource 1: Extension Proofs and Supporting Numerical Studies},pdfauthor={Ihor Kendiukhov}}
+\maketitle
+\noindent Supplement to ``Same Loss and Gradient Covariance, Different Stationary
+Errors in Adaptive Optimization'', prepared for submission to the
+\emph{Journal of Optimization Theory and Applications}.
+
+\noindent This resource retains the full extension proofs, deterministic numerical
+certificate, supporting simulations, earlier discrepancies and exploratory
+checks. References to Sections 1--6 and Appendices A--E refer to the main
+paper. No new observations or fits were generated for this preparation.
+\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{table}{0}
+\setcounter{equation}{\getrefnumber{jota-main-last-equation}}
+\renewcommand{\thesection}{S\arabic{section}}
+\setcounter{section}{0}
+\input{extensions}
+\appendix
+\setcounter{section}{5}
+\input{proofs/slow_memory}
+\input{proofs/noncommuting}
+\input{proofs/empirical}
+\section{Supporting Numerical Studies}\label{app:supporting-studies}
+\input{supporting_studies}
+\FloatBarrier
+\end{document}

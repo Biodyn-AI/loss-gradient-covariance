@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite the unpublished manuscript and the repository version you used."
+type: software
+title: "Reproducibility materials for Same Loss and Gradient Covariance, Different Stationary Errors in Adaptive Optimization"
+authors:
+  - family-names: Kendiukhov
+    given-names: Ihor
+version: 1.0.0
+date-released: '2026-11-17'
+url: "https://github.com/Biodyn-AI/loss-gradient-covariance"
+repository-code: "https://github.com/Biodyn-AI/loss-gradient-covariance"
+license: MIT
+preferred-citation:
+  type: unpublished
+  title: "Same Loss and Gradient Covariance, Different Stationary Errors in Adaptive Optimization"
+  authors:
+    - family-names: Kendiukhov
+      given-names: Ihor
+  year: 2026
+  url: "https://github.com/Biodyn-AI/loss-gradient-covariance/blob/v1.0.0/paper/manuscript.pdf"
+  notes: "Unpublished author manuscript; prepared for JOTA, not accepted or published."

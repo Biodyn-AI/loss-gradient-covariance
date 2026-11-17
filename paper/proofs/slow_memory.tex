@@ -1,0 +1,95 @@
+\section{What Changes when Squared-Gradient Memory Becomes Long}\label{app:slow}
+
+Keep the underlying distributions, positive $\epsilon,\lambda$ and $\alpha<1$ fixed.
+Write $d=1-\beta$, $\nu=\E R^2>0$ and
+$\sigma^2=\operatorname{Var}(R^2)$. When one sample's magnitude is replaced by $r$, let
+\[
+ V_j(r)=\sum_{k\ne j}d_kR_k^2+d_jr^2,\qquad
+ f(v)=(\sqrt v+\epsilon)^{-1},\qquad
+ g(v)=[\sqrt v(\sqrt v+\epsilon)^2]^{-1}.
+\]
+Use the complete bounded kernel term
+\[
+ k_j(r)=f(V_j(r))-d_jr^2g(V_j(r)),\qquad 0\leq k_j(r)\leq1/\epsilon.
+\]
+Keeping these terms together avoids the need to bound inverse moments
+of a denominator that can approach zero.
+
+The squared coefficient sums are
+\[
+ S_2=\sum_kd_k^2=\frac d{1+\beta},\qquad
+ S_4=\sum_kd_k^4=\frac{d^3}{1+\beta+\beta^2+\beta^3}.
+\]
+For $\beta\geq3/4$, the other-time energy has mean at least $3\nu/4$.
+Hoeffding's bound for weighted sums of independent bounded variables,
+first for finite sums and then by convergence, gives
+uniformly in $j,r$,
+\[
+ \Pp(V_j(r)<\nu/2)
+ \leq\exp\!\left[-\frac{\nu^2(1+\beta)}{8R_{\max}^4d}\right]
+ \leq e^{-c/d},\qquad c=\frac{\nu^2}{8R_{\max}^4}>0.
+\]
+Indeed a lower deviation of at least $\nu/4$ is required, and the sum
+of squared bounded-variable ranges is at most $R_{\max}^4S_2$.
+The noise magnitude $R$ is allowed to be arbitrarily close to zero.
+
+Choose bounded smooth extensions $\widetilde f,\widetilde g$ of $f,g$, agreeing with them on
+$[\nu/2,R_{\max}^2]$, with three bounded derivatives for the needed
+Taylor argument. Comparing the complete bounded $k_j$ to the corresponding
+extended expression introduces an error of $O(e^{-c/d})$ on the exceptional event.
+Write
+\[
+ V_j(r)-\nu=W_j+a_j,\quad
+ W_j=\sum_{k\ne j}d_k(R_k^2-\nu),\quad a_j=d_j(r^2-\nu).
+\]
+Then $\E W_j=0$, $\E W_j^2=\sigma^2(S_2-d_j^2)$, and independence
+of centered terms gives
+\[
+ \E W_j^4\leq C(S_4+S_2^2)=O(d^2),\qquad
+ \E|W_j|^3\leq\sqrt{\E W_j^2\E W_j^4}=O(d^{3/2}).
+\]
+Also $|a_j|\leq Cd$ uniformly. Taylor expansion of the bounded extensions
+therefore yields
+\begin{align*}
+ \E\widetilde f(V_j(r))&=f(\nu)+f'(\nu)d_j(r^2-\nu)
+                 +\tfrac12f''(\nu)\sigma^2S_2+O(d^{3/2}),\\
+ \E\widetilde g(V_j(r))&=g(\nu)+O(\sqrt d).
+\end{align*}
+We use these extensions only within the complete modified kernel.
+The omitted same-time variance and squared shift are $O(d^2)$; multiplying
+the second remainder by $d_jr^2$ gives $O(d^{3/2})$.
+
+Since $f'(\nu)=-g(\nu)/2$ and
+\[
+ f''(\nu)=\frac{3\sqrt\nu+\epsilon}
+                {4\nu^{3/2}(\sqrt\nu+\epsilon)^3},\qquad
+ \sum_jw_jd_j=\frac{(1-\alpha)d}{1-\alpha\beta}=d+O(d^2),
+\]
+summing the uniform expansion gives \eqref{eq:slow-kernel}.
+Multiplication by bounded $H$ makes the error uniform over all allowed
+curvature/noise dependence choices. Subtracting two response slopes gives
+the displayed mixed-moment formula. The best and worst pairings use the
+same equal or opposite ranks at every $\beta$, so their susceptibility gap is
+$\tfrac32g(\nu)d(M_+-M_-)+O(d^{3/2})$. Expanding the ratio of their
+positive decay-plus-response slopes proves \eqref{eq:slow-spread}.
+
+\paragraph{What long memory implies for matrices.}
+For fixed dimension, bounded matrix $A$, and the common coordinate-noise
+law, \eqref{eq:rowkernel} permits entrywise multiplication of the same
+uniform expansion. With $g=g(\nu)$,
+\begin{equation}\label{eq:matrix-slow-expansion}
+ J_\beta=f(\nu)\bar H+(1-\beta)
+ \left[\left(\frac{\sigma^2f''(\nu)}4+\frac{\nu g}2\right)\bar H
+       -\frac{3g}2\E[\operatorname{Diag}(e_i^2)A]\right]
+ +O((1-\beta)^{3/2}).
+\end{equation}
+The error bound in operator norm is uniform over dependence choices
+with these fixed bounded separate distributions. Hence
+$\operatorname{Sym}(\lambda I+J_\beta)\to\lambda I+f(\nu)\bar H\succ0$.
+For every fixed uniformly positive-definite Hessian law and fixed noise,
+the averaged field at zero is eventually locally stable as $\beta\uparrow1$.
+The fixed-law unstable phase cannot persist uniformly through this limit.
+This describes only the field near zero; it proves neither global
+stationary concentration nor a joint actual-chain $\eta,\beta$ theorem.
+It also gives no numerical
+finite-$\beta$ threshold without an explicit bound on the error term.

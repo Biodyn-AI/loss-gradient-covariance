@@ -1,0 +1,103 @@
+{
+  "status": "complete",
+  "source_sha256": "91f497d7c0b117834bb4f49834727d9e945c13ac249438edf46b26ea250c10a6",
+  "helper_source_sha256": "e7405aaf46b852b944f2a1c9521aa8ae1e24f5b7c87b15738cebca1c51ce31f9",
+  "test_source_sha256": "3b54328d4689705063468f81d4189a5086db80364f31c98d63e1b9a3feb11ec0",
+  "input_sha256_before": {
+    "results/q2_decay_contrast_analysis_20261117/run/summary.json": "db1802a09c53214dc21e62f53829b7a1b9afb140ca717de83a04149aba3e201a",
+    "experiments/q2_phase_paper_figures_20261117.py": "9ff88d7c24ee3fa6710c13cb134ee35b44458b51bee77492ad968991e45d6e0f"
+  },
+  "input_sha256_after": {
+    "results/q2_decay_contrast_analysis_20261117/run/summary.json": "db1802a09c53214dc21e62f53829b7a1b9afb140ca717de83a04149aba3e201a",
+    "experiments/q2_phase_paper_figures_20261117.py": "9ff88d7c24ee3fa6710c13cb134ee35b44458b51bee77492ad968991e45d6e0f"
+  },
+  "scientific_inputs_unchanged": true,
+  "scientific_random_draws": 0,
+  "fitted_parameters": 0,
+  "new_scientific_statistics": 0,
+  "final_width_cm": 11.9,
+  "minimum_normal_font_pt": 8.5,
+  "actual_font_at_95_percent_linewidth_pt": 8.075,
+  "aspect_ratio": "7.2:3.5",
+  "recorded_display": [
+    {
+      "n": 384,
+      "c": 30.0,
+      "second_moment_contrast": -0.024663082509545842,
+      "replica_se": 0.0007307706665199225,
+      "percentile_95": [
+        -0.026094289500465585,
+        -0.0232929566577711
+      ],
+      "simultaneous_95": [
+        -0.026586719597752873,
+        -0.02273944542133881
+      ],
+      "runtime_delta": 0.022239337654683694,
+      "contrast_per_delta": -1.1089845791496267,
+      "simultaneous_95_per_delta": [
+        -1.1954816285706065,
+        -1.0224875297286469
+      ],
+      "response_contrast": {
+        "lower": "-0.031289559253760532264707040681990639362227568463395410139247952112029270600532385",
+        "upper": "-0.019700921247647201913668505102213361075269182338399614514929720096301169209323625"
+      },
+      "response_contrast_per_delta": {
+        "lower": "-1.4069465438437267245392400004386789902696825742675769084968428800484910963615111",
+        "upper": "-0.88585917240515294198216682793207738625058576786435896095950645253239780957441062"
+      },
+      "finite_remainder_certified": false
+    },
+    {
+      "n": 448,
+      "c": 30.0,
+      "second_moment_contrast": -0.013680780282358019,
+      "replica_se": 0.0004415221915957564,
+      "percentile_95": [
+        -0.014551328647534832,
+        -0.012836254943334268
+      ],
+      "simultaneous_95": [
+        -0.014843016948294162,
+        -0.012518543616421875
+      ],
+      "runtime_delta": 0.011803216897903089,
+      "contrast_per_delta": -1.1590721750431012,
+      "simultaneous_95_per_delta": [
+        -1.2575399636120481,
+        -1.0606043864741543
+      ],
+      "response_contrast": {
+        "lower": "-0.016606495222403709818145507689853170208067331396230744630246264048829083587258055",
+        "upper": "-0.010455987951849622573474674744967961023309482880453007578941547593178141557326187"
+      },
+      "response_contrast_per_delta": {
+        "lower": "-1.4069465438437267245392400004386789902696825742675769084968428800484910963615111",
+        "upper": "-0.88585917240515294198216682793207738625058576786435896095950645253239780957441062"
+      },
+      "finite_remainder_certified": false
+    }
+  ],
+  "interval_scope": "Unchanged: approximate simultaneous 95% native contrasts; independently frozen response-functional interval, with unknown finite-rate remainder and equilibration error excluded.",
+  "prior_jota_asset_directory": "decay_figure_typography_before_20261117",
+  "prior_jota_asset_sha256": {
+    "decay_contrast.pdf": "42b6dd17283f5de1d85a68d4e07fbcaff440940985d949329945204a2f122c3a",
+    "decay_contrast.svg": "bdaa6386c8f9e52136552860e7814a09e89eeef6c80137ab4e336e151b555630",
+    "decay_contrast.png": "f1f0abd74b84dfe6cc9442f4290bfbc0be48da501fc5d9598d2fc3950234564c"
+  },
+  "artifacts": {
+    "decay_contrast.pdf": {
+      "bytes": 21163,
+      "sha256": "73bb63108e81e16fe521f924d5fa3ddec75e3c9844bc3dad83a2a1d11f73e59d"
+    },
+    "decay_contrast.svg": {
+      "bytes": 19680,
+      "sha256": "8cb29a55d1e114416256310e4ea5352f52b8909d9918e8d6eaef92c53fe6e1c2"
+    },
+    "decay_contrast.png": {
+      "bytes": 74074,
+      "sha256": "feb3d08b76202fc1a0123bdf07f62f14c1466bec733ee6184f3dcdc52f4ea040"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+\section{From the Optimizer History to Its Stationary Limit}
+\label{app:transfer}
+
+\paragraph{Keeping the optimizer state bounded.}
+A stationary, or invariant, law is a probability distribution unchanged
+by one optimizer step. The native cone is the set of moving-average
+states satisfying the inequality below. For any scalar history, weighted
+Cauchy--Schwarz gives
+$m^2\leq C_*^2v$. Updating one sample preserves this relation: if
+$m^2\leq C_*^2v$, weighted Cauchy--Schwarz gives
+\[
+ [\alpha m+(1-\alpha)g]^2
+ \leq\left(\frac{\alpha^2C_*^2}{\beta}
+           +\frac{(1-\alpha)^2}{1-\beta}\right)
+       [\beta v+(1-\beta)g^2]
+ =C_*^2[\beta v+(1-\beta)g^2].
+\]
+The normalized coordinate action has magnitude at most $C_*$, including
+its continuous zero value at $m=v=0$. Hence, for $\eta\lambda\leq1$,
+\[
+ |u_{i,n+1}|\leq(1-\eta\lambda)|u_{i,n}|+\eta C_*.
+\]
+The box $|u_i|\leq M=C_*/\lambda$ is invariant. Every stationary cone law
+is supported there: if $0<\eta\lambda<1$, for $r>0$ its tail above $M+r$ is bounded by its tail
+above $M+r/(1-\eta\lambda)$, and iteration sends the latter threshold to
+infinity. At $\eta\lambda=1$ confinement holds after one step.
+The same shrinking-bound argument keeps the stationary moving averages
+in a compact set because gradients are bounded on this box. The update
+is continuous on a compact set that it preserves. It therefore has the
+Feller property: the one-step expectation of a continuous function
+is continuous in the current state.
+Averaging successive laws gives an invariant probability. All bounds
+hold uniformly over every such probability.
+
+\paragraph{How fast the update forgets old samples.}
+Write $r=\|x\|_d$ and let $a$ represent the numerator functional in
+the weighted square-sum space of histories, so $\|a\|_d=C_*$. For $r>0$, with $z=x/r$,
+\[
+ DT(x)=\frac{[I-\tfrac r{r+\epsilon}(z\otimes z)]a}{r+\epsilon}.
+\]
+It extends continuously by $a/\epsilon$ at zero. Differentiating away
+from zero gives $\|D^2T\|\leq6C_*/\epsilon^2$: the terms with
+$(a\otimes z+z\otimes a)$ and $\langle a,z\rangle I$ have total
+norm at most $3C_*/(r+\epsilon)^2$, and the remaining rank-one term
+has norm at most $C_*(3r+\epsilon)/(r+\epsilon)^3$.
+Integrating along a segment, with continuity at zero if the segment
+crosses it, proves
+$\|DT(x)-DT(y)\|\leq6C_*\|x-y\|_d/\epsilon^2$.
+In particular $T$ is $C^1$ with bounded Lipschitz derivative.
+
+For each coordinate, a frozen gradient history is affine in $u$ with bounded
+parameter derivative. Two bounded mark histories sharing their last $k$
+future samples differ in their weighted histories and derivatives by at
+most $C\rho^k$. The update and its first parameter derivative therefore forget old
+samples at a geometric rate. Let $\mathsf P$ be the history
+shift with a fresh iid mark. Coupling to an independent stationary old
+history proves uniform convergence of
+\[
+ H_u=\sum_{k\geq0}\mathsf P^k(f_u-F(u)),\qquad K_u=\mathsf P H_u,
+\]
+including its first parameter derivative on an enlarged box. Thus $H_u,K_u$
+are bounded and uniformly Lipschitz in $u$. They give a Poisson corrector:
+a bounded adjustment that separates predictable history effects from
+fresh mean-zero noise. Only the update and its derivative need to forget
+old samples; no total-variation mixing of the full infinite history is
+required.
+
+\paragraph{Using samples in the right order.}
+In a stationary chain extended to past and future times, the contribution
+of initial moving-average values vanishes.
+The native increment bound gives $\|u_{n-j}-u_n\|\leq C\eta j$.
+Since $\sum_jj^2d_j<\infty$, the Hilbert quotient Lipschitz bound gives
+\[
+ U_{n+1}^{\rm actual}=f_{u_n}(Z_{n+1})+O(\eta)
+\]
+uniformly. Here $Z_n$ is the complete past iid mark history, with the
+current parameter measurable before the fresh mark. Define
+\[
+ \Delta M_{n+1}=H_{u_n}(Z_{n+1})-K_{u_n}(Z_n).
+\]
+It is bounded and has conditional mean zero given all past information,
+including the stationary initial coordinate. Such increments are called
+martingale differences. The Poisson identity is
+\[
+ f_{u_n}(Z_{n+1})-F(u_n)
+ =\Delta M_{n+1}+K_{u_n}(Z_n)-K_{u_n}(Z_{n+1}).
+\]
+Consequently the negative correction $X_n=u_n-\eta K_{u_n}(Z_n)$ obeys
+\begin{equation}\label{eq:corrected-core}
+ X_{n+1}=X_n-\eta G(X_n)-\eta\Delta M_{n+1}+R_{n+1},
+ \qquad \|R_{n+1}\|\leq C\eta^2.
+\end{equation}
+The $O(\eta^2)$ bound uses the parameter Lipschitz bounds for $K$ and $G$.
+No restoring property of $G$ is needed for this representation. Its
+conditional bracket $q(u,Z)$ is the conditional covariance matrix of the
+next martingale difference. It is bounded and uniformly Lipschitz in $u$,
+because $H_u$ is bounded and Lipschitz.
+
+\begin{lemma}[Regular stationary transfer with a global Lyapunov metric]
+\label{lem:regular-transfer}
+A Lyapunov metric is a weighted squared distance that decreases under
+the averaged dynamics. Suppose $G(0)=0$ and on an enlarged native box there
+are a positive-definite
+matrix $P_0$ and $c_0>0$ such that
+\[
+ u^\top P_0G(u)\geq c_0u^\top P_0u.
+\]
+Let $B=DG(0)$, and let $Q_0$ be the origin Green--Kubo matrix: the sum
+of update covariances over all time lags at zero parameters. Every
+invariant native-cone selection then satisfies
+\[
+ u/\sqrt\eta\Rightarrow N(0,S),\qquad BS+SB^\top=Q_0,
+\]
+with every positive absolute scaled moment converging. The corresponding
+stationary path limit on clock $1/\eta$ is the stationary Ornstein--Uhlenbeck
+(OU) diffusion: a linear diffusion with a Gaussian stationary law.
+\end{lemma}
+\begin{proof}
+Use the norm $\|x\|_{P_0}^2=x^\top P_0x$. For each integer $k\geq1$,
+stationary expansion of $\|X\|_{P_0}^{2k}$ in
+\eqref{eq:corrected-core} gives a leading drift at most
+$-2kc_0\eta\E\|X\|_{P_0}^{2k}$. The first martingale contribution
+vanishes. Since corrected jumps are $O(\eta)$, the second-order remainder
+is bounded by
+\[
+ C_k\eta^2\E\|X\|_{P_0}^{2k-2}+C_k\eta^{2k}.
+\]
+The remainder $R$ contributes at most
+$C_k\eta^2\E\|X\|_{P_0}^{2k-1}$, bounded by the preceding even moment
+on the fixed compact enlarged box. Thus
+\[
+ \E\|X\|_{P_0}^{2k}\leq C_k\eta
+    (\E\|X\|_{P_0}^{2k-2}+\eta^{2k-2}).
+\]
+Induction and $\|u-X\|\leq C\eta$ prove
+$\E\|u\|^{2k}=O(\eta^k)$ uniformly over invariant selections, before
+any weak limit.
+
+For the process $X_{\lfloor t/\eta\rfloor}/\sqrt\eta$, the bracket
+parameter replacement costs, on every fixed time interval, at most
+$C\eta\sum_{n\leq T/\eta}\E\|u_n\|=O(\sqrt\eta)$.
+The remaining bracket at zero is a bounded function of the stationary iid
+history. Its time average converges to its mean $Q_0$. The same convergence
+holds uniformly over partial time sums by separating a fixed initial
+segment. This uses only the history distribution; the initial parameter
+may still be correlated with old samples.
+
+The scaled martingale jumps are $O(\sqrt\eta)$, so no large jump survives
+in the limit (the Lindeberg condition).
+The scaled accumulated $R$ is $O(\sqrt\eta)$, as are corrector endpoints.
+The moment bounds keep initial distributions from escaping to infinity.
+Local Lipschitz drift, Doob's martingale inequality and Gronwall's inequality
+then keep paths in a bounded region with high probability on every fixed
+interval.
+Differentiability at zero identifies the drift $-By$. Keeping the initial coordinate among the information used to define the
+martingale shows that every subsequential stationary process limit solves
+\[
+ dY=-BYdt+Q_0^{1/2}dW.
+\]
+Differentiating the Lyapunov inequality at zero gives
+$\operatorname{Sym}(P_0B)\succeq c_0P_0$, hence every eigenvalue of $B$
+has positive real part. The OU diffusion has a unique invariant Gaussian
+law, whose covariance is the unique solution of the displayed Lyapunov
+equation. All subsequences therefore have that limit. The bounds on higher even moments give uniform integrability, allowing
+expectations to pass to the limit and proving every claimed absolute
+moment convergence.
+
+Finally, its martingale origin variance equals the Green--Kubo matrix:
+the bounded Poisson decomposition telescopes in each partial action sum;
+dividing its covariance by the length and using absolute covariance
+summability identifies the limit with $Q_0$. This also applies to every
+scalar projection and hence to the matrix identity.
+\qed\end{proof}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "purpose": "Portable public figure regeneration; path-only adaptations to held typography sources.",
+  "scientific_random_draws": 0,
+  "new_scientific_statistics": 0,
+  "fitted_parameters": 0,
+  "scientific_sources_and_records_changed": false,
+  "adapted_files": [
+    {
+      "path": "paper/figure_typography_20261117.py",
+      "author_workspace_relative_origin": "research/submissions/jota_20261117/manuscript/figure_typography_20261117.py",
+      "old_sha256": "e7405aaf46b852b944f2a1c9521aa8ae1e24f5b7c87b15738cebca1c51ce31f9",
+      "new_sha256": "e53dc967b179d61628e44c35b8780d2a211648e5e517552d2dad7f31f37941cd",
+      "changes": [
+        "Default scientific root resolves relative to public repository data/workspace."
+      ],
+      "all_function_ast_unchanged": true,
+      "function_ast_sha256": {
+        "sha": "8ca4634934a29812b598355845e2e994574491baeebce3c13d923c92350adee1",
+        "risk_series": "b37ce33c0df1129bc98fad92516085b21931bcfff09cddd852d703e2b501c79f",
+        "error_bar": "93fc874afd5001cb9309c131b79445906c2cbfd230bc765e56a29aced8b60174",
+        "log_ticks": "347723c35237302f4c1c94ca0dcb807acf68f7fb221ee9aa69de621f3cf0f905",
+        "matrix_figure": "caa808f4e50a55dadc98a27dfd738cb19b0057e56baa650c1425c8e831c81d31",
+        "scalar_figure": "40cf52f6bf2c7d9479df81b39d32dd9a76172f11b51e6f7a982687c6f351a8f9",
+        "drawn_texts": "56e1381db9923f41623020ec33408d13124d496162c182c4a20d306aeae499f8",
+        "assert_fonts_and_bounds": "94428d3f432b26e54df14bb354f2cb05dd6beecf8e20421b2812a7ba0e2f8e4d",
+        "run": "199e13b6b732ebcaf70e8cb5b98b9ac2730442d29422e905a671e9715217d427"
+      }
+    },
+    {
+      "path": "paper/figure1_journal_typography_20261117.py",
+      "author_workspace_relative_origin": "research/submissions/jota_20261117/manuscript/figure1_journal_typography_20261117.py",
+      "old_sha256": "4a402a1a15a88017141e27f848319fe82cff35823142d4897bd10ecd31b97bd2",
+      "new_sha256": "3e2b100f5872e057f4c9e8ee403cea832ccc4d39c5e450200a94e281ccdbf354",
+      "changes": [
+        "Default scientific root resolves relative to public repository data/workspace."
+      ],
+      "all_function_ast_unchanged": true,
+      "function_ast_sha256": {
+        "sha": "81218fb2ab12b2dc19f8c061a3c4e5d10db58faa1552f42059baa7fef94298d7",
+        "run": "d81b25de93a52adc8ae307ab21fcd573d968bcdd1fa12eff41cbb417c38c31b5"
+      }
+    },
+    {
+      "path": "paper/decay_figure_typography_20261117.py",
+      "author_workspace_relative_origin": "research/submissions/jota_20261117/manuscript/decay_figure_typography_20261117.py",
+      "old_sha256": "91f497d7c0b117834bb4f49834727d9e945c13ac249438edf46b26ea250c10a6",
+      "new_sha256": "ec3549c48b0a72f8bc23637ea48d8dec74eedb106b6543e6d3090ed0aeb63835",
+      "changes": [
+        "Default scientific root resolves relative to public repository data/workspace.",
+        "Rebind local helper SHA256 after that helper path-only edit."
+      ],
+      "all_function_ast_unchanged": true,
+      "function_ast_sha256": {
+        "decay_figure": "69d07d27d132809fc1d5206676248000e7e7623ffb65c4b311b1199f51a9768d",
+        "run": "6faa6e56671ac84db4d789e910c6ad513ec24843c0081fab63d6654ca30c36c2"
+      }
+    }
+  ],
+  "new_entrypoint": {
+    "path": "scripts/reproduce_figures.py",
+    "sha256": "e7c777aca188a3f183884231c209a66350dfe3308395fa394ce6b8b5d90ddacb",
+    "uses_saved_records_only": true,
+    "refuses_existing_output_directory": true,
+    "refuses_output_inside_scientific_workspace": true,
+    "does_not_call_fixed_output_main_or_decay_run": true,
+    "expected_figure_files": 12,
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ]
+  },
+  "checks": {
+    "existing_literal_typography_tests_passed": 4,
+    "scientific_input_sha256_preflight_passed": 9,
+    "literal_wrapper_contracts_passed": 4,
+    "full_actual_reproduction_run_performed_for_this_record": false
+  },
+  "scope": "This source adaptation record does not claim an actual full rendering run. The reproduction command writes a separate input/producer/output hash receipt on completion. Numerical functions, display subsets and saved intervals are unchanged."
+}

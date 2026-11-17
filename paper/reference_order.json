@@ -1,0 +1,77 @@
+{
+  "policy": "Publisher alphabetic ordering; same first person with more than two authors is ordered by publication year, as requested by current JOTA references guidance.",
+  "keys": [
+    "balles2018dissecting",
+    "benaim1999",
+    "bernstein2018signsgd",
+    "borkarmeyn2000",
+    "cambanissimonsstout1976",
+    "cattaneo",
+    "chaudharisoatto2018",
+    "chen2019adamtype",
+    "chenmoumaguluri2022",
+    "cohen_edge",
+    "adaptive_edge",
+    "das",
+    "defossez2022simple",
+    "symmetry",
+    "dj2024",
+    "dj2026",
+    "ddb",
+    "duchi2011adagrad",
+    "eos",
+    "fort2015",
+    "fortpages",
+    "kingma2015adam",
+    "kunstner2023noise",
+    "kushneryin2003",
+    "litaie2017",
+    "liwenlyu",
+    "liu2021",
+    "loshchilov2019adamw",
+    "malladi",
+    "mandt2017",
+    "compagnoni",
+    "mouetal2020",
+    "pemantle1990",
+    "polyakjuditsky1992",
+    "reddi",
+    "robbinsmonro1951",
+    "simsekli",
+    "singh",
+    "smithle2018",
+    "su",
+    "thomas",
+    "wilson2017marginal",
+    "yaida2019",
+    "zaheer2018adaptive",
+    "zeiler2012adadelta",
+    "zhang_attention",
+    "zhang2022adam",
+    "zhang_hessian",
+    "zhuang2020adabelief",
+    "zou2019sufficient"
+  ],
+  "adjusted_groups": {
+    "Cohen Jeremy M.": {
+      "before": [
+        "adaptive_edge",
+        "cohen_edge"
+      ],
+      "after": [
+        "cohen_edge",
+        "adaptive_edge"
+      ]
+    },
+    "Zhang Yushun": {
+      "before": [
+        "zhang_hessian",
+        "zhang2022adam"
+      ],
+      "after": [
+        "zhang2022adam",
+        "zhang_hessian"
+      ]
+    }
+  }
+}

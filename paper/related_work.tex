@@ -1,0 +1,89 @@
+\subsection*{Related Work}
+\paragraph{Adaptive Updates and Convergence.}
+Adaptive coordinate scaling predates Adam through AdaGrad and ADADELTA
+\cite{duchi2011adagrad,zeiler2012adadelta}. Adam uses gradient-moment
+averages \cite{kingma2015adam}; AdamW separates weight decay from that
+scaling \cite{loshchilov2019adamw}. Sign and variance interpretations
+\cite{balles2018dissecting,bernstein2018signsgd} and alternative
+denominators such as AdaBelief \cite{zhuang2020adabelief} are established.
+Convergence analyses cover nonconvex settings
+\cite{zaheer2018adaptive,chen2019adamtype}, averaging-parameter conditions
+\cite{zou2019sufficient}, and unchanged Adam updates
+\cite{defossez2022simple,zhang2022adam}. Their assumptions do not imply
+minimizer consistency for every fixed-memory, constant-step problem.
+Our result concerns the specified AdamW denominator, including its shared
+history with the gradient.
+
+\paragraph{The Closest Comparisons.}
+The averaged Adam field already depends on the whole sampling law
+\cite{dj2024}. Its derivative and corrected noise covariance enter a
+decreasing-step, averaged-iterate central limit theorem conditional on
+convergence to a stable zero \cite{dj2026}. Theorem~4.12 of
+\cite{symmetry} concerns fixed isotropic curvature; here sign-symmetric
+noise and random curvature preserve the same zero while changing stability.
+Stochastic convex failure \cite{reddi}, deterministic AdamW instability
+and exact discrete-step conditions
+\cite[Proposition~4.3 and Appendix~A.6]{su}, and large-step stability
+phenomena \cite{cohen_edge,adaptive_edge,eos} are prior results.
+Normalization-dependent floors versus SGD under multiplicative noise also
+precede us \cite{singh}; that comparison changes the normalization rule.
+Our distinction is the same AdamW update, with fixed positive offset and
+decay, having vanishing versus persistent stationary error when only the
+pairing changes. The average loss, full gradient covariance kernel and both
+complete Hessian and noise marginals remain fixed. The moment averages
+continue fluctuating at the minimum even as the step vanishes.
+
+\paragraph{Classical Methods and Stationary Error.}
+Stochastic approximation \cite{robbinsmonro1951}, its differential-equation
+and stability methods \cite{kushneryin2003,benaim1999,borkarmeyn2000},
+unstable-point avoidance \cite{pemantle1990}, and constant-step stationary
+limits \cite{fortpages,ddb,chenmoumaguluri2022} supply established tools.
+We prove their required gradient-history estimates rather than claiming new
+Gaussian-limit or covariance methods. The additional work controls every
+stationary distribution satisfying the algorithm's moment constraints,
+including a case where
+the optimum repels the averaged dynamics. Exact SGD balance identities
+\cite{yaida2019} presuppose stationarity; martingale corrections handle
+dependent noise \cite{fort2015}. Iterate averaging changes fluctuations
+\cite{polyakjuditsky1992,mouetal2020}; our error concerns an unaveraged
+stationary iterate. Classical rearrangement inequalities
+\cite{cambanissimonsstout1976} give our scalar extrema after deriving the
+optimizer-specific response weight, not a new general coupling inequality.
+
+\paragraph{Diffusion Models and Memory.}
+Finite-time stochastic differential equation approximations
+\cite{litaie2017} extend to adaptive methods and scaling rules
+\cite{malladi,compagnoni}. Their Adam limits let memory parameters approach
+one as the step decreases; our main theorem fixes memory and the sampling
+law. These approximations already describe interactions between adaptive
+normalization and noise; different memory scalings can retain different
+parts of that interaction. Finite-time approximation alone does not justify
+exchanging long-time and small-step limits. Our separate long-memory result takes the small-step
+limit first, without covering every simultaneous scaling. The example
+challenges descriptions retaining only the matched summaries, not diffusion
+models that retain additional dependence information.
+
+\paragraph{Noise, Curvature and Adaptive Bias.}
+SGD diffusion models connect fluctuations to approximate Bayesian inference
+and noise scale \cite{mandt2017,smithle2018}, and anisotropic noise to
+probability currents \cite{chaudharisoatto2018}. Curvature--noise tradeoffs
+\cite{thomas}, Adam covariance with a population replacement for the
+random denominator \cite{liu2021}, bias near minimizer manifolds under
+another memory scaling \cite{liwenlyu}, preconditioning limits \cite{das},
+and discrete-update regularization \cite{cattaneo} are established.
+Keeping the realized denominator random distinguishes our exact response
+formula; the matched-law stationary error orders distinguish the
+construction.
+
+\paragraph{Connections to Transformers and Limits.}
+Heavy-tailed gradient noise \cite{simsekli,zhang_attention} and Hessian
+block differences \cite{zhang_hessian} offer other explanations for
+adaptive optimization. SGD--Adam gaps can persist without sampling noise
+\cite{kunstner2023noise}, and optimization gains need not improve
+generalization \cite{wilson2017marginal}. Our bounded-noise examples fix
+the entire Hessian law and isolate an additional dependence. They establish
+neither a full explanation of transformer optimization nor a language-model
+or generalization benefit. Bounded noise makes heavy tails unnecessary for
+this particular separation, without disputing their empirical role in
+neural-network training.
+

@@ -1,0 +1,134 @@
+\section{Why Stationary Laws Cannot Gather at an Unstable Optimum}\label{app:repulsion}
+
+Use the bounded optimizer state and corrected recursion of
+Appendix~\ref{app:transfer}. At zero parameters, each coordinate update
+has mean zero. Curvature may depend on noise magnitudes; flipping any
+individual noise-coordinate sign still leaves the joint law unchanged.
+
+\begin{lemma}[Uniform conditional origin excitation]
+\label{lem:uniform-origin-excitation}
+Let $|e_i|\leq R_{\max}$, with $\E e_i^2>0$ for every coordinate.
+For every old history and vector $v$, the origin conditional bracket obeys
+\begin{equation}\label{eq:uniform-origin-bracket}
+ v^\top q(0,Z)v\geq
+ \left(\frac{1-\alpha}{R_{\max}+\epsilon}\right)^2
+       \sum_i v_i^2\E e_i^2.
+\end{equation}
+Thus fresh noise remains present even after conditioning on the entire
+past. Curvature may depend on noise; it does not enter the update at
+zero parameters.
+\end{lemma}
+\begin{proof}
+The averaged update at zero is zero. Conditional on future noise
+magnitudes, every fresh sign has mean zero. For the update $k$ steps
+ahead, averaging over fresh signs leaves only the old numerator. Thus
+the $i$th corrector at zero has the exact representation
+\[
+ H_{0,i}(Z)=\sum_{l\geq0}e_{i,-l}a_{i,l}(|Z|),\qquad
+ a_{i,l}(|Z|)=\sum_{k\geq0}w_{k+l}
+       \E_{\rm future}\frac1{\sqrt{V_{i,k}}+\epsilon}.
+\]
+Here $|Z|$ denotes the coordinate-noise magnitude history. Its coefficients
+are sign independent and satisfy
+\[
+ 0\leq a_{i,l}\leq\frac{\alpha^l}{\epsilon},\qquad
+ a_{i,0}\geq\frac{w_0}{R_{\max}+\epsilon}>0.
+\]
+The upper bound gives uniform absolute summability, at most
+$R_{\max}/[\epsilon(1-\alpha)]$, justifying all exchanges. The lower
+bound retains the $k=0$ term and uses $V_{i,k}\leq R_{\max}^2$.
+
+Condition on the old history and the complete fresh magnitude vector
+$r=(|e_{i,n+1}|)_i$. Then
+\[
+ H_{0,i}(Z_{n+1})=e_{i,n+1}a_{i,0}(|Z_{n+1}|)+b_i,
+\]
+where the coefficient and $b_i$ are measurable under this conditioning.
+Because each coordinate sign can be flipped without changing the law,
+the nonzero fresh signs are independent and equally likely positive or
+negative conditional on $r$. Their cross covariances are zero, while
+zero coordinates contribute zero. Therefore
+\[
+ \operatorname{Var}\!\left(v^\top H_0(Z_{n+1})\mid\mathcal F_n,r\right)
+   =\sum_i v_i^2r_i^2a_{i,0}^2.
+\]
+The law of total variance, the coefficient lower bound and freshness of
+$r$ prove \eqref{eq:uniform-origin-bracket}. Subtracting the past-measurable term
+$\mathsf P H_0(Z_n)$ does not change this conditional variance.
+\qed\end{proof}
+
+\begin{proposition}[Stationary mass cannot concentrate at the repelling origin]
+\label{prop:matrix-stationary-repulsion}
+In dimension two assume the noise hypotheses of
+Lemma~\ref{lem:uniform-origin-excitation}, and let $v=(1,-1)/\sqrt2$.
+Suppose swapping the two coordinates swaps the averaged drift in the same
+way (exchange equivariance), and its derivative at zero has a strictly negative
+eigenvalue on $v$. Under the bounded native setup above, there exist
+$\delta,c,\eta_0>0$ such that every invariant native-cone law with
+$0<\eta<\eta_0$ satisfies
+\[
+ \Pp(\|u\|\geq\delta)\geq c,\qquad
+ \E L_{\rm pop}(u)\geq
+       \tfrac12\lambda_{\min}(\bar H)\delta^2c>0,
+ \quad \bar H=\E A.
+\]
+The constants and complete sample law are fixed before $\eta$ decreases.
+\end{proposition}
+\begin{proof}
+Write $y=v^\top x$ and $G_v=v^\top G$. Coordinate-swap symmetry implies
+$G_v(z,0)=0$ in symmetric/antisymmetric coordinates. Integrating its
+$y$ derivative gives $|G_v(x)|\leq L|y|$ on an enlarged bounded parameter box.
+The strictly negative derivative at zero gives $a_0,\delta_0>0$ with
+\[
+ yG_v(x)\leq-a_0y^2\quad\hbox{when }\|x\|\leq\delta_0.
+\]
+The conditional noise bound in Lemma~\ref{lem:uniform-origin-excitation}
+and the bracket's uniform Lipschitz bound imply that some fixed
+neighborhood has
+\[
+ q_v(x,Z):=v^\top q(x,Z)v\geq q_{\min}/2>0.
+\]
+Globally on the enlarged box $0\leq q_v\leq q_{\max}<\infty$.
+Set $h=6q_{\max}/a_0$ and
+$\phi_\eta(y)=\log(y^2+h\eta)$. This test is bounded on the parameter
+box for each positive $\eta$. Its first three derivative bounds are
+$O(\eta^{-1/2})$, $O(\eta^{-1})$, $O(\eta^{-3/2})$.
+
+Expand \eqref{eq:corrected-core} by Taylor's formula and use stationarity
+to set the expected change of the test to zero. This gives
+\begin{equation}\label{eq:conditional-log-generator}
+ 0=\E B_\eta(X,Z)+O(\sqrt\eta),\qquad
+ B_\eta(x,Z)=-\phi_\eta'(y)G_v(x)
+             +\tfrac\eta2\phi_\eta''(y)q_v(x,Z).
+\end{equation}
+Indeed, the first martingale term and its drift cross term have zero
+expectation. The $R$ term times $\phi'$ and the third-order jump remainder
+are $O(\eta^{3/2})$ before division by $\eta$. The drift-square term is
+$O(\eta^2)$ because $|G_v(x)|\leq L|y|$ and
+$|\phi_\eta''(y)|y^2\leq C$. Replacing $q(u,Z)$ by $q(X,Z)$ costs
+$O(\eta^2)$ by $\|u-X\|\leq C\eta$. Throughout the calculation the variance remains conditional on the past;
+it has not been replaced by its unconditional mean in
+\eqref{eq:conditional-log-generator}.
+
+On a fixed neighborhood where the drift and bracket bounds both hold,
+put $z=y^2/(h\eta)$. Then
+\[
+ B_\eta(x,Z)\geq\frac{2a_0z}{1+z}
+       +\frac{q_v(x,Z)}h\frac{1-z}{(1+z)^2}.
+\]
+For $z\leq1/2$, the second term is at least $q_{\min}/(9h)$ and the
+first is nonnegative. For $z>1/2$, the first is at least $2a_0/3$ and
+the second at least $-q_{\max}/h=-a_0/6$. Consequently
+\[
+ B_\eta(x,Z)\geq\kappa:=
+       \min\{q_{\min}/(9h),a_0/2\}>0
+\]
+on that neighborhood for every history. Throughout the enlarged bounded
+box it is at least
+$-C_1$, with $C_1=2L+q_{\max}/h$. Equation
+\eqref{eq:conditional-log-generator} therefore forces a fixed positive
+probability outside the neighborhood for all sufficiently small $\eta$. Since
+$\|u-X\|\leq C\eta$, halving its radius transfers the probability
+bound to $u$. Positive $\bar H$ gives the stated risk lower bound.
+\qed\end{proof}
+

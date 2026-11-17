@@ -1,0 +1,99 @@
+{
+  "status": "finished",
+  "certificate_complete": true,
+  "scientific_random_draws": 0,
+  "method": "Exhaustive exact dyadic prefixes plus directed48digit Decimal intervals and uniform analytic omission bounds",
+  "source_sha256_before": {
+    "experiments/q2_matrix_susceptibility_certificate_20261117.py": "eda13382f7e4798d1e865bf3894c4875ec890efba2ae808fd3acad072f409a99",
+    "tests/test_q2_matrix_susceptibility_certificate_20261117.py": "1e0ff8bbd789a2bea0777a7e771f20492eb5b00e18e509230ca348bd91f133f5",
+    "research/q2_matched_coupling_instability_20261117.md": "db5f1c7cabeebc67fdbddc4c55f5eb8282ea9b06d821f67339b150a6547fd0ee"
+  },
+  "parameters": {
+    "alpha": 0.1,
+    "beta": 0.2,
+    "epsilon": 0.03,
+    "decay": 0.1,
+    "matrices": [
+      [
+        [
+          1.0,
+          2.9
+        ],
+        [
+          2.9,
+          9.0
+        ]
+      ],
+      [
+        [
+          9.0,
+          2.9
+        ],
+        [
+          2.9,
+          1.0
+        ]
+      ]
+    ],
+    "noise_axis_amplitude": 1.0,
+    "prefix_length": 14,
+    "numerator_terms": 8
+  },
+  "instability_verified": true,
+  "prefixes": 16384,
+  "finite_kernel_bounds": {
+    "quiet": [
+      "5.76009014013181460583342182268401355401910284280",
+      "5.76009014013181460583342182268401355401910293333"
+    ],
+    "noisy": [
+      "0.183756860009174574153267623915616372671527214512",
+      "0.183756860009174574153267623915616372671527221089"
+    ]
+  },
+  "omission_allowance": "0.0568892222222222485387802085146805135607660762543",
+  "kernel_bounds": {
+    "quiet": [
+      "5.70320091790959235729464161416933304045833676654",
+      "5.81697936235403685437220203119869406757986900959"
+    ],
+    "noisy": [
+      "0.126867637786952325614487415400935859110761138257",
+      "0.240646082231396822692047832430296886232293297344"
+    ]
+  },
+  "decay_plus_field_eigenvalue_bounds": {
+    "coupled_antisymmetric": [
+      "-5.03918409898613014901845841331243184492990516155",
+      "-4.58407032120835216070821674519498773644377644534"
+    ],
+    "coupled_symmetric": [
+      "11.9761042347560711807748125652941203758271366208",
+      "12.8749539458671826975819839615655518301448740444"
+    ],
+    "independent_antisymmetric": [
+      "6.22157198348137218151275443127199516355951832733",
+      "6.46050671681470563548118720529417398045710274684"
+    ],
+    "independent_symmetric": [
+      "23.1287707950013512441351209628309147385222878773",
+      "24.0276205061124627609422923591023461928400254689"
+    ],
+    "sample_hessian_minimum": [
+      "0.059352269185749822301790253112641266716646961780",
+      "0.059352269185749822301790253112641266716646961795"
+    ],
+    "population_hessian_minimum": [
+      "2.10000000000000008881784197001252323389053344726",
+      "2.10000000000000008881784197001252323389053344727"
+    ]
+  },
+  "source_sha256_after": {
+    "experiments/q2_matrix_susceptibility_certificate_20261117.py": "eda13382f7e4798d1e865bf3894c4875ec890efba2ae808fd3acad072f409a99",
+    "tests/test_q2_matrix_susceptibility_certificate_20261117.py": "1e0ff8bbd789a2bea0777a7e771f20492eb5b00e18e509230ca348bd91f133f5",
+    "research/q2_matched_coupling_instability_20261117.md": "db5f1c7cabeebc67fdbddc4c55f5eb8282ea9b06d821f67339b150a6547fd0ee"
+  },
+  "elapsed_seconds": 5.87134808299993,
+  "peak_rss_bytes": 18186240,
+  "sources_unchanged": true
+}

@@ -1,0 +1,1868 @@
+{
+  "status": "all_selected_references_validated_online",
+  "selected_reference_count": 50,
+  "validation_date_utc": "2026-11-17",
+  "scope": "Every selected work was individually checked online against primary paper/publisher/author or publisher-deposited metadata and the indicated citation claim. Access levels and limitations are preserved. This is not external peer review or independent verification of all cited proofs.",
+  "records": [
+    {
+      "bibkey": "duchi2011adagrad",
+      "title": "Adaptive Subgradient Methods for Online Learning and Stochastic Optimization",
+      "authors": [
+        "John Duchi",
+        "Elad Hazan",
+        "Yoram Singer"
+      ],
+      "year": 2011,
+      "venue": "Journal of Machine Learning Research 12(61):2121-2159",
+      "url": "https://jmlr.org/papers/v12/duchi11a.html",
+      "checked_urls": [
+        "https://jmlr.org/papers/v12/duchi11a.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The publisher page supplies all authors and the complete journal citation. Its abstract develops adaptive subgradient methods whose geometry changes with previously observed gradients and gives regret guarantees relative to hindsight choices of proximal geometry.",
+      "evidence_location": "JMLR publisher page, bibliographic header and abstract; lines 30-36.",
+      "metadata_location": "",
+      "claim": "Adaptive geometry based on past gradients predates Adam; AdaGrad provides a foundational example with online-learning guarantees. These regret results do not imply the fixed-memory, constant-step stationary claims proved here.",
+      "suggested_placement": "Section 1 short historical paragraph distinguishing adaptive-gradient foundations from fixed-step stationary dynamics.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "manuscript_citation_lines": [
+        113
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "zeiler2012adadelta",
+      "title": "ADADELTA: An Adaptive Learning Rate Method",
+      "authors": [
+        "Matthew D. Zeiler"
+      ],
+      "year": 2012,
+      "venue": "arXiv preprint arXiv:1212.5701",
+      "url": "https://arxiv.org/abs/1212.5701",
+      "checked_urls": [
+        "https://arxiv.org/abs/1212.5701"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The primary submission page names Zeiler as the sole author and dates the preprint to December 2012. Its abstract presents coordinate-specific step adaptation using first-order information with modest additional computational cost.",
+      "evidence_location": "arXiv title, author, submission date and abstract; lines 8-18.",
+      "metadata_location": "",
+      "claim": "Coordinate-specific learning-rate adaptation using gradient history has established algorithmic precedents besides AdaGrad and Adam. The paper is background, not evidence for noise-curvature coupling or a modern LLM advantage.",
+      "suggested_placement": "Section 1 concise history of adaptive updates, grouped with AdaGrad and Adam.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "The opened primary page does not identify a conference or journal; retain the preprint designation.",
+      "manuscript_citation_lines": [
+        114
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "kingma2015adam",
+      "title": "Adam: A Method for Stochastic Optimization",
+      "authors": [
+        "Diederik P. Kingma",
+        "Jimmy Ba"
+      ],
+      "year": 2015,
+      "venue": "3rd International Conference on Learning Representations (ICLR 2015)",
+      "url": "https://arxiv.org/abs/1412.6980",
+      "checked_urls": [
+        "https://arxiv.org/abs/1412.6980"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The author-deposited primary page identifies the authors, title and ICLR 2015 publication. It introduces an optimizer using adaptive first- and second-moment estimates. The initial arXiv submission is from December 2014; the conference year is 2015.",
+      "evidence_location": "arXiv abstract and publication comment; page lines 8-19.",
+      "metadata_location": "",
+      "claim": "Adam uses running estimates of gradient moments to determine its update. Cite for the algorithm definition and history, not as a valid blanket convergence guarantee: subsequent work identified a problem in the original convergence argument.",
+      "suggested_placement": "Section 1 optimizer background; Section 2 first definition of Adam and its moment variables.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "The primary arXiv author field uses Jimmy Ba. Use 2015 for the ICLR paper, not the 2014 preprint date.",
+      "manuscript_citation_lines": [
+        115
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "loshchilov2019adamw",
+      "title": "Decoupled Weight Decay Regularization",
+      "authors": [
+        "Ilya Loshchilov",
+        "Frank Hutter"
+      ],
+      "year": 2019,
+      "venue": "International Conference on Learning Representations (ICLR 2019)",
+      "url": "https://arxiv.org/abs/1711.05101",
+      "checked_urls": [
+        "https://arxiv.org/abs/1711.05101"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The primary abstract distinguishes weight decay from an L2 penalty for adaptive algorithms and proposes applying weight decay separately from the loss-gradient update. Its publication comment explicitly identifies ICLR 2019; the first preprint is from November 2017.",
+      "evidence_location": "arXiv abstract, authors and publication comment; lines 8-20.",
+      "metadata_location": "",
+      "claim": "Decoupled weight decay and adding an L2 penalty to the gradient generally produce different adaptive-optimizer updates. This supports the manuscript's explicit AdamW decay convention.",
+      "suggested_placement": "Section 2 immediately after the AdamW update and explanation of the separate lambda u term.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "The OpenReview forum was attempted but returned a browser-verification page. Validation uses the successfully opened author-deposited arXiv source, which explicitly states ICLR 2019.",
+      "manuscript_citation_lines": [
+        116
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "balles2018dissecting",
+      "title": "Dissecting Adam: The Sign, Magnitude and Variance of Stochastic Gradients",
+      "authors": [
+        "Lukas Balles",
+        "Philipp Hennig"
+      ],
+      "year": 2018,
+      "venue": "Proceedings of the 35th International Conference on Machine Learning, PMLR 80:404-413",
+      "url": "https://proceedings.mlr.press/v80/balles18a.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v80/balles18a.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The official proceedings page identifies the complete citation. The authors decompose Adam into a sign-based direction and a step magnitude adapted to relative gradient variability, then examine these ingredients separately.",
+      "evidence_location": "PMLR official page, title/authors/venue, abstract and BibTeX; lines 8-23.",
+      "metadata_location": "",
+      "claim": "Adam's normalization already has established sign-and-variance interpretations. The present paper should distinguish its fixed-marginal curvature-noise coupling classification from claiming that normalized or sign-like updates are a new observation.",
+      "suggested_placement": "Section 1 related-work paragraph on mechanisms of adaptation; Section 8 limitations on explaining the Adam-SGD gap.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "manuscript_citation_lines": [
+        118
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "bernstein2018signsgd",
+      "title": "signSGD: Compressed Optimisation for Non-Convex Problems",
+      "authors": [
+        "Jeremy Bernstein",
+        "Yu-Xiang Wang",
+        "Kamyar Azizzadenesheli",
+        "Animashree Anandkumar"
+      ],
+      "year": 2018,
+      "venue": "Proceedings of the 35th International Conference on Machine Learning, PMLR 80:560-569",
+      "url": "https://proceedings.mlr.press/v80/bernstein18a.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v80/bernstein18a.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The official PMLR page lists the full citation and studies sign-compressed stochastic gradients. Its abstract identifies relative l1/l2 properties of gradient, curvature and noise as relevant to comparisons with SGD, and reports a momentum variant resembling Adam empirically on ImageNet.",
+      "evidence_location": "Official PMLR title/authors/venue, abstract and BibTeX; lines 8-26.",
+      "metadata_location": "",
+      "claim": "Sign-based update geometry and its relationship to noise and curvature already have a substantial theoretical literature. This supplies background for normalized-update mechanisms, not a prior proof of the present fixed-marginal stationary phase separation.",
+      "suggested_placement": "Section 1 mechanism paragraph grouped with Balles-Hennig and Kunstner, if sign-descent interpretations are mentioned.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "Use the official PMLR full name Animashree Anandkumar; the deposited PDF byline shortens this to Anima Anandkumar.",
+      "manuscript_citation_lines": [
+        119
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "zaheer2018adaptive",
+      "title": "Adaptive Methods for Nonconvex Optimization",
+      "authors": [
+        "Manzil Zaheer",
+        "Sashank J. Reddi",
+        "Devendra Sachan",
+        "Satyen Kale",
+        "Sanjiv Kumar"
+      ],
+      "year": 2018,
+      "venue": "Advances in Neural Information Processing Systems 31 (NeurIPS 2018)",
+      "url": "https://proceedings.neurips.cc/paper/2018/hash/90365351ccc7437a1309dc64e4db32a3-Abstract.html",
+      "checked_urls": [
+        "https://proceedings.neurips.cc/paper/2018/hash/90365351ccc7437a1309dc64e4db32a3-Abstract.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The official proceedings page analyzes adaptive optimizers in nonconvex stochastic problems, including how increasing minibatch sizes affects approach to stationarity. It also introduces Yogi to regulate the effective stepsize.",
+      "evidence_location": "Official NeurIPS title/authors/venue and abstract; lines 0-10. The primary paper PDF spells Reddi's middle initial J.",
+      "metadata_location": "",
+      "claim": "There is established nonconvex convergence analysis whose guarantees depend on noise magnitude and minibatch size. Such results address convergence conditions and noise floors, rather than identifying sharp differences between couplings with identical complete marginals.",
+      "suggested_placement": "Section 1 convergence literature paragraph, alongside Reddi, Chen, Zou and Defossez.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "manuscript_citation_lines": [
+        122
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "chen2019adamtype",
+      "title": "On the Convergence of A Class of Adam-Type Algorithms for Non-Convex Optimization",
+      "authors": [
+        "Xiangyi Chen",
+        "Sijia Liu",
+        "Ruoyu Sun",
+        "Mingyi Hong"
+      ],
+      "year": 2019,
+      "venue": "International Conference on Learning Representations (ICLR 2019)",
+      "url": "https://arxiv.org/pdf/1808.02941",
+      "checked_urls": [
+        "https://arxiv.org/pdf/1808.02941"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The primary PDF header states ICLR 2019 and lists all four authors. The abstract supplies sufficient conditions for a class of adaptive momentum algorithms to attain nonconvex stationarity bounds, and gives examples showing failures when those conditions are violated.",
+      "evidence_location": "Primary paper PDF, first page header and abstract; lines 0-25. arXiv first submission is August 2018.",
+      "metadata_location": "",
+      "claim": "Adam-type convergence has sufficient-condition analyses covering several update rules. Do not state that these guarantees cover every fixed-beta, constant-learning-rate Adam process or imply convergence to its objective minimizer under the present assumptions.",
+      "suggested_placement": "Section 1 convergence literature paragraph; distinguish varying-step stationarity guarantees from fixed-step invariant laws.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "The direct OpenReview PDF URL returned a verification page; the successfully opened author-deposited PDF itself confirms the conference venue.",
+      "manuscript_citation_lines": [
+        122
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "zou2019sufficient",
+      "title": "A Sufficient Condition for Convergences of Adam and RMSProp",
+      "authors": [
+        "Fangyu Zou",
+        "Li Shen",
+        "Zequn Jie",
+        "Weizhong Zhang",
+        "Wei Liu"
+      ],
+      "year": 2019,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2019), pages 11127-11135",
+      "url": "https://arxiv.org/abs/1811.09358",
+      "checked_urls": [
+        "https://arxiv.org/abs/1811.09358"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The primary arXiv page provides all authors and explicitly confirms CVPR 2019 acceptance. The abstract derives a condition involving the base stepsize and historical squared-gradient weights sufficient for convergence of generic Adam/RMSProp in nonconvex stochastic optimization.",
+      "evidence_location": "arXiv author/title/abstract/acceptance comment; lines 8-20. Official CVF indexed primary citation supplies pages 11127-11135.",
+      "metadata_location": "",
+      "claim": "The behavior of the second-moment memory and learning-rate schedule is central to established convergence conditions. These conditions are not a claim of minimizer consistency for arbitrary fixed beta and fixed learning rate.",
+      "suggested_placement": "Section 1 convergence literature, and Section 5 when relating the beta-to-one limit to convergence regimes.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "The CVF publisher page was located and its citation inspected in search, but direct opening returned 403. The successfully opened primary arXiv page independently confirms the title, authors, claim and conference; it is the validation URL.",
+      "manuscript_citation_lines": [
+        123
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "defossez2022simple",
+      "title": "A Simple Convergence Proof of Adam and Adagrad",
+      "authors": [
+        "Alexandre Défossez",
+        "Léon Bottou",
+        "Francis Bach",
+        "Nicolas Usunier"
+      ],
+      "year": 2022,
+      "venue": "Transactions on Machine Learning Research (October 2022)",
+      "url": "https://arxiv.org/pdf/2003.02395",
+      "checked_urls": [
+        "https://arxiv.org/pdf/2003.02395"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The final author-deposited PDF explicitly carries the TMLR October 2022 publication header. It proves nonconvex stationarity bounds for Adam and Adagrad with bounded stochastic gradients and appropriately chosen optimization parameters, with explicit dependence on momentum.",
+      "evidence_location": "Primary PDF first-page header, authors and abstract; lines 0-28; setup discussion on second page, lines 51-70.",
+      "metadata_location": "",
+      "claim": "Rigorous convergence guarantees for Adam require a specified parameter regime and assumptions. They should be distinguished from a fixed-memory, constant-step invariant-law limit and from a claim that every small-step invariant law concentrates at the population minimum.",
+      "suggested_placement": "Section 1 convergence literature and the long-second-moment-memory comparison in Section 5.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "Accented primary author names are Alexandre Défossez and Léon Bottou. Initial preprint 2020; journal publication 2022. Direct OpenReview PDF access was challenged; the opened arXiv PDF is the published-format version.",
+      "manuscript_citation_lines": [
+        125
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "zhang2022adam",
+      "title": "Adam Can Converge Without Any Modification On Update Rules",
+      "authors": [
+        "Yushun Zhang",
+        "Congliang Chen",
+        "Naichen Shi",
+        "Ruoyu Sun",
+        "Zhi-Quan Luo"
+      ],
+      "year": 2022,
+      "venue": "Advances in Neural Information Processing Systems 35 (NeurIPS 2022)",
+      "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/b6260ae5566442da053e5ab5d691067a-Abstract-Conference.html",
+      "checked_urls": [
+        "https://papers.neurips.cc/paper_files/paper/2022/hash/b6260ae5566442da053e5ab5d691067a-Abstract-Conference.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The official page proves convergence to a critical-point neighborhood for sufficiently large beta2 and beta1 below its square root, with stronger conclusions under an additional growth condition. It also describes divergence regions for small beta2. Hyperparameters depend on the fixed problem.",
+      "evidence_location": "Official NeurIPS metadata and abstract; lines 0-13.",
+      "metadata_location": "",
+      "claim": "Problem-dependent hyperparameters and memory values already yield established convergence/divergence regime distinctions for vanilla Adam. The novelty claim here must concern changing the noise-curvature coupling with fixed marginals and fixed optimizer parameters, rather than the mere existence of different dynamical phases.",
+      "suggested_placement": "Section 1 before stating the precise novelty of the coupling-controlled phase distinction; Section 5 long-memory interpretation.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "revision_metadata": {
+        "title": "Adam Converges Without Any Modification On Update Rules",
+        "fullauthors": [
+          "Yushun Zhang",
+          "Bingran Li",
+          "Congliang Chen",
+          "Zhi-Quan Luo",
+          "Ruoyu Sun"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint arXiv:2603.02092; no journal acceptance inferred",
+        "url": "https://arxiv.org/abs/2603.02092",
+        "opened_online": true,
+        "retrievalUTC": "2026-11-17T13:59:34Z",
+        "relationship_evidence": "The primary PDF first-page footnote, lines 59-61, explicitly calls it the extended journal version of the NeurIPS 2022 paper and describes a simplified random-shuffling proof plus a new with-replacement-sampling proof.",
+        "count_as_separate_bibliography_work": false,
+        "scope_note": "If an iid with-replacement theorem is discussed, cite the 2026 version with its own author list; otherwise retain the published 2022 citation. Do not attribute the added 2026 theorem to the 2022 conference paper."
+      },
+      "manuscript_citation_lines": [
+        125
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "zhuang2020adabelief",
+      "title": "AdaBelief Optimizer: Adapting Stepsizes by the Belief in Observed Gradients",
+      "authors": [
+        "Juntang Zhuang",
+        "Tommy Tang",
+        "Yifan Ding",
+        "Sekhar C. Tatikonda",
+        "Nicha Dvornek",
+        "Xenophon Papademetris",
+        "James S. Duncan"
+      ],
+      "year": 2020,
+      "venue": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/d9d4f495e875a2e075a1a4a6e1b9770f-Abstract.html",
+      "checked_urls": [
+        "https://proceedings.neurips.cc/paper/2020/hash/d9d4f495e875a2e075a1a4a6e1b9770f-Abstract.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The official proceedings identifies NeurIPS 2020 and all authors. The primary abstract motivates an adaptive stepsize using disagreement between the observed gradient and a prediction supplied by its exponential moving average, rather than only the uncentered gradient-square statistic.",
+      "evidence_location": "Official NeurIPS title/authors/venue and abstract, lines 0-12; primary arXiv abstract, lines 16-24.",
+      "metadata_location": "",
+      "claim": "The choice of statistic in an adaptive denominator is an established algorithmic design question. The paper's mathematical results concern the stated AdamW recursion and do not automatically transfer to alternatives such as AdaBelief.",
+      "suggested_placement": "Section 8 when delimiting the result to the specified squared-gradient-memory recursion; an optional short sentence naming alternative denominator designs.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "The official page includes Sekhar C Tatikonda; the primary arXiv page supplies James S. Duncan and spells Dvornek consistently. Do not reproduce the apparent Dvornik OCR error from the indexed PDF.",
+      "manuscript_citation_lines": [
+        129
+      ],
+      "manuscript_citation_contexts": [
+        "\\subsection*{Related work}\n\\paragraph{Adaptive updates and convergence.}\nCoordinatewise adaptation includes AdaGrad \\cite{duchi2011adagrad} and\nADADELTA \\cite{zeiler2012adadelta}. Adam combines averages of gradients and\nsquared gradients \\cite{kingma2015adam}; AdamW applies weight decay separately\nfrom this rescaling \\cite{loshchilov2019adamw}. Earlier analyses separate\nthe roles of sign, magnitude and variance in Adam\n\\cite{balles2018dissecting}, and study updates that retain only gradient\nsigns \\cite{bernstein2018signsgd}. Our question concerns the dependence\nbetween the gradient and its rescaling, including their shared history.\nConvergence guarantees for adaptive methods already cover several\nnonconvex settings \\cite{zaheer2018adaptive,chen2019adamtype}, sufficient\nconditions on the averaging parameters \\cite{zou2019sufficient}, and\nproofs for Adam without changing its update rule\n\\cite{defossez2022simple,zhang2022adam}. These guarantees have specific\nassumptions on parameters, steps or sampling; they do not imply convergence\nfor every fixed-memory constant-step problem studied here. Other methods\nchange the statistic in the denominator: AdaBelief uses gradient prediction\nerrors \\cite{zhuang2020adabelief}. Our exact formula concerns AdamW's\nsquared-gradient denominator and is not a theorem for all adaptive methods."
+      ]
+    },
+    {
+      "bibkey": "dj2024",
+      "title": "Convergence rates for the Adam optimizer",
+      "authors": [
+        "Steffen Dereich",
+        "Arnulf Jentzen"
+      ],
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2407.21078",
+      "checked_urls": [
+        "https://arxiv.org/abs/2407.21078",
+        "https://arxiv.org/html/2407.21078v1"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "Definition 2.4 averages the native quotient over a whole frozen innovation history. The paper develops its sequence space, observable regularity and perturbation analysis. This supports attributing the full-law field and history framework to prior work, without attributing the present matched-coupling theorem to it.",
+      "evidence_location": "Full text Definition 2.4, equation (9); Sections 3–4 and 8.",
+      "metadata_location": "arXiv abstract-page title, author list and submission history (29 July 2024).",
+      "claim": "The averaged Adam update depends on the complete sampling law and can differ from the population gradient; the history-space framework is prior work.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2407.21078",
+      "identifier": "arXiv:2407.21078v1",
+      "full_text_opened": true,
+      "manuscript_citation_lines": [
+        134
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed."
+      ]
+    },
+    {
+      "bibkey": "dj2026",
+      "title": "Central limit theorem for the averaged Adam optimizer",
+      "authors": [
+        "Steffen Dereich",
+        "Arnulf Jentzen"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2606.21433",
+      "checked_urls": [
+        "https://arxiv.org/abs/2606.21433",
+        "https://arxiv.org/html/2606.21433v1"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The main theorem assumes a linearization with strictly negative spectral real parts and gives an averaged-iterate CLT conditional on convergence to that zero. Its covariance uses a martingale correction. This validates the stable-attractor comparison and distinguishes it from constant-step invariant-risk separation.",
+      "evidence_location": "Definition 2.5; Theorem 2.6(b), equations (14)–(20).",
+      "metadata_location": "arXiv abstract-page author list and submission history (19 June 2026).",
+      "claim": "Gaussian limit theorems for averaged Adam use a field derivative, a corrected noise covariance and a stable attractor.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2606.21433",
+      "identifier": "arXiv:2606.21433v1",
+      "full_text_opened": true,
+      "manuscript_citation_lines": [
+        136,
+        161
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed.",
+        "The assumptions differ in specific ways. The quadratic symmetry result in\n\\cite[Theorem~4.12]{symmetry} uses a fixed Hessian proportional to the identity;\nour noise remains sign symmetric while random Hessians change\nthe stability of the same optimum. The deterministic local analysis in\n\\cite[Proposition~4.3 and Appendix~A.6]{su} includes fixed-step conditions,\nso fixed memory alone is not a distinction. Here AdamW's gradient averages\nkeep fluctuating even at the minimum as $\\eta\\downarrow0$, and only the\npairing of the Hessian and noise changes. The averaged-iterate Gaussian\nlimit theorem in \\cite{dj2026} uses decreasing steps and is conditional on\nconvergence to a stable zero of the averaged update; we compare a\nglobally restoring case with a repelling case under the same listed summaries."
+      ]
+    },
+    {
+      "bibkey": "symmetry",
+      "title": "Adam symmetry theorem: characterization of the convergence of the stochastic Adam optimizer",
+      "authors": [
+        "Steffen Dereich",
+        "Thang Do",
+        "Arnulf Jentzen",
+        "Philippe von Wurstemberger"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2511.06675",
+      "checked_urls": [
+        "https://arxiv.org/abs/2511.06675",
+        "https://arxiv.org/html/2511.06675v2"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "Theorem 4.12 uses squared Euclidean distance losses and iid two-point data, hence deterministic Hessian proportional to the identity. Under its decreasing-step assumptions it equates symmetry with convergence/error properties. This supports the manuscript's theorem-specific contrast; broader results elsewhere in the paper should not be dismissed as isotropic.",
+      "evidence_location": "Theorem 4.12, full-text lines 1812–1831.",
+      "metadata_location": "arXiv author list; first submission 10 November 2025 and revision 22 June 2026.",
+      "claim": "The specifically cited symmetry theorem treats fixed isotropic sample curvature and separates symmetric from asymmetric data.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2511.06675",
+      "identifier": "arXiv:2511.06675v2",
+      "revision_year": 2026,
+      "full_text_opened": true,
+      "manuscript_citation_lines": [
+        138,
+        154
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed.",
+        "The assumptions differ in specific ways. The quadratic symmetry result in\n\\cite[Theorem~4.12]{symmetry} uses a fixed Hessian proportional to the identity;\nour noise remains sign symmetric while random Hessians change\nthe stability of the same optimum. The deterministic local analysis in\n\\cite[Proposition~4.3 and Appendix~A.6]{su} includes fixed-step conditions,\nso fixed memory alone is not a distinction. Here AdamW's gradient averages\nkeep fluctuating even at the minimum as $\\eta\\downarrow0$, and only the\npairing of the Hessian and noise changes. The averaged-iterate Gaussian\nlimit theorem in \\cite{dj2026} uses decreasing steps and is conditional on\nconvergence to a stable zero of the averaged update; we compare a\nglobally restoring case with a repelling case under the same listed summaries."
+      ]
+    },
+    {
+      "bibkey": "reddi",
+      "title": "On the Convergence of Adam and Beyond",
+      "authors": [
+        "Sashank J. Reddi",
+        "Satyen Kale",
+        "Sanjiv Kumar"
+      ],
+      "year": 2018,
+      "venue": "International Conference on Learning Representations (ICLR)",
+      "url": "https://arxiv.org/abs/1904.09237",
+      "checked_urls": [
+        "https://arxiv.org/abs/1904.09237",
+        "https://arxiv.org/html/1904.09237v1"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "Theorem 3 supplies a stochastic convex counterexample under fixed admissible momentum parameters. This directly supports the manuscript's acknowledgment that convex stochastic nonconvergence is classical. The conference year 2018 and later arXiv identifier are consistent, not a bibliographic mismatch.",
+      "evidence_location": "Theorem 3 and Appendix C.",
+      "metadata_location": "arXiv author list and comment identifying ICLR 2018; arXiv upload is dated 19 April 2019.",
+      "claim": "Adam failure on stochastic convex problems is established prior work.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.1904.09237",
+      "identifier": "arXiv:1904.09237v1",
+      "preprint_year": 2019,
+      "full_text_opened": true,
+      "access_notes": [
+        "OpenReview forum was also attempted but returned a browser challenge; the official author-uploaded arXiv paper was accessible."
+      ],
+      "manuscript_citation_lines": [
+        139
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed."
+      ]
+    },
+    {
+      "bibkey": "su",
+      "title": "A Stability Analysis of AdamW: Unstable Equilibria and Non-Convergence",
+      "authors": [
+        "Baiyu Su",
+        "Lizhang Chen",
+        "Qiang Liu"
+      ],
+      "year": 2026,
+      "venue": "NeurIPS 2026 (accepted, as stated on the authors' arXiv record)",
+      "url": "https://arxiv.org/abs/2611.11526",
+      "checked_urls": [
+        "https://arxiv.org/abs/2611.11526",
+        "https://arxiv.org/html/2611.11526v1"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "Proposition 4.3 characterizes stability of deterministic ODE equilibria. Appendix A.6 separately analyzes the autonomous exact-gradient discrete update and finite-step Schur/Jury conditions. The manuscript correctly acknowledges both rather than describing this source as only a continuous-time result.",
+      "evidence_location": "Proposition 4.3; Appendix A.6, particularly Proposition A.15 and its Jury conditions.",
+      "metadata_location": "arXiv author list, 8 November 2026 submission and NeurIPS acceptance comment.",
+      "claim": "Deterministic AdamW already has unstable equilibria and exact discrete-step stability conditions; fixed memory alone does not distinguish the present work.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2611.11526",
+      "identifier": "arXiv:2611.11526v1",
+      "full_text_opened": true,
+      "verification_notes": [
+        "Conference acceptance is verified from the primary author-uploaded arXiv record; a separate NeurIPS proceedings entry was not located. Cite as accepted if distinguishing acceptance from proceedings publication."
+      ],
+      "manuscript_citation_lines": [
+        140,
+        157
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed.",
+        "The assumptions differ in specific ways. The quadratic symmetry result in\n\\cite[Theorem~4.12]{symmetry} uses a fixed Hessian proportional to the identity;\nour noise remains sign symmetric while random Hessians change\nthe stability of the same optimum. The deterministic local analysis in\n\\cite[Proposition~4.3 and Appendix~A.6]{su} includes fixed-step conditions,\nso fixed memory alone is not a distinction. Here AdamW's gradient averages\nkeep fluctuating even at the minimum as $\\eta\\downarrow0$, and only the\npairing of the Hessian and noise changes. The averaged-iterate Gaussian\nlimit theorem in \\cite{dj2026} uses decreasing steps and is conditional on\nconvergence to a stable zero of the averaged update; we compare a\nglobally restoring case with a repelling case under the same listed summaries."
+      ]
+    },
+    {
+      "bibkey": "cohen_edge",
+      "title": "Gradient Descent on Neural Networks Typically Occurs at the Edge of Stability",
+      "authors": [
+        "Jeremy M. Cohen",
+        "Simran Kaur",
+        "Yuanzhi Li",
+        "J. Zico Kolter",
+        "Ameet Talwalkar"
+      ],
+      "year": 2021,
+      "venue": "International Conference on Learning Representations",
+      "url": "https://arxiv.org/abs/2103.00065",
+      "checked_urls": [
+        "https://arxiv.org/abs/2103.00065"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": null,
+      "validation_group": "geometry",
+      "evidence": "Reports full-batch neural gradient descent near a learning-rate-dependent Hessian stability threshold, with nonmonotone short-time loss.",
+      "evidence_location": "arXiv author list, ICLR2021 comment and abstract",
+      "metadata_location": "",
+      "claim": "Large-step neural edge-of-stability behavior is established and differs from a fixed-law small-step stationary error floor.",
+      "suggested_placement": "Closest comparisons: instability and what is new",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "arxiv": "2103.00065",
+      "manuscript_citation_lines": [
+        142
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed."
+      ]
+    },
+    {
+      "bibkey": "adaptive_edge",
+      "title": "Adaptive Gradient Methods at the Edge of Stability",
+      "authors": [
+        "Jeremy M. Cohen",
+        "Behrooz Ghorbani",
+        "Shankar Krishnan",
+        "Naman Agarwal",
+        "Sourabh Medapati",
+        "Michal Badura",
+        "Daniel Suo",
+        "David Cardoze",
+        "Zachary Nado",
+        "George E. Dahl",
+        "Justin Gilmer"
+      ],
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2207.14484",
+      "checked_urls": [
+        "https://arxiv.org/abs/2207.14484"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": null,
+      "validation_group": "geometry",
+      "evidence": "Investigates full- and large-batch adaptive methods near a stability threshold of the preconditioned Hessian. The revised arXiv author list includes eleven authors.",
+      "evidence_location": "arXiv v2 author list, submission/revision history and abstract",
+      "metadata_location": "",
+      "claim": "Adaptive edge-of-stability behavior is known; the current theorem concerns another limit. No NeurIPS2022 main-conference venue is inferred.",
+      "suggested_placement": "Closest comparisons: instability and what is new",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "arxiv": "2207.14484",
+      "revision_year": 2024,
+      "manuscript_citation_lines": [
+        142
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed."
+      ]
+    },
+    {
+      "bibkey": "eos",
+      "title": "Adam at the Edge of Stability: Adaptive Feedback, Provable Oscillation, and Gradient Reversal",
+      "authors": [
+        "Yiman Fong",
+        "Heng Yang"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2608.20638",
+      "checked_urls": [
+        "https://arxiv.org/abs/2608.20638",
+        "https://arxiv.org/html/2608.20638v2"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The analysis studies adaptive feedback near an active stability boundary. Lemma 4.1 gives reversal under a supercritical active-curvature condition in a rank-one setting. This supports the acknowledged large-step phenomenon; it does not establish the manuscript's fixed-noise-coupling stationary-order theorem.",
+      "evidence_location": "Sections 3–4; Lemma 4.1.",
+      "metadata_location": "arXiv author list; first submission 21 August and revision 1 October 2026.",
+      "claim": "Large-learning-rate edge-of-stability and gradient reversal are existing phenomena distinct from the present small-step stationary effect.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2608.20638",
+      "identifier": "arXiv:2608.20638v2",
+      "revision_year": 2026,
+      "full_text_opened": true,
+      "manuscript_citation_lines": [
+        143
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed."
+      ]
+    },
+    {
+      "bibkey": "singh",
+      "title": "Same Loss, Same Noise, Opposite Schedules: Noise Structure and Optimizer Normalization Jointly Determine Whether Learning-Rate Cooldown Helps",
+      "authors": [
+        "Subham Singh",
+        "Ashutosh Mishra",
+        "Subha Raut"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2607.12360",
+      "checked_urls": [
+        "https://arxiv.org/abs/2607.12360",
+        "https://arxiv.org/html/2607.12360v1"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "Proposition 1 derives multiplicative-noise SGD contraction, while Proposition 2 and its appendix establish signSGD granularity and a stationary squared-step floor. Periodicity limits single-iterate interpretations. The manuscript's broad attribution is supported; these are sign/normalized methods, not the same fixed-positive-offset AdamW coupling experiment.",
+      "evidence_location": "Propositions 1–2; Technical Appendix A.",
+      "metadata_location": "arXiv title, full author list and 14 July 2026 submission.",
+      "claim": "Normalization-dependent error floors versus SGD under multiplicative noise precede the present result.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2607.12360",
+      "identifier": "arXiv:2607.12360v1",
+      "full_text_opened": true,
+      "manuscript_citation_lines": [
+        149
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{The closest comparisons.}\nThe averaged Adam update as a function of the whole sampling distribution\nhas already been studied \\cite{dj2024}; its derivative and noise covariance\nalso appear in Gaussian limit theorems for averaged Adam iterates\n\\cite{dj2026}. The effect of symmetric versus asymmetric noise is established\nfor quadratics with a fixed Hessian proportional to the identity\n\\cite{symmetry}. Adam's failure on stochastic convex problems is classical\n\\cite{reddi}. Recent deterministic AdamW analysis already gives unstable\nequilibria and exact fixed-step stability conditions \\cite{su}.\nLarge-step stability thresholds are studied for gradient descent\n\\cite{cohen_edge} and adaptive methods \\cite{adaptive_edge}, with recent\nAdam theory proving oscillation and gradient reversal \\cite{eos}.\nOur contribution is the smooth pair with all the matching\nconditions above, the change from vanishing to persistent stationary error,\nand an explicit condition that restores vanishing error. The denominator\noffset and weight decay stay positive and fixed throughout.\nNormalization-dependent floors versus SGD under multiplicative noise\nalso precede this work \\cite{singh}. Here the optimizer remains the same\nAdamW update with a fixed positive denominator offset, and only the pairing\nchanges while both full separate distributions remain fixed."
+      ]
+    },
+    {
+      "bibkey": "robbinsmonro1951",
+      "title": "A Stochastic Approximation Method",
+      "authors": [
+        "Herbert Robbins",
+        "Sutton Monro"
+      ],
+      "year": 1951,
+      "venue": "The Annals of Mathematical Statistics 22(3):400–407",
+      "url": "https://doi.org/10.1214/aoms/1177729586",
+      "checked_urls": [
+        "https://www.columbia.edu/~ww2040/8100F16/RM51.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The original paper formulates sequential root finding from noisy observations and proves convergence in probability for its decreasing-step recursion under stated monotonicity and boundedness assumptions.",
+      "evidence_location": "Published cover metadata; §1 Summary (p.400); §3 Convergence theorems (pp.401–405).",
+      "metadata_location": "",
+      "claim": "Noisy root finding and stochastic approximation long predate modern adaptive optimizers.",
+      "suggested_placement": "main.tex, Relation to prior work: introduce the classical stochastic-approximation lineage before discussing optimizer-specific history fields.",
+      "scope_limit": "Historical foundation, not a theorem about fixed-memory AdamW invariant laws.",
+      "doi": "10.1214/aoms/1177729586",
+      "access_note": "Euclid landing page returned an iframe; the original published PDF and its journal cover were successfully opened.",
+      "manuscript_citation_lines": [
+        167
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "kushneryin2003",
+      "title": "Stochastic Approximation and Recursive Algorithms and Applications",
+      "authors": [
+        "Harold J. Kushner",
+        "G. George Yin"
+      ],
+      "year": 2003,
+      "venue": "Springer, Stochastic Modelling and Applied Probability 35, second edition",
+      "url": "https://link.springer.com/book/10.1007/b97441",
+      "checked_urls": [
+        "https://link.springer.com/book/10.1007/b97441"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The book develops qualitative and asymptotic analysis of recursive stochastic algorithms, with separate chapters on correlated noise, weak convergence and iterate averaging.",
+      "evidence_location": "Author list; About this book; contents: correlated-noise convergence, weak-convergence methods, rates, averaging; bibliographic information.",
+      "metadata_location": "",
+      "claim": "ODE, weak-convergence and averaging methods belong to the established stochastic-approximation toolkit.",
+      "suggested_placement": "main.tex, Relation to prior work, and proofs/native_transfer.tex before the history correction and stationary transfer lemma.",
+      "scope_limit": "A general methodological reference; applicability of individual results to the present native-history chain is not assumed without proof.",
+      "doi": "10.1007/b97441",
+      "edition": 2,
+      "manuscript_citation_lines": [
+        169
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "benaim1999",
+      "title": "Dynamics of stochastic approximation algorithms",
+      "authors": [
+        "Michel Benaïm"
+      ],
+      "year": 1999,
+      "venue": "Séminaire de Probabilités XXXIII, Springer, pp.1–68",
+      "url": "https://numdam.org/item/SPS_1999__33__1_0/",
+      "checked_urls": [
+        "https://numdam.org/item/SPS_1999__33__1_0/",
+        "https://www.numdam.org/item/SPS_1999__33__1_0.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The notes develop the dynamical-systems approach through asymptotic pseudotrajectories, describe possible limit sets, and discuss nonconvergence to repelling sets. The introduction explicitly focuses mainly on decreasing steps.",
+      "evidence_location": "Original paper §1, pp.3–5; §4; §9, Nonconvergence to unstable points, periodic orbits and normally hyperbolic sets.",
+      "metadata_location": "",
+      "claim": "ODE descriptions and probabilistic avoidance of unstable limiting sets are established theory.",
+      "suggested_placement": "main.tex, Relation to prior work; proofs/phase_selection.tex introductory comparison before the fixed-step stationary log test.",
+      "scope_limit": "Decreasing-step path nonconvergence is distinct from a positive risk floor for every small-fixed-step invariant selection.",
+      "manuscript_citation_lines": [
+        169
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "borkarmeyn2000",
+      "title": "The O.D.E. Method for Convergence of Stochastic Approximation and Reinforcement Learning",
+      "authors": [
+        "V. S. Borkar",
+        "S. P. Meyn"
+      ],
+      "year": 2000,
+      "venue": "SIAM Journal on Control and Optimization 38(2):447–469",
+      "url": "https://epubs.siam.org/doi/abs/10.1137/S0363012997331639",
+      "checked_urls": [
+        "https://epubs.siam.org/doi/abs/10.1137/S0363012997331639",
+        "https://faculty.eng.ufl.edu/meyn/wp-content/uploads/sites/671/archive/spm_files/Papers_pdf/ode.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper derives stability from an associated ODE and treats both decreasing steps and bounded small steps. Under additional assumptions it gives bounded-step concentration and ergodicity statements.",
+      "evidence_location": "Full paper §2.1, Theorems2.1–2.4; journal issue metadata.",
+      "metadata_location": "",
+      "claim": "Averaged-ODE stability arguments, including small bounded-step results, are established stochastic-approximation theory.",
+      "suggested_placement": "main.tex, Relation to prior work; proofs/native_transfer.tex, boundedness and weighted-distance stability discussion.",
+      "scope_limit": "Do not claim classical ODE theory only treats decreasing steps, and do not claim the present invariant-law proof follows merely from a local Jacobian sign.",
+      "doi": "10.1137/S0363012997331639",
+      "author_name_note": "All authors are included; initials are retained as printed on the journal article.",
+      "manuscript_citation_lines": [
+        169
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "pemantle1990",
+      "title": "Nonconvergence to Unstable Points in Urn Models and Stochastic Approximations",
+      "authors": [
+        "Robin Pemantle"
+      ],
+      "year": 1990,
+      "venue": "The Annals of Probability 18(2):698–712",
+      "url": "https://doi.org/10.1214/aop/1176990853",
+      "checked_urls": [
+        "https://api.crossref.org/works/10.1214/aop/1176990853"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "For steps of order one over time, sufficiently multidirectional noise prevents convergence to unstable equilibria of the associated smooth deterministic flow.",
+      "evidence_location": "Crossref fields title, author, container-title, volume, issue, page, published, abstract; HTTP200. Also cross-checked against Benaïm1999 §9.",
+      "metadata_location": "",
+      "claim": "Avoidance of noisy unstable equilibria is classical and must not be claimed as a new general principle.",
+      "suggested_placement": "main.tex, Relation to prior work; proofs/phase_selection.tex: cite as historical contrast to the all-invariant-selection fixed-step mass bound.",
+      "scope_limit": "Validation here covers the publisher-deposited abstract and metadata, not a fresh verification of the full original proof; the result concerns decreasing steps.",
+      "doi": "10.1214/aop/1176990853",
+      "access_note": "Euclid returned an empty iframe; the author page and Berkeley full-paper endpoint returned403. No failed fetch is represented as a full-paper read.",
+      "manuscript_citation_lines": [
+        170
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "fortpages",
+      "title": "Asymptotic Behavior of a Markovian Stochastic Algorithm with Constant Step",
+      "authors": [
+        "Jean-Claude Fort",
+        "Gilles Pagès"
+      ],
+      "year": 1999,
+      "venue": "SIAM Journal on Control and Optimization",
+      "url": "https://epubs.siam.org/doi/abs/10.1137/S0363012997328610",
+      "checked_urls": [
+        "https://epubs.siam.org/doi/abs/10.1137/S0363012997328610"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The abstract describes tight invariant families, ODE-invariant small-step limits and exclusion of repulsive thin sets; additional pseudogradient assumptions exclude saddle/spurious equilibria. This supports historical method attribution only, not a direct import of its theorem to the native AdamW recursion.",
+      "evidence_location": "Publisher abstract.",
+      "metadata_location": "SIAM publisher page title/authors and Information section, volume 37 issue 5, pages 1456–1482, copyright 1999.",
+      "claim": "Classical constant-step stationary-distribution arguments exclude repulsive limiting sets under suitable assumptions.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.1137/S0363012997328610",
+      "identifier": "10.1137/S0363012997328610",
+      "volume": "37",
+      "issue": "5",
+      "pages": "1456–1482",
+      "full_text_opened": false,
+      "access_notes": [
+        "Initial DOI open failed, but the official SIAM abstract/information URL opened successfully. The displayed 2006 online-hosting date is distinct from the 1999 journal issue year."
+      ],
+      "manuscript_citation_lines": [
+        173
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "ddb",
+      "title": "Bridging the gap between constant step size stochastic gradient descent and Markov chains",
+      "authors": [
+        "Aymeric Dieuleveut",
+        "Alain Durmus",
+        "Francis Bach"
+      ],
+      "year": 2020,
+      "venue": "The Annals of Statistics",
+      "url": "https://arxiv.org/abs/1707.06386",
+      "checked_urls": [
+        "https://arxiv.org/abs/1707.06386",
+        "https://www.cmap.polytechnique.fr/~aymeric.dieuleveut/papers/Dieuleveut-Durmus-Bach.pdf",
+        "https://researchportal.ip-paris.fr/en/publications/bridging-the-gap-between-constant-step-size-stochastic-gradient-d/"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The source develops constant-step SGD through Markov chains and expansions of moments, including noise, step and initialization effects. It supports the classical stationary-analysis context, without supplying a native fixed-memory AdamW phase theorem.",
+      "evidence_location": "Author-hosted full paper abstract and official institutional publication abstract.",
+      "metadata_location": "Primary author arXiv record and full paper; author's institution publication record supplies journal, issue, pages, DOI and June 2020 date.",
+      "claim": "Constant-step SGD, invariant distributions and Markov-chain/moment-expansion tools are established prior work.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.1214/19-AOS1850",
+      "identifier": "10.1214/19-AOS1850; arXiv:1707.06386",
+      "volume": "48",
+      "issue": "3",
+      "pages": "1348–1382",
+      "preprint_year": 2017,
+      "full_text_opened": true,
+      "access_notes": [
+        "Publisher DOI endpoint redirected to a bot challenge and the official complete-issue PDF returned 502. The primary author-hosted full paper and official author-institution record were accessible."
+      ],
+      "manuscript_citation_lines": [
+        173
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "chenmoumaguluri2022",
+      "title": "Stationary Behavior of Constant Stepsize SGD Type Algorithms: An Asymptotic Characterization",
+      "authors": [
+        "Zaiwei Chen",
+        "Shancong Mou",
+        "Siva Theja Maguluri"
+      ],
+      "year": 2022,
+      "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems 6(1):1–24",
+      "url": "https://doi.org/10.1145/3508039",
+      "checked_urls": [
+        "https://arxiv.org/abs/2111.06328",
+        "https://api.crossref.org/works/10.1145/3508039"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper characterizes small-step limits of scaled stationary laws for strongly convex SGD, stable linear approximation and contractive nonlinear approximation. Under appropriate uniqueness conditions, Gaussian limits satisfy matrix Lyapunov equations.",
+      "evidence_location": "arXiv abstract; Crossref fields title, author, container-title, volume, issue, page, published; HTTP200.",
+      "metadata_location": "",
+      "claim": "Small-step Gaussian limits of stationary stochastic-approximation laws are an established direct predecessor of the regular stationary transfer.",
+      "suggested_placement": "main.tex, Relation to prior work, and proofs/native_transfer.tex before LemmaB.1: distinguish existing regular stationary limits from this paper’s history correction and matched stable/unstable pair.",
+      "scope_limit": "The native AdamW history, complete matching and all-invariant-selection repelling floor are additional arguments here, not consequences asserted from this citation.",
+      "doi": "10.1145/3508039",
+      "access_note": "ACM article endpoints returned403. The publisher-registered Crossref record was successfully read; the author arXiv abstract independently supplies the square-root-step scaling lost in plain-text publisher metadata.",
+      "manuscript_citation_lines": [
+        173
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "yaida2019",
+      "title": "Fluctuation-dissipation relations for stochastic gradient descent",
+      "authors": [
+        "Sho Yaida"
+      ],
+      "year": 2019,
+      "venue": "International Conference on Learning Representations (ICLR 2019)",
+      "url": "https://arxiv.org/abs/1810.00004",
+      "checked_urls": [
+        "https://arxiv.org/abs/1810.00004"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper derives exact relations among stationary SGD observables and hyperparameters and uses them to study landscape properties and learning schedules.",
+      "evidence_location": "Author list, abstract and Comments: final version accepted at ICLR2019.",
+      "metadata_location": "",
+      "claim": "Stationary expectation balances and fluctuation–dissipation identities provide classical motivation for testing stationary optimization laws.",
+      "suggested_placement": "main.tex, Relation to prior work; proofs/reference.tex near the exact stationary covariance recurrence, or proofs/empirical.tex when distinguishing stationarity assumptions from finite observation windows.",
+      "scope_limit": "Its exact identities presuppose stationarity; they do not establish equilibration, uniqueness or the present conditional-noise risk floor.",
+      "access_note": "Direct OpenReview PDF returned a browser challenge; the opened author record confirms the accepted conference version.",
+      "manuscript_citation_lines": [
+        174
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "fort2015",
+      "title": "Central limit theorems for stochastic approximation with controlled Markov chain dynamics",
+      "authors": [
+        "Gersende Fort"
+      ],
+      "year": 2015,
+      "venue": "ESAIM: Probability and Statistics 19:60–80",
+      "url": "https://www.numdam.org/item/PS_2015__19__60_0/",
+      "checked_urls": [
+        "https://www.numdam.org/item/PS_2015__19__60_0/",
+        "https://www.numdam.org/item/PS_2015__19__60_0.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper proves central limit results for stochastic approximation driven by controlled Markov chains and for averaged sequences. Its Poisson equation separates conditional mean-zero noise from a history-dependent remainder.",
+      "evidence_location": "Full paper §2.1, p.63, Poisson-equation solution and martingale/remainder decomposition; abstract and bibliographic record.",
+      "metadata_location": "",
+      "claim": "Poisson-equation martingale correction for dependent stochastic-approximation noise is a standard technique.",
+      "suggested_placement": "proofs/native_transfer.tex, immediately before defining the bounded history corrector; main.tex, Relation to prior work, methodological-ingredients paragraph.",
+      "scope_limit": "Its CLT assumptions are not silently transferred to our infinite-history shift; the paper proves the required observable forgetting and chronology directly.",
+      "doi": "10.1051/ps/2014013",
+      "manuscript_citation_lines": [
+        177
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "polyakjuditsky1992",
+      "title": "Acceleration of Stochastic Approximation by Averaging",
+      "authors": [
+        "B. T. Polyak",
+        "A. B. Juditsky"
+      ],
+      "year": 1992,
+      "venue": "SIAM Journal on Control and Optimization 30(4):838–855",
+      "url": "https://epubs.siam.org/doi/abs/10.1137/0330046",
+      "checked_urls": [
+        "https://epubs.siam.org/doi/abs/10.1137/0330046"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper studies averaging stochastic-approximation trajectories, proving almost-sure convergence in a range of optimization and identification settings and optimal convergence rates under its assumptions.",
+      "evidence_location": "Title/authors, Abstract, Information & Authors.",
+      "metadata_location": "",
+      "claim": "Trajectory averaging and its precision improvements are classical stochastic-approximation results.",
+      "suggested_placement": "main.tex, Effect size, return speed and memory length: distinguish the local precision–relaxation calculation from results for averaged iterates.",
+      "scope_limit": "Our paper does not establish a whole-chain averaging CLT or identify this classical averaging result as new.",
+      "doi": "10.1137/0330046",
+      "author_name_note": "All authors are included; initials are retained exactly as displayed by the publisher.",
+      "manuscript_citation_lines": [
+        179
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "mouetal2020",
+      "title": "On Linear Stochastic Approximation: Fine-grained Polyak-Ruppert and Non-Asymptotic Concentration",
+      "authors": [
+        "Wenlong Mou",
+        "Chris Junchi Li",
+        "Martin J. Wainwright",
+        "Peter L. Bartlett",
+        "Michael I. Jordan"
+      ],
+      "year": 2020,
+      "venue": "Proceedings of the 33rd Conference on Learning Theory, PMLR 125:2947–2997",
+      "url": "https://proceedings.mlr.press/v125/mou20a.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v125/mou20a.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper proves a fixed-step CLT for averaged stable linear stochastic approximation, identifies a step-dependent correction to classical averaging covariance, and gives matching concentration results under noise-tail assumptions.",
+      "evidence_location": "Complete authors, bibliographic citation and abstract.",
+      "metadata_location": "",
+      "claim": "Averaged linear iterates have refined finite-step covariance and concentration theory, distinct from the present unaveraged stationary comparison.",
+      "suggested_placement": "main.tex, Comparing errors at the same local return speed: support the explicit distinction from actual-chain averaging CLTs and infinite-time correlation guarantees.",
+      "scope_limit": "Theorem regimes concern averaged linear stochastic approximation; no such averaging CLT is established for the full native AdamW chain here.",
+      "manuscript_citation_lines": [
+        179
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Classical methods and stationary distributions.}\nThe study of noisy iterative root finding begins with stochastic\napproximation \\cite{robbinsmonro1951}. Its connections to differential\nequations and stability are developed in\n\\cite{kushneryin2003,benaim1999,borkarmeyn2000}. Avoidance of unstable\npoints is also classical \\cite{pemantle1990}; the decreasing-step conclusion\nthere is distinct from the stationary lower bound needed here.\nConstant-step invariant distributions and small-step limits have established\ntheories \\cite{fortpages,ddb,chenmoumaguluri2022}. Exact stationary balance\nrelations for SGD are studied in \\cite{yaida2019}; such relations presuppose\nstationarity and do not by themselves bound the time to reach it.\nCorrections that turn dependent noise into a martingale are standard tools\nin limit theorems with Markovian noise \\cite{fort2015}.\nAveraging iterates changes their limiting fluctuations\n\\cite{polyakjuditsky1992,mouetal2020}; our leading error concerns an\nunaveraged stationary iterate. We use these established methods rather than\nclaiming that Gaussian limits, covariance equations or unstable-point\navoidance are themselves new."
+      ]
+    },
+    {
+      "bibkey": "litaie2017",
+      "title": "Stochastic Modified Equations and Adaptive Stochastic Gradient Algorithms",
+      "authors": [
+        "Qianxiao Li",
+        "Cheng Tai",
+        "Weinan E"
+      ],
+      "year": 2017,
+      "venue": "Proceedings of the 34th International Conference on Machine Learning, PMLR 70:2101–2110",
+      "url": "https://proceedings.mlr.press/v70/li17f.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v70/li17f.html",
+        "https://proceedings.mlr.press/v70/li17f/li17f.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The method approximates stochastic-gradient algorithms weakly by continuous-time stochastic differential equations and uses that description for adaptive parameter policies. The approximation theorem specifies a finite time horizon.",
+      "evidence_location": "Abstract and citation metadata; full paper §2, informal Theorem1, p.2.",
+      "metadata_location": "",
+      "claim": "Continuous-time weak approximations are a standard way to study stochastic-gradient dynamics.",
+      "suggested_placement": "main.tex, Relation to prior work or Interpretation and limitations: distinguish fixed-time diffusion approximations from control of invariant laws.",
+      "scope_limit": "Finite-horizon weak approximation alone does not justify exchanging long-time and small-step limits.",
+      "manuscript_citation_lines": [
+        186
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Diffusion models and memory scaling.}\nStochastic differential equations provide approximations to optimization\nover finite time intervals \\cite{litaie2017}. Such models also describe\nadaptive updates and their scaling rules \\cite{malladi,compagnoni}.\nTheir Adam limits use memory parameters approaching one with the learning\nrate; the main theorem here instead fixes both memory parameters.\nAn approximation over a fixed time interval does not automatically justify\ninterchanging the long-time and small-step limits. We retain AdamW's actual\nrandom gradient history and prove statements for its stationary laws.\nOur separate long-memory result takes the small-step limit first, so it\ndoes not cover every simultaneous scaling of step and memory.\nThe counterexample applies to descriptions retaining only the matched\nquantities. It does not rule out diffusion models that retain additional\ndependence information."
+      ]
+    },
+    {
+      "bibkey": "malladi",
+      "title": "On the SDEs and Scaling Rules for Adaptive Gradient Algorithms",
+      "authors": [
+        "Sadhika Malladi",
+        "Kaifeng Lyu",
+        "Abhishek Panigrahi",
+        "Sanjeev Arora"
+      ],
+      "year": 2022,
+      "venue": "Advances in Neural Information Processing Systems 35",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/32ac710102f0620d0f28d5d05a44fe08-Abstract.html",
+      "checked_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/2022/hash/32ac710102f0620d0f28d5d05a44fe08-Abstract.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": null,
+      "validation_group": "geometry",
+      "evidence": "Derives diffusion approximations and batch-size scaling rules for RMSprop and Adam. The limiting construction fixes memory-to-squared-step ratios and scales noise, rather than keeping the memory and noise law fixed.",
+      "evidence_location": "Official proceedings abstract; paper Definitions4.1,4.4, Theorems4.2,4.5, Remark4.3",
+      "metadata_location": "",
+      "claim": "Adaptive-optimizer diffusion models depend on their scaling assumptions; the fixed-memory stationary limit in this paper is different.",
+      "suggested_placement": "Related work: diffusion descriptions and memory scaling",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.52202/068431-0559",
+      "manuscript_citation_lines": [
+        187
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Diffusion models and memory scaling.}\nStochastic differential equations provide approximations to optimization\nover finite time intervals \\cite{litaie2017}. Such models also describe\nadaptive updates and their scaling rules \\cite{malladi,compagnoni}.\nTheir Adam limits use memory parameters approaching one with the learning\nrate; the main theorem here instead fixes both memory parameters.\nAn approximation over a fixed time interval does not automatically justify\ninterchanging the long-time and small-step limits. We retain AdamW's actual\nrandom gradient history and prove statements for its stationary laws.\nOur separate long-memory result takes the small-step limit first, so it\ndoes not cover every simultaneous scaling of step and memory.\nThe counterexample applies to descriptions retaining only the matched\nquantities. It does not rule out diffusion models that retain additional\ndependence information."
+      ]
+    },
+    {
+      "bibkey": "compagnoni",
+      "title": "Adaptive Methods through the Lens of SDEs: Theoretical Insights on the Role of Noise",
+      "authors": [
+        "Enea Monzio Compagnoni",
+        "Tianlin Liu",
+        "Rustem Islamov",
+        "Frank Norbert Proske",
+        "Antonio Orvieto",
+        "Aurelien Lucchi"
+      ],
+      "year": 2025,
+      "venue": "International Conference on Learning Representations",
+      "url": "https://arxiv.org/abs/2411.15958",
+      "checked_urls": [
+        "https://arxiv.org/abs/2411.15958"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": null,
+      "validation_group": "geometry",
+      "evidence": "Develops noise-sensitive SDEs for normalized and adaptive methods, including AdamW. The stated AdamW approximation uses memory coefficients tending to one as the step decreases.",
+      "evidence_location": "arXiv metadata and acceptance comment; full text Section3.2, Theorem3.12 and AppendixC.47,C.53",
+      "metadata_location": "",
+      "claim": "Noise, curvature and adaptive normalization already interact in diffusion models; this paper retains fixed memory and actual stationary histories.",
+      "suggested_placement": "Related work: diffusion descriptions and memory scaling",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "arxiv": "2411.15958",
+      "preprint_year": 2024,
+      "manuscript_citation_lines": [
+        187
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Diffusion models and memory scaling.}\nStochastic differential equations provide approximations to optimization\nover finite time intervals \\cite{litaie2017}. Such models also describe\nadaptive updates and their scaling rules \\cite{malladi,compagnoni}.\nTheir Adam limits use memory parameters approaching one with the learning\nrate; the main theorem here instead fixes both memory parameters.\nAn approximation over a fixed time interval does not automatically justify\ninterchanging the long-time and small-step limits. We retain AdamW's actual\nrandom gradient history and prove statements for its stationary laws.\nOur separate long-memory result takes the small-step limit first, so it\ndoes not cover every simultaneous scaling of step and memory.\nThe counterexample applies to descriptions retaining only the matched\nquantities. It does not rule out diffusion models that retain additional\ndependence information."
+      ]
+    },
+    {
+      "bibkey": "mandt2017",
+      "title": "Stochastic Gradient Descent as Approximate Bayesian Inference",
+      "authors": [
+        "Stephan Mandt",
+        "Matthew D. Hoffman",
+        "David M. Blei"
+      ],
+      "year": 2017,
+      "venue": "Journal of Machine Learning Research 18(134):1–35",
+      "url": "https://jmlr.org/papers/v18/17-214.html",
+      "checked_urls": [
+        "https://jmlr.org/papers/v18/17-214.html",
+        "https://jmlr.org/papers/volume18/17-214/17-214.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper studies constant-rate SGD through approximate stationary distributions and an OU description, using explicit local assumptions to relate optimization parameters to approximate Bayesian sampling.",
+      "evidence_location": "Journal metadata and abstract; full paper §3, pp.6–7, four assumptions and Ornstein–Uhlenbeck approximation.",
+      "metadata_location": "",
+      "claim": "Stationary covariance and OU-based descriptions of constant-step SGD are established precedents.",
+      "suggested_placement": "main.tex, Relation to prior work, alongside the current matrix covariance reference; proofs/reference.tex near the exact discrete SGD control.",
+      "scope_limit": "The local diffusion assumptions and approximate Bayesian interpretation are not exact statements for every native AdamW invariant law.",
+      "manuscript_citation_lines": [
+        201
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "smithle2018",
+      "title": "A Bayesian Perspective on Generalization and Stochastic Gradient Descent",
+      "authors": [
+        "Samuel L. Smith",
+        "Quoc V. Le"
+      ],
+      "year": 2018,
+      "venue": "International Conference on Learning Representations (ICLR 2018)",
+      "url": "https://arxiv.org/abs/1710.06451",
+      "checked_urls": [
+        "https://arxiv.org/abs/1710.06451"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "The paper interprets SGD using a diffusion description and relates noise scale to learning rate, training-set size and batch size, with empirical tests of batch-size behavior.",
+      "evidence_location": "Author list, abstract and Comments: published as a conference paper at ICLR2018.",
+      "metadata_location": "",
+      "claim": "Noise scale and learning-rate/batch-size tradeoffs are established learning-dynamics questions.",
+      "suggested_placement": "main.tex, Relation to prior work or Interpretation and limitations: identify the covariance/noise-scale literature whose summaries our controlled pair probes.",
+      "scope_limit": "A modeling and empirical noise-scale reference, not proof that covariance alone determines native fixed-memory adaptive dynamics.",
+      "access_note": "OpenReview forum/PDF endpoints returned a browser challenge; the author arXiv record explicitly confirms the conference and year.",
+      "manuscript_citation_lines": [
+        201
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "chaudharisoatto2018",
+      "title": "Stochastic gradient descent performs variational inference, converges to limit cycles for deep networks",
+      "authors": [
+        "Pratik Chaudhari",
+        "Stefano Soatto"
+      ],
+      "year": 2018,
+      "venue": "International Conference on Learning Representations (ICLR 2018)",
+      "url": "https://arxiv.org/abs/1710.11029",
+      "checked_urls": [
+        "https://arxiv.org/abs/1710.11029",
+        "https://openreview.net/references/pdf?id=H1-b1fs6m"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "Within its continuous-time formulation and assumptions, non-isotropic gradient noise changes the effective potential and can introduce persistent probability currents or cycling behavior.",
+      "evidence_location": "Official full-paper first-page publication header; §2 continuous-time SGD; §3 potential and assumptions.",
+      "metadata_location": "",
+      "claim": "Non-isotropic noise can produce dynamics beyond isotropic equilibrium pictures; this general principle precedes the present matched-law construction.",
+      "suggested_placement": "main.tex, Relation to prior work: contrast known noise-geometry effects with the stronger equality of the complete gradient covariance kernel here.",
+      "scope_limit": "Do not present its diffusion-based cycling claims as an exact discrete-time AdamW theorem; its explicit steady-state and current assumptions matter.",
+      "metadata_note": "Venue verified from the opened official PDF header: ICLR2018, not CVPR.",
+      "manuscript_citation_lines": [
+        202
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "thomas",
+      "title": "On the interplay between noise and curvature and its effect on optimization and generalization",
+      "authors": [
+        "Valentin Thomas",
+        "Fabian Pedregosa",
+        "Bart van Merriënboer",
+        "Pierre-Antoine Manzagol",
+        "Yoshua Bengio",
+        "Nicolas Le Roux"
+      ],
+      "year": 2020,
+      "venue": "Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics (AISTATS), PMLR",
+      "url": "https://proceedings.mlr.press/v108/thomas20a.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v108/thomas20a.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The abstract studies the interaction of gradient variance and curvature in optimization speed and generalization, and distinguishes Hessian, Fisher and gradient covariance. This directly supports the broad contextual attribution; no matched-copula theorem is attributed to it.",
+      "evidence_location": "Official abstract.",
+      "metadata_location": "Official PMLR conference metadata and BibTeX; the BibTeX includes the author surname prefix 'van'.",
+      "claim": "Curvature/noise interactions governing optimization speed and fluctuations are established topics.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "identifier": "pmlr-v108-thomas20a",
+      "volume": "108",
+      "pages": "3503–3513",
+      "full_text_opened": false,
+      "manuscript_citation_lines": [
+        204
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "liu2021",
+      "title": "Noise and Fluctuation of Finite Learning Rate Stochastic Gradient Descent",
+      "authors": [
+        "Kangqiao Liu",
+        "Liu Ziyin",
+        "Masahito Ueda"
+      ],
+      "year": 2021,
+      "venue": "Proceedings of the 38th International Conference on Machine Learning (ICML), PMLR",
+      "url": "https://proceedings.mlr.press/v139/liu21ad.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v139/liu21ad.html",
+        "https://proceedings.mlr.press/v139/liu21ad/liu21ad.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The source explicitly approximates Adam using a population second-moment preconditioner and solves stationary covariance without momentum under its prescribed noise model. This supports the manuscript's careful distinction from the native realized EMA quotient.",
+      "evidence_location": "Published PDF page 9 (zero-index 8), discussion preceding Theorem 10 and Theorem 10.",
+      "metadata_location": "Official PMLR title, author list and conference/volume/page metadata.",
+      "claim": "An earlier stationary-covariance analysis of Adam replaces its random denominator by a population normalizer.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "identifier": "pmlr-v139-liu21ad",
+      "volume": "139",
+      "pages": "7045–7056",
+      "full_text_opened": true,
+      "manuscript_citation_lines": [
+        206
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "liwenlyu",
+      "title": "Adam Reduces a Unique Form of Sharpness: Theoretical Insights Near the Minimizer Manifold",
+      "authors": [
+        "Xinghan Li",
+        "Haodong Wen",
+        "Kaifeng Lyu"
+      ],
+      "year": 2025,
+      "venue": "Thirty-Ninth Conference on Neural Information Processing Systems (NeurIPS 2025)",
+      "url": "https://arxiv.org/abs/2511.02773",
+      "checked_urls": [
+        "https://arxiv.org/abs/2511.02773",
+        "https://arxiv.org/html/2511.02773v1"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The framework studies slow motion near a minimizer manifold and explicitly couples second-moment memory to the square of the learning rate. This supports the stated difference from the manuscript's fixed-memory stationary limit.",
+      "evidence_location": "Section 4, Theorem 4.2; Appendix Theorems B.1–B.2.",
+      "metadata_location": "arXiv full author list, 4 November 2025 submission and journal-reference field identifying NeurIPS 2025.",
+      "claim": "Other work studies adaptive implicit bias near a minimizer manifold under a different second-moment-memory scaling.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2511.02773",
+      "identifier": "arXiv:2511.02773v1",
+      "full_text_opened": true,
+      "manuscript_citation_lines": [
+        208
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "das",
+      "title": "Towards Quantifying the Preconditioning Effect of Adam",
+      "authors": [
+        "Rudrajit Das",
+        "Naman Agarwal",
+        "Sujay Sanghavi",
+        "Inderjit S. Dhillon"
+      ],
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2402.07114",
+      "checked_urls": [
+        "https://arxiv.org/abs/2402.07114"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The abstract analyzes quadratic preconditioning, gives diagonal/diagonally-dominant bounds and reports adverse behavior for sufficiently non-diagonal Hessians. This supports the manuscript's limited preconditioning attribution, not a novel-claim assertion about noncommutation alone.",
+      "evidence_location": "Official author-uploaded abstract.",
+      "metadata_location": "arXiv title, full author list and 11 February 2024 submission.",
+      "claim": "The benefits and limitations of Adam as a preconditioner, including non-diagonal Hessian difficulties, are prior topics.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.48550/arXiv.2402.07114",
+      "identifier": "arXiv:2402.07114v1",
+      "full_text_opened": false,
+      "manuscript_citation_lines": [
+        209
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "cattaneo",
+      "title": "On the Implicit Bias of Adam",
+      "authors": [
+        "Matias D. Cattaneo",
+        "Jason Matthew Klusowski",
+        "Boris Shigida"
+      ],
+      "year": 2024,
+      "venue": "Proceedings of the 41st International Conference on Machine Learning (ICML), PMLR",
+      "url": "https://proceedings.mlr.press/v235/cattaneo24a.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v235/cattaneo24a.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "The abstract relates backward-error ODEs to implicit regularization in RMSProp and Adam, with behavior depending on hyperparameters and training stage. This supports the manuscript's discrete-update implicit-bias attribution; the current text does not miscite it as a noncommuting-Hessian theorem.",
+      "evidence_location": "Official abstract.",
+      "metadata_location": "Official PMLR title, full authors, ICML 2024 volume and pages.",
+      "claim": "Backward-error analysis identifies regularization effects introduced by adaptive methods' discrete updates.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "identifier": "pmlr-v235-cattaneo24a",
+      "volume": "235",
+      "pages": "5862–5906",
+      "full_text_opened": false,
+      "manuscript_citation_lines": [
+        210
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Noise, curvature and adaptive bias.}\nDiffusion descriptions connect SGD fluctuations to approximate Bayesian\ninference \\cite{mandt2017,smithle2018} and to probability currents and\nlimit cycles under anisotropic noise \\cite{chaudharisoatto2018}.\nCurvature/noise tradeoffs for speed and fluctuations are established topics\n\\cite{thomas}. Stationary covariance for an Adam approximation\nthat replaces the random denominator by a population quantity is studied in\n\\cite{liu2021}; keeping that denominator random is essential here.\nOther work studies the bias of adaptive methods near a manifold of minima\nunder a different memory scaling \\cite{liwenlyu}, the limits of Adam as a\npreconditioner \\cite{das}, and regularization effects introduced by its\ndiscrete updates \\cite{cattaneo}. Here the same optimizer has different\norders of stationary error under the complete matching conditions above."
+      ]
+    },
+    {
+      "bibkey": "simsekli",
+      "title": "A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks",
+      "authors": [
+        "Umut Simsekli",
+        "Levent Sagun",
+        "Mert Gurbuzbalaban"
+      ],
+      "year": 2019,
+      "venue": "Proceedings of the 36th International Conference on Machine Learning",
+      "url": "https://proceedings.mlr.press/v97/simsekli19a.html",
+      "checked_urls": [
+        "https://proceedings.mlr.press/v97/simsekli19a.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": null,
+      "validation_group": "geometry",
+      "evidence": "Questions a Gaussian-noise approximation and investigates heavy tails in measured neural-network gradient noise.",
+      "evidence_location": "Official PMLR metadata, BibTeX and abstract",
+      "metadata_location": "",
+      "claim": "Covariance and Gaussian noise are not the only descriptions studied for learning dynamics; the current example uses bounded noise.",
+      "suggested_placement": "Related work: noise, curvature and transformer optimization",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "volume": "97",
+      "pages": "5827--5837",
+      "manuscript_citation_lines": [
+        215
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Connections to transformers and limits of the example.}\nHeavy-tailed gradient noise has been measured in neural networks\n\\cite{simsekli} and used to explain difficulties of SGD in attention models\n\\cite{zhang_attention}. Differences between Hessian blocks provide another\nexplanation for Adam's advantage on transformers \\cite{zhang_hessian}.\nHowever, an SGD--Adam gap can remain even with full-batch gradients\n\\cite{kunstner2023noise}, and optimization speed need not predict held-out\nperformance \\cite{wilson2017marginal}. Our bounded-noise quadratic examples\nhold the whole Hessian distribution fixed and isolate an additional\ndependence. They neither explain the full transformer optimization gap\nnor establish a generalization or language-quality benefit."
+      ]
+    },
+    {
+      "bibkey": "zhang_attention",
+      "title": "Why are Adaptive Methods Good for Attention Models?",
+      "authors": [
+        "Jingzhao Zhang",
+        "Sai Praneeth Karimireddy",
+        "Andreas Veit",
+        "Seungyeon Kim",
+        "Sashank Reddi",
+        "Sanjiv Kumar",
+        "Suvrit Sra"
+      ],
+      "year": 2020,
+      "venue": "Advances in Neural Information Processing Systems 33",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/b05b57f6add810d3b7490866d74c0053-Abstract.html",
+      "checked_urls": [
+        "https://proceedings.neurips.cc/paper/2020/hash/b05b57f6add810d3b7490866d74c0053-Abstract.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": null,
+      "validation_group": "geometry",
+      "evidence": "Presents heavy-tailed gradient noise as one explanation for optimizer differences in attention models and studies coordinate clipping.",
+      "evidence_location": "Official proceedings author list and abstract",
+      "metadata_location": "",
+      "claim": "Noise-tail explanations for adaptive optimization precede this work; our bounded-noise construction isolates a different dependence.",
+      "suggested_placement": "Related work: noise, curvature and transformer optimization",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "manuscript_citation_lines": [
+        216
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Connections to transformers and limits of the example.}\nHeavy-tailed gradient noise has been measured in neural networks\n\\cite{simsekli} and used to explain difficulties of SGD in attention models\n\\cite{zhang_attention}. Differences between Hessian blocks provide another\nexplanation for Adam's advantage on transformers \\cite{zhang_hessian}.\nHowever, an SGD--Adam gap can remain even with full-batch gradients\n\\cite{kunstner2023noise}, and optimization speed need not predict held-out\nperformance \\cite{wilson2017marginal}. Our bounded-noise quadratic examples\nhold the whole Hessian distribution fixed and isolate an additional\ndependence. They neither explain the full transformer optimization gap\nnor establish a generalization or language-quality benefit."
+      ]
+    },
+    {
+      "bibkey": "zhang_hessian",
+      "title": "Why Transformers Need Adam: A Hessian Perspective",
+      "authors": [
+        "Yushun Zhang",
+        "Congliang Chen",
+        "Tian Ding",
+        "Ziniu Li",
+        "Ruoyu Sun",
+        "Zhi-Quan Luo"
+      ],
+      "year": 2024,
+      "venue": "Advances in Neural Information Processing Systems 37",
+      "url": "https://papers.nips.cc/paper_files/paper/2024/hash/ee0e45ff4de76cbfdf07015a7839f339-Abstract-Conference.html",
+      "checked_urls": [
+        "https://papers.nips.cc/paper_files/paper/2024/hash/ee0e45ff4de76cbfdf07015a7839f339-Abstract-Conference.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": null,
+      "validation_group": "geometry",
+      "evidence": "Studies differences in Hessian spectra across parameter blocks and their relationship to the Adam-versus-SGD gap on transformers and quadratic examples.",
+      "evidence_location": "Official proceedings author list and abstract; paper introduction",
+      "metadata_location": "",
+      "claim": "Curvature variation across parameter blocks is a proposed explanation for adaptive optimization in transformers; the present matching fixes the whole Hessian law.",
+      "suggested_placement": "Related work: noise, curvature and transformer optimization",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "doi": "10.52202/079017-4190",
+      "manuscript_citation_lines": [
+        217
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Connections to transformers and limits of the example.}\nHeavy-tailed gradient noise has been measured in neural networks\n\\cite{simsekli} and used to explain difficulties of SGD in attention models\n\\cite{zhang_attention}. Differences between Hessian blocks provide another\nexplanation for Adam's advantage on transformers \\cite{zhang_hessian}.\nHowever, an SGD--Adam gap can remain even with full-batch gradients\n\\cite{kunstner2023noise}, and optimization speed need not predict held-out\nperformance \\cite{wilson2017marginal}. Our bounded-noise quadratic examples\nhold the whole Hessian distribution fixed and isolate an additional\ndependence. They neither explain the full transformer optimization gap\nnor establish a generalization or language-quality benefit."
+      ]
+    },
+    {
+      "bibkey": "kunstner2023noise",
+      "title": "Noise Is Not the Main Factor Behind the Gap Between SGD and Adam on Transformers, but Sign Descent Might Be",
+      "authors": [
+        "Frederik Kunstner",
+        "Jacques Chen",
+        "Jonathan Wilder Lavington",
+        "Mark Schmidt"
+      ],
+      "year": 2023,
+      "venue": "International Conference on Learning Representations (ICLR 2023)",
+      "url": "https://arxiv.org/pdf/2304.13960",
+      "checked_urls": [
+        "https://arxiv.org/pdf/2304.13960"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The primary PDF confirms ICLR 2023. Its abstract reports batch-size-controlled experiments including full-batch training: the Adam-SGD gap persists after noise removal, and large-batch Adam resembles momentum sign descent. The arXiv author page expands J. Wilder Lavington to Jonathan Wilder Lavington.",
+      "evidence_location": "Primary PDF first-page publication header and abstract, lines 0-23; primary arXiv author and abstract fields, lines 9-18.",
+      "metadata_location": "",
+      "claim": "The present existence theorem about curvature-noise coupling cannot establish that stochastic noise is the dominant source of Adam's empirical transformer advantage; documented full-batch gaps require additional mechanisms. This is an empirical scope limit, not a contradiction of the coupling theorem.",
+      "suggested_placement": "Section 1 related work on Adam versus SGD; Section 8 immediately after the limitation concerning practical LLM benefits.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "Do not abbreviate the title as Noise, Not Geometry: that is not the title of this work.",
+      "manuscript_citation_lines": [
+        219
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Connections to transformers and limits of the example.}\nHeavy-tailed gradient noise has been measured in neural networks\n\\cite{simsekli} and used to explain difficulties of SGD in attention models\n\\cite{zhang_attention}. Differences between Hessian blocks provide another\nexplanation for Adam's advantage on transformers \\cite{zhang_hessian}.\nHowever, an SGD--Adam gap can remain even with full-batch gradients\n\\cite{kunstner2023noise}, and optimization speed need not predict held-out\nperformance \\cite{wilson2017marginal}. Our bounded-noise quadratic examples\nhold the whole Hessian distribution fixed and isolate an additional\ndependence. They neither explain the full transformer optimization gap\nnor establish a generalization or language-quality benefit."
+      ]
+    },
+    {
+      "bibkey": "wilson2017marginal",
+      "title": "The Marginal Value of Adaptive Gradient Methods in Machine Learning",
+      "authors": [
+        "Ashia C. Wilson",
+        "Rebecca Roelofs",
+        "Mitchell Stern",
+        "Nati Srebro",
+        "Benjamin Recht"
+      ],
+      "year": 2017,
+      "venue": "Advances in Neural Information Processing Systems 30 (NIPS 2017)",
+      "url": "https://proceedings.neurips.cc/paper/2017/hash/81b3833e2504647f9d794f7d7b9bf341-Abstract.html",
+      "checked_urls": [
+        "https://proceedings.neurips.cc/paper/2017/hash/81b3833e2504647f9d794f7d7b9bf341-Abstract.html"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:59:34Z",
+      "validation_group": "adaptive",
+      "evidence": "The official proceedings page identifies the authors and venue. It gives classification examples where adaptive methods select solutions with worse test error than SGD, and reports empirical generalization comparisons on neural-network tasks.",
+      "evidence_location": "Official NeurIPS proceedings title/authors/venue and abstract; lines 0-10.",
+      "metadata_location": "",
+      "claim": "Optimization behavior and test generalization can differ across adaptive and non-adaptive methods. A stationary quadratic-risk advantage or separation here does not by itself establish better language modeling or generalization.",
+      "suggested_placement": "Section 8 when separating the proved population-risk statements from practical LLM quality and generalization.",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "metadata_note": "Use the current official proceedings author name Nati Srebro; the older deposited PDF uses Nathan Srebro.",
+      "manuscript_citation_lines": [
+        220
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Connections to transformers and limits of the example.}\nHeavy-tailed gradient noise has been measured in neural networks\n\\cite{simsekli} and used to explain difficulties of SGD in attention models\n\\cite{zhang_attention}. Differences between Hessian blocks provide another\nexplanation for Adam's advantage on transformers \\cite{zhang_hessian}.\nHowever, an SGD--Adam gap can remain even with full-batch gradients\n\\cite{kunstner2023noise}, and optimization speed need not predict held-out\nperformance \\cite{wilson2017marginal}. Our bounded-noise quadratic examples\nhold the whole Hessian distribution fixed and isolate an additional\ndependence. They neither explain the full transformer optimization gap\nnor establish a generalization or language-quality benefit."
+      ]
+    },
+    {
+      "bibkey": "cambanissimonsstout1976",
+      "title": "Inequalities for E k(X, Y) when the marginals are fixed",
+      "authors": [
+        "Stamatis Cambanis",
+        "Gordon Simons",
+        "William Stout"
+      ],
+      "year": 1976,
+      "venue": "Zeitschrift für Wahrscheinlichkeitstheorie und Verwandte Gebiete 36:285–294",
+      "url": "https://link.springer.com/article/10.1007/BF00532695",
+      "checked_urls": [
+        "https://link.springer.com/article/10.1007/BF00532695"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T14:01:30Z",
+      "validation_group": "theory",
+      "evidence": "For a class of quasi-monotone functions with fixed input distributions, the expectation is ordered by the joint distribution and attained minimum and maximum couplings are characterized.",
+      "evidence_location": "Title, complete author list, publication/volume/pages, Abstract and Cite this article.",
+      "metadata_location": "",
+      "claim": "Attained expectation extrema under fixed marginals are a direct classical mathematical ancestor of the scalar rearrangement step.",
+      "suggested_placement": "main.tex, after the sharp scalar theorem’s sentence calling rearrangement classical; proofs/kernel.tex, Best and worst scalar dependence, immediately before the tail-integral proof.",
+      "scope_limit": "The contribution here is the optimizer-specific decreasing response kernel and resulting risk interval, not the general rearrangement principle.",
+      "doi": "10.1007/BF00532695",
+      "manuscript_citation_lines": [
+        227,
+        399
+      ],
+      "manuscript_citation_contexts": [
+        "\\paragraph{Optimizing the pairing.}\nExtremal expectations under fixed separate distributions have classical\nrearrangement bounds \\cite{cambanissimonsstout1976}. We apply these bounds\nto the exact AdamW response weight. The contribution is the resulting sharp\nrange of leading stationary errors and its connection to the optimizer,\nrather than a new general rearrangement inequality.",
+        "The theorem gives the full range of possible leading errors in one\ndimension. Pairing large curvature with small noise gives the lowest error;\npairing large curvature with large noise gives the highest. The step that\nbounds an average product from its separate distributions is classical\n\\cite{cambanissimonsstout1976}. The AdamW-specific part is \\eqref{eq:rowkernel} and\nits decreasing weight. Appendices~\\ref{app:kernel}--\\ref{app:transfer}\nprove that the averaged update points inward and that the actual stationary\nerror has the stated limit. Section~\\ref{sec:phases} proves exact equality\nof SGD errors for the matrix examples as well."
+      ]
+    }
+  ],
+  "validated_but_replaced": [
+    {
+      "bibkey": "rearrangement",
+      "title": "Identifying Treatment Effects under Data Combination",
+      "authors": [
+        "Yanqin Fan",
+        "Robert Sherman",
+        "Matthew Shum"
+      ],
+      "year": 2013,
+      "venue": "California Institute of Technology Social Science Working Paper",
+      "url": "https://divisions-prod-assets.resources.caltech.edu/hss70/working_papers/sswp1377.pdf",
+      "checked_urls": [
+        "https://divisions-prod-assets.resources.caltech.edu/hss70/working_papers/sswp1377.pdf"
+      ],
+      "opened_online": true,
+      "metadata_validated_online": true,
+      "citation_claim_validated_online": true,
+      "validation_date_utc": "2026-11-17",
+      "retrieval_utc": "2026-11-17T13:58:28Z",
+      "validation_group": "existing",
+      "evidence": "Lemma 3.1 gives sharp lower and upper expectations of products through opposite/equal quantile orderings, attributing the inequality to earlier rearrangement work. This supports the manuscript's classical attribution and not a new-method claim.",
+      "evidence_location": "Lemma 3.1 on PDF page 7 (zero-index 6), with explicit classical attributions immediately before it.",
+      "metadata_location": "Caltech-hosted paper cover and title page: full author names, working-paper number 1377 and May 2013.",
+      "claim": "The sharp fixed-marginal product/rearrangement bound is classical.",
+      "suggested_placement": "Existing citation context",
+      "scope_limit": "Supports the stated context; validation does not independently verify every proof in the cited work.",
+      "identifier": "Caltech Social Science Working Paper 1377",
+      "volume": "1377",
+      "full_text_opened": true,
+      "retirement_reason": "Replaced by the directly relevant classical mathematical source Cambanis, Simons and Stout (1976), rather than retaining an indirect treatment-effects citation."
+    }
+  ],
+  "input_record_sha256": {
+    "research/q2_reference_validation_existing_20261117.json": "492921cf9d9527cdb4b43aea30dc494fd11b28ae5609aadf5aa0a9a1c5e37969",
+    "research/q2_reference_validation_adaptive_20261117.json": "c98c1bf9b06d1bbddcd37e516cd23cbf4c9c10af3f9bc0f159969dd3eeff2a61",
+    "research/q2_reference_validation_theory_20261117.json": "9eb7c8fe6cfcffd91a14fd27c18c23a0ba899f12451665b8aba95c9f5b14a223",
+    "research/q2_reference_validation_geometry_20261117.json": "df8d6932d20e28d9d5b02d791fd6c1ca2d972c8415b29acb4295b092ec4ca407"
+  },
+  "bibliography_order": "First manuscript citation; each selected work appears exactly once.",
+  "bibliography_entries": 50,
+  "every_entry_cited_in_context": true
+}

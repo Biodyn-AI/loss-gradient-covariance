@@ -1,0 +1,71 @@
+\section{A Range of Dependence Choices with Different Long-run Behavior}
+\label{app:continuous}
+
+\begin{proof}[Proof of Corollary~\ref{cor:continuous-copula-phases}]
+A copula specifies dependence while leaving each separate distribution
+fixed. These mixtures preserve the complete separate distributions,
+the zero mixed moment
+$\E[A_{ij}e_k]$, symmetry under each noise-coordinate sign flip, and coordinate-swap
+symmetry.
+The scalar row kernels depend only on the common noise marginal.
+Proposition~\ref{prop:rowkernel} therefore gives exactly
+\[
+ J_\theta=(1-\theta)J_0+\theta J_1,
+ \qquad B_\theta=\lambda I+J_\theta
+              =(1-\theta)B_0+\theta B_1.
+\]
+The entire nonlinear field $F_\theta$ need not be affine in
+$\theta$. Coordinate-swap symmetry gives the common symmetric and
+antisymmetric eigendirections; only the latter eigenvalue crosses zero, at
+\eqref{eq:copula-local-threshold}.
+
+To prove global stability for mixtures close to independence, let
+$\Delta_A$ be the largest operator-norm distance between two matrices in
+the common Hessian support. Construct paired samples using
+the same $e$, an independent $A_0$ with the common Hessian law, a draw
+$A_1$ from the conditional $\mathcal P_1$ law given $e$, and an independent
+$C\sim\operatorname{Bernoulli}(\theta)$. Choose $A_\theta=A_0$ if
+$C=0$ and $A_\theta=A_1$ otherwise; repeat independently over time.
+The quotient bound, which has no dimension-dependent factor, gives
+\begin{align*}
+ \|f_\theta(u)-f_0(u)\|
+ &\leq\frac{C_*\Delta_A}{\epsilon}\|u\|
+                   \sqrt{\sum_jd_jC_j}\\
+ &\leq\frac{C_*\Delta_A}{\epsilon}\|u\|
+                   \sum_j\sqrt{d_j}C_j.
+\end{align*}
+Taking expectations gives a bound linear in $\theta$:
+\[
+ \|F_\theta(u)-F_0(u)\|\leq\theta L\|u\|,
+ \qquad L=\frac{C_*\Delta_A}{\epsilon}
+                      \frac{\sqrt{1-\beta}}{1-\sqrt\beta}.
+\]
+Let $\kappa_{\bar H}=\lambda_{\max}(\bar H)/\lambda_{\min}(\bar H)$.
+The reference law's bound for decreasing weighted squared distance gives
+\[
+ u^\top\bar HG_\theta(u)
+ \geq(\lambda-\theta L\kappa_{\bar H})u^\top\bar Hu.
+\]
+Choose $0<\theta_0<\min\{\theta_*,\lambda/(L\kappa_{\bar H}),1\}$.
+Lemma~\ref{lem:regular-transfer} applies on this interval. The common fluctuation covariance at zero is $DI$, and
+\[
+ S_\theta=\frac D2B_\theta^{-1},\qquad
+ C_\theta=\tfrac12\operatorname{tr}(\bar HS_\theta)>0.
+\]
+Here the exchange-symmetric $2\times2$ matrix $B_\theta$ is symmetric
+positive definite. For fixed $\theta>\theta_*$, the antisymmetric drift
+still vanishes on the symmetric line and has a negative derivative at
+zero. This gives the same local repulsion inequality as before. The uniform
+conditional noise bound is unchanged because the noise law is unchanged. Proposition~\ref{prop:matrix-stationary-repulsion}
+therefore gives the fixed positive stationary risk floor. The bounded
+optimizer state supplies its finite upper bound.
+
+Finally the common complete Hessian and noise distributions and zero
+mixed moment make the SGD covariance equation identical for every $\theta$.
+These mixtures also preserve fixed smooth densities in all matrix and
+noise coordinates and the matrix law with noncommuting samples. All statements fix $\theta$ before
+$\eta\downarrow0$. Neither the local crossing nor these two open stationary
+phase ranges identify the leading nonlinear behavior exactly at the
+crossing, all attracting sets away from zero, finite-time switching, or
+a rate of convergence to stationarity.
+\qed\end{proof}

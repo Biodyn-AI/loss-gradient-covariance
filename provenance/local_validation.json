@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-17",
+  "scope": "Pre-publication software and recorded-data verification; not independent human proof review or a mixing certificate.",
+  "python": "3.12.14",
+  "platform": "Darwin arm64",
+  "numerical_environment": {
+    "numpy": "1.26.4",
+    "matplotlib": "3.10.8",
+    "scipy": "1.15.2"
+  },
+  "unit_tests": {
+    "passed": 41,
+    "python_versions": [
+      "3.10",
+      "3.12"
+    ]
+  },
+  "core_install_without_numpy_passed": true,
+  "official_cff_1_2_0_schema_validation_passed": true,
+  "scientific_archive": {
+    "version": "1.0.0",
+    "tag": "v1.0.0",
+    "repository": "https://github.com/Biodyn-AI/loss-gradient-covariance",
+    "url": "https://github.com/Biodyn-AI/loss-gradient-covariance/releases/download/v1.0.0/scientific-record-v1.0.0.zip",
+    "filename": "scientific-record-v1.0.0.zip",
+    "sha256": "ff6c87277d6d25ec43872e366d0d4ca373487bba2295771e18b32447547767ff",
+    "bytes": 253677113,
+    "member_count": 721,
+    "uncompressed_bytes": 375077016
+  },
+  "all_721_member_hashes_verified": true,
+  "displayed_matrix_values_recomputed_and_exactly_matched": 93,
+  "saved_resamples_reused": 10000,
+  "figures_regenerated": {
+    "count": 4,
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "scientific_random_draws": 0,
+    "fitted_parameters": 0,
+    "receipt": "provenance/figure_reproduction.json"
+  },
+  "paper": {
+    "main_pages": 25,
+    "supplement_pages": 9,
+    "latex_warnings": 0,
+    "unresolved_references": 0,
+    "changed_manuscript_page": 22,
+    "change": "Public repository and v1.0.0 release links in data availability statement; other main/supplement pages render identically to the prior JOTA edition."
+  },
+  "fresh_toy_demo": {
+    "steps": 100,
+    "seed": 7,
+    "scope": "Separate finite-horizon smoke check, not archived study replication."
+  }
+}

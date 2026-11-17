@@ -1,0 +1,107 @@
+\section{The Exact Response Kernel and Best Possible Scalar Bounds}\label{app:kernel}
+
+The response kernel measures how strongly the averaged update reacts to a
+small parameter change. Fix one coordinate, omit its index, and let $R_j=|e_{-j}|$,
+$V=\sum_jd_jR_j^2$, $D_V=\sqrt V$. Since independent time samples have
+$\Pp(R>0)>0$, both $V$ and each $V_{-j}=V-d_jR_j^2$ are positive
+almost surely. Differentiate the frozen quotient in direction $k$:
+\[
+ \partial_kf_i(0,Z)=
+ \frac{\sum_jw_jA_{ik,-j}}{D_V+\epsilon}
+ -\frac{(\sum_lw_le_{i,-l})(\sum_jd_je_{i,-j}A_{ik,-j})}
+ {D_V(D_V+\epsilon)^2}.
+\]
+For $l\ne j$, condition on all other times and $|e_{i,-l}|$. The
+corresponding product contains $e_{i,-l}$ but not the curvature from that
+same sample. Its conditional expectation is zero because the noise
+marginal is symmetric. No sign symmetry conditional on that absent
+curvature is needed. The surviving same-sample terms are
+\[
+ \sum_j w_j A_{ik,-j}
+ \frac{V-d_jR_j^2+\epsilon\sqrt V}{\sqrt V(\sqrt V+\epsilon)^2}.
+\]
+Condition each on its own $(A_{ik,-j},R_j)$ and average other times.
+This gives \eqref{eq:rowkernel} and \eqref{eq:psi}.
+
+To justify differentiating inside the expectation, use the weighted
+square-sum norm on gradient histories $\|x\|_d^2=\sum_jd_jx_j^2$. The numerator
+$n(x)=\sum_jw_jx_j$ has representing vector of norm $C_*$. The map
+$T(x)=n(x)/(\|x\|_d+\epsilon)$ is continuously differentiable ($C^1$), including derivative
+$n/\epsilon$ at zero, with a bounded Lipschitz derivative: its change is at
+most a constant times the change in the history. Bounded affine gradient histories
+therefore allow differentiation under expectation.
+The own-time factor is at most $1/(D_V+\epsilon)\leq1/\epsilon$;
+its sum is uniformly bounded by the summable weights.
+
+For $v>0$, both
+\[
+ \frac{v}{x(x+\epsilon)^2},\qquad
+ \frac{\epsilon}{(x+\epsilon)^2},\qquad x=\sqrt{v+d_jr^2},
+\]
+are strictly decreasing with $r\geq0$. The $j=0$ term has positive
+weight, including when $\alpha=0$. Dominated convergence proves continuity;
+strictness of this one term proves strict monotonicity of $\Psi$.
+Because $D_V\leq R_{\max}$ after each substituted $r\leq R_{\max}$,
+\[
+ 0<\frac{\epsilon}{(R_{\max}+\epsilon)^2}
+       \leq\Psi(r)\leq\frac1\epsilon.
+\]
+
+\paragraph{Why scalar drift points toward zero.}
+For a numerator summand at age $j$, condition on all other times and put
+$J=\sum_{k\ne j}d_kg_{-k}(u)^2$. The function
+$x/(\sqrt{d_jx^2+J}+\epsilon)$ is odd increasing. For $u>0$ and $H_j>0$,
+its value at $H_ju+e_j$ is at least its value at $e_j$ pointwise, including
+when $H_j$ depends on the sign. The latter averages to zero by marginal
+symmetry and independence of other times. Reverse the comparison for $u<0$.
+Summing weights yields $uF(u)\geq0$, hence
+$uG(u)\geq\lambda u^2$. The field need not be odd when curvature can depend on the noise sign.
+Lemma~\ref{lem:regular-transfer} below gives the stated
+stationary law and moments after positivity of the origin variance.
+
+\paragraph{Fluctuations at zero.}
+At the origin the action depends only on the common noise law. Conditional
+on its magnitudes, each nonzero sign is fair and independent across time.
+For a scalar lag $l\geq0$,
+\[
+ \E[U_0U_l\mid |e|]=
+ \frac{\alpha^lQ_0}{(\sqrt{V_0}+\epsilon)(\sqrt{V_l}+\epsilon)},
+ \qquad Q_0=\sum_jw_j^2e_{-j}^2.
+\]
+This is nonnegative. It is bounded by
+$[(1-\alpha)^2/(1-\beta)](\alpha/\rho)^l$, and its variance term is
+strictly positive. Thus $0<D_\epsilon<\infty$. The martingale-corrector
+variance agrees with this covariance sum by the bounded telescoping
+decomposition and absolute summability.
+
+\paragraph{Best and worst scalar dependence.}
+For nonnegative bounded $H,W$, write their product as an integral of
+joint tail probabilities:
+\[
+ \E HW=\int_0^\infty\!\int_0^\infty
+                   \Pp(H>x,W>y)\,dx\,dy.
+\]
+Writing $A_x=\Pp(H>x)$ and $B_y=\Pp(W>y)$, intersection probabilities
+lie between $\max(0,A_x+B_y-1)$ and $\min(A_x,B_y)$. Opposite/equal
+rank pairings attain these bounds simultaneously: pair larger values
+with smaller values for the lower bound, or larger with larger for the
+upper bound. Apply this to
+$W=\Psi(R)$, whose order reverses $R$. This gives the smallest and largest response slopes and, because risk
+decreases with the slope, the risk endpoints.
+Fair independent signs make both extremizers admissible in the signed
+class. Mixtures preserve both marginals and $\E He=0$, fill the entire
+susceptibility interval linearly, and fill the risk interval continuously.
+If neither marginal is constant, the intersection bounds differ on a set
+of positive area, so the two endpoints differ strictly.
+
+Finally, $h_{\min}\E\Psi(R)\leq\chi\leq h_{\max}\E\Psi(R)$ yields
+\[
+ \frac{C_{\max}}{C_{\min}}
+ =\frac{\lambda+\chi_{\max}}{\lambda+\chi_{\min}}
+ \leq\frac{\lambda+h_{\max}\E\Psi(R)}
+             {\lambda+h_{\min}\E\Psi(R)}
+ \leq\frac{h_{\max}}{h_{\min}}.
+\]
+This bounds curvature spread across samples. It differs from the condition
+number of one scalar quadratic, which is always one. The bound does not
+say that every choice of marginals can attain this ceiling.

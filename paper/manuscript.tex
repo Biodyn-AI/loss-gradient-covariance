@@ -1,0 +1,579 @@
+\input{preamble}
+\IfFileExists{ESM_1.aux}{\externaldocument{ESM_1}}{\externaldocument{xref_cache/ESM_1}[ESM_1.pdf]}
+\begin{document}
+\input{article_metadata}
+\section{Introduction}
+AdamW rescales each gradient coordinate using averages of past gradients
+and squared gradients. Its average update can therefore differ from the
+average gradient. We ask what information is needed to predict its
+stationary error: expected excess loss when the joint distribution of
+parameters and moment estimates is unchanged by further updates.
+
+Curvature describes how the gradient changes when the parameters move;
+for quadratic losses it is the Hessian matrix. Gradient noise is the
+difference between a sampled gradient and its mean. Their separate
+distributions do not determine how they occur together. We call this
+remaining dependence a \emph{coupling}, or pairing.
+
+We construct two problems that share the average loss, the full separate
+Hessian and optimum-noise distributions, and gradient covariance at every
+pair of parameter values, including the use of the same sample at both
+values. Changing only the pairing makes one averaged update restore the
+common optimum and the other repel it in one direction. We prove that
+stationary error vanishes in proportion to the learning rate in one
+problem but remains bounded away from zero in the other. Plain stochastic
+gradient descent has exactly the same stationary error on both.
+
+The two parameters interact: the sampled Hessians do not share an
+eigenbasis. The distributions can be smooth, and one fully specified
+example has sample condition numbers below ten. Symmetric noise keeps
+the optimum a zero of both averaged updates, so the mechanism changes
+stability rather than merely shifting that zero. We extend the result
+to a range of pairings and identify conditions restoring vanishing error.
+The supplementary results quantify error, local return speed and a
+sequential long-memory limit. We assert neither a finite-start mixing-time
+bound nor a language-model training benefit.
+
+\input{related_work}
+
+Appendices A--E contain the essential proofs in this paper. Appendices
+F--I and Section S1, including the extension statements and proofs and supporting numerical records, are
+in Online Resource~1. Online Resource~2 provides the scientific code and
+recorded data used for the numerical results.
+
+\section{The Algorithm and the Quantities Held Fixed}
+At each update draw $(A_n,e_n)$ independently from the same joint
+distribution. The matrix gives sample curvature, and the vector gives
+the sample gradient at zero. In our examples zero minimizes the average
+loss. These samples define
+\[
+ \begin{gathered}
+ \ell(u;A,e)=\tfrac12u^\top Au+e^\top u,\qquad g(u;A,e)=Au+e,\\
+ 0<h_{\min}I\preceq A\preceq h_{\max}I,
+ \end{gathered}
+\]
+with bounded symmetric $A$ and bounded $e$. Fix
+$0\leq\alpha<\rho=\sqrt\beta<1$ and $\epsilon,\lambda>0$.
+We use the following coordinatewise AdamW update at a constant learning rate:
+\begin{align}
+ m_{n+1}&=\alpha m_n+(1-\alpha)g(u_n;A_{n+1},e_{n+1}),\nonumber\\
+ v_{n+1}&=\beta v_n+(1-\beta)g(u_n;A_{n+1},e_{n+1})^{\odot2},
+ \label{eq:native}\\
+ u_{n+1}&=(1-\eta\lambda)u_n
+                -\eta\frac{m_{n+1}}{\sqrt{v_{n+1}}+\epsilon}.
+ \nonumber
+\end{align}
+Here $m$ and $v$ are exponential averages of gradients and squared gradients,
+$\epsilon$ is the positive denominator offset, and $\lambda$ is weight
+decay. The initial bias correction is omitted. Put
+\[
+ w_j=(1-\alpha)\alpha^j,\quad d_j=(1-\beta)\beta^j,\quad
+ C_*^2=\sum_{j\geq0}\frac{w_j^2}{d_j}
+ =\frac{(1-\alpha)^2}{(1-\beta)(1-\alpha^2/\beta)}.
+\]
+The moment constraints $v_i\geq0$, $m_i^2\leq C_*^2v_i$ define the set
+we call the \emph{native cone}. Zero initial moment estimates satisfy these
+constraints, and every update preserves them. For $\eta\lambda\leq1$,
+every stationary distribution in this set is supported on
+$\|u\|_\infty\leq C_*/\lambda$. Such stationary distributions exist.
+Appendix~\ref{app:transfer} proves these bounds and relates the update with
+its actual past gradients to its averaged description.
+
+A \emph{law} means a probability distribution. We use \emph{invariant}
+and \emph{stationary} interchangeably: an update leaves the joint
+distribution of parameters and moment estimates $(u,m,v)$ unchanged.
+``Every invariant selection'' means any choice of stationary
+distribution at each allowed learning rate. We assume neither uniqueness
+nor a rate at which a run approaches stationarity. The risk in the formal
+statements is stationary error, measured as expected excess average loss.
+
+We hold the full separate distributions of $A$ and $e$ fixed. In our examples
+$\E e=0$ and every cross moment $\E[A_{ij}e_k]=0$. With $\bar H=\E A$,
+\begin{equation}\label{eq:matched-kernel}
+ \begin{gathered}
+ L(u)=\tfrac12u^\top\bar H u,\qquad \E g(u)=\bar H u,\\
+ \Cov(g(u),g(v))=\E[(A-\bar H)uv^\top(A-\bar H)]+\E ee^\top.
+ \end{gathered}
+\end{equation}
+The covariance uses the same sampled loss at $u,v$. For quadratics, the
+displayed moments and separate distributions therefore fix it at every pair
+of parameter values. The joint distribution of curvature and noise, and
+their higher cross moments, can still differ.
+
+\begin{theorem}[A fixed smooth matched pair with different stationary risk orders]
+\label{thm:main}
+For every admitted fixed $\alpha,\beta,\epsilon,\lambda$, there are two
+fixed smooth compactly supported joint laws on
+$\operatorname{Sym}_2\times\R^2$, called independent and coupled, such that:
+\begin{enumerate}
+ \item All sample Hessians are uniformly positive definite; their law is
+ full dimensional and independent sample Hessians fail to commute almost
+ surely. The two laws share the complete separate Hessian and optimum-noise
+ marginals and every quantity in \eqref{eq:matched-kernel}.
+ \item Both joint laws are invariant under each individual coordinate
+ sign flip of $e$ with $A$ unchanged, and under simultaneous coordinate
+ exchange $(A,e)\mapsto(PAP,Pe)$. The common optimum $0$ is a zero of
+ both averaged AdamW fields.
+ \item For every invariant native-cone selection,
+ \[
+\begin{gathered}
+  \Risk_{\rm independent}(\eta)=C\eta+o(\eta),\quad 0<C<\infty,
+\\
+   0<\underline R\leq\Risk_{\rm coupled}(\eta)\leq\overline R<\infty
+\end{gathered}
+ \]
+ for all sufficiently small $\eta$. Here $\Risk=\E L(u)$.
+ \item Plain SGD with the same decay has exactly equal stationary
+ covariance matrices and quadratic risks for the two laws throughout a
+ common stable step interval; both risks have order $\eta$.
+\end{enumerate}
+All sample laws, supports, conditioning constants and optimizer parameters
+are fixed before the step limit. The risk ratio is of order $1/\eta$.
+\end{theorem}
+
+The proof constructs the pair explicitly. Sections~\ref{sec:field}--\ref{sec:phases}
+give the matrices and explain why one case is stable and the other is not.
+The appendices prove the stationary results for the actual AdamW update.
+Conditioning and
+cross-sample curvature spread are finite for each example; they are not
+uniformly bounded over every memory choice or requested spectral margin.
+
+\section{How Gradient Noise Reweights Curvature}\label{sec:field}
+The key quantity is how the average AdamW update changes near the minimum.
+To compute it, fix the parameter $u$ while averaging past gradient samples.
+For a complete sample history $Z$, define
+\[
+\begin{gathered}
+ f_i(u,Z)=\frac{\sum_{j\geq0}w_j((A_{-j}u)_i+e_{i,-j})}
+ {\sqrt{\sum_{j\geq0}d_j((A_{-j}u)_i+e_{i,-j})^2}+\epsilon},
+ \\ F(u)=\E f(u,Z),\quad G(u)=\lambda u+F(u).
+\end{gathered}
+\]
+Noise marginals are symmetric and nonzero with positive probability.
+Let $R_{\max}=\max_i\operatorname{ess\,sup}|e_i|$,
+$R_i=|e_i|$, $V_{i,-j}=\sum_{k\ne j}d_kR_{i,-k}^2$, and, for
+$0\leq r\leq R_{\max}$, put
+\begin{equation}\label{eq:psi}
+ \Psi_i(r)=\sum_{j\geq0}w_j\E\left[
+ \frac{V_{i,-j}}{x(x+\epsilon)^2}
+       +\frac{\epsilon}{(x+\epsilon)^2}\right],
+ \qquad x=\sqrt{V_{i,-j}+d_jr^2}.
+\end{equation}
+The expectation over other times depends only on the distribution of $R_i$.
+The function $\Psi_i$ will give the weight applied to curvature in coordinate
+$i$. The term \emph{susceptibility kernel} below refers to this curvature
+weight in the local slope of the averaged update.
+
+\begin{proposition}[Exact curvature-weighting formula]\label{prop:rowkernel}
+Every $\Psi_i$ is positive, continuous and strictly decreasing, with
+$\epsilon/(R_{\max}+\epsilon)^2\leq\Psi_i\leq1/\epsilon$.
+The exact origin field derivative is
+\begin{equation}\label{eq:rowkernel}
+ J_{ik}=\partial_kF_i(0)=\E[A_{ik}\Psi_i(|e_i|)].
+\end{equation}
+Only marginal noise symmetry is needed for this identity; sample Hessians
+need not commute. Positive definite $A$ alone need not make $J$ positive stable.
+\end{proposition}
+
+The proof differentiates the quotient built from past gradients. Cross
+terms involving different times average to zero: they contain a symmetric
+noise sign but not the curvature sampled at that same time. The remaining
+terms give \eqref{eq:psi}; both decrease with $r$.
+Appendix~\ref{app:kernel} gives the details. The formula says that curvature
+observed with smaller noise receives greater weight. Replacing the random
+denominator by its population approximation would lose this dependence.
+
+\begin{theorem}[Exact error range in one dimension]\label{thm:scalar}
+In dimension one fix complete bounded marginals $H\in[h_{\min},h_{\max}]$
+and symmetric nonzero $e$. Allow every signed coupling with $\E He=0$.
+Let $\mu=\E H$, $\chi=\E[H\Psi(|e|)]$, and let $D_\epsilon>0$ be the
+origin Green--Kubo variance of the native action. Every invariant selection has
+\[
+ u/\sqrt\eta\Rightarrow N\!\left(0,\frac{D_\epsilon}{2(\lambda+\chi)}\right),
+ \qquad C(H,e):=\lim\frac{\E L(u)}\eta
+       =\frac{\mu D_\epsilon}{4(\lambda+\chi)}.
+\]
+All positive absolute scaled moments converge. If $a,b$ are the generalized
+quantiles of $H,|e|$, define
+\[
+ \chi_{\min}=\int_0^1a(t)\Psi(b(t))dt,
+ \qquad \chi_{\max}=\int_0^1a(t)\Psi(b(1-t))dt.
+\]
+The complete attainable risk interval is
+\[
+ \frac{\mu D_\epsilon}{4(\lambda+\chi_{\max})}
+ \leq C(H,e)\leq
+ \frac{\mu D_\epsilon}{4(\lambda+\chi_{\min})}.
+\]
+Opposite curvature/magnitude ranks minimize risk; equal ranks maximize it.
+Both extrema and all intermediate values are attainable, and their ratio is
+at most $h_{\max}/h_{\min}$. The endpoints differ strictly when both
+marginals are nondegenerate.
+\end{theorem}
+
+The theorem gives the full range of possible leading errors in one
+dimension. Pairing large curvature with small noise gives the lowest error;
+pairing large curvature with large noise gives the highest. The step that
+bounds an average product from its separate distributions is classical
+\cite{cambanissimonsstout1976}. The AdamW-specific part is \eqref{eq:rowkernel} and
+its decreasing weight. Appendices~\ref{app:kernel}--\ref{app:transfer}
+prove that the averaged update points inward and that the actual stationary
+error has the stated limit. Section~\ref{sec:phases} proves exact equality
+of SGD errors for the matrix examples as well.
+
+\section{Constructing Vanishing and Persistent Error}\label{sec:phases}
+Let the vector noise have magnitudes $(0,a)$ or $(a,0)$ with equal
+probabilities, with fair independent coordinate signs. Its coordinate
+marginals are identical. For the common kernel let
+\[
+ K=\frac{\Psi(0)}{\Psi(a)}>1.
+\]
+Choose any fixed $M,b$ with
+\begin{equation}\label{eq:construction-window}
+ 1<\sqrt M<K,\qquad
+ \frac{K+M}{K+1}<b<\sqrt M,
+ \qquad \Delta=b(K+1)-(K+M)>0.
+\end{equation}
+The interval is nonempty because $(\sqrt M-1)(\sqrt M-K)<0$.
+Set
+\[
+ H_1=\begin{pmatrix}1&b\\b&M\end{pmatrix},\quad
+ H_2=\begin{pmatrix}M&b\\b&1\end{pmatrix},\quad
+ s>\frac{2\lambda}{\Psi(a)\Delta}.
+\]
+Both matrices are positive definite and do not commute; their commutator has nonzero entry
+$2b(1-M)$. In the coupled law use $A=sH_1$ for magnitude $(0,a)$ and
+$A=sH_2$ for $(a,0)$. In the independent law draw the same equally
+weighted Hessian distribution independently of the entire noise vector.
+Fair signs make every $\E[A_{ij}e_k]$ vanish. This proves all matching
+claims in \eqref{eq:matched-kernel}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/pairing_mechanism.pdf}
+\caption{How a different pairing reverses mean motion in the concrete
+example of Section~\ref{sec:matrix-experiment}. Both problems have the same
+separate curvature and noise distributions and the same gradient covariance.
+\textbf{a:} For displacement $u=(x,-x)$, bars give the mean coordinate
+gradient per unit coordinate displacement, conditioned on that coordinate
+having zero noise (quiet) or unit noise (noisy). Equivalently, they show
+$\E[(Au)_i/u_i\mid |e_i|]$. A negative bar gives an outward descent component;
+it is not a negative Hessian eigenvalue. Ordinary averaging gives $.75$ in
+both cases. \textbf{b:} AdamW's local curvature weights are the same in both
+problems, but the quiet coordinate receives much more weight. These weights
+average over the full noise history; they are not instantaneous inverse-noise
+factors. Caps show deterministic certified bounds, not confidence intervals.
+\textbf{c:} After including weight decay, the local mean motion is
+$\dot x=-kx$. The weighted quiet contribution now makes the coupled case
+repel along this direction. Arrows show direction only in this local
+linearization, not simulated trajectories. Plotting code was developed with OpenAI Codex; displayed quantities are derived from certified calculations.}
+\label{fig:copulas}
+\end{figure}
+
+The coupled Jacobian is
+\[
+ J_c=\frac{s\Psi(a)}2
+ \begin{pmatrix}K+M&b(K+1)\\b(K+1)&K+M\end{pmatrix}.
+\]
+Thus $\lambda I+J_c$ has negative eigenvalue
+$\lambda-s\Psi(a)\Delta/2$ on $v=(1,-1)/\sqrt2$, and a positive
+eigenvalue on the symmetric direction. The origin is a saddle for
+$\dot u=-G(u)$: motion is pushed away in one direction and pulled back in
+the other. In the independent case the Jacobian is
+\[
+ J_r=c\bar H,\qquad c=\tfrac12(\Psi(0)+\Psi(a))>0,
+ \qquad \bar H=\E A,
+\]
+which is positive definite after adding decay. These local calculations
+alone do not prove the stationary errors. We must also show that the
+independent update pulls inward globally, and that random updates cannot
+remain concentrated at the repelling minimum in the coupled case.
+
+\paragraph{Why the independent case has small error.}
+In the independent law, $A-\bar H$ has the same distribution as its negative.
+At fixed $u$, each gradient coordinate has a symmetric distribution about
+$m_i=(\bar H u)_i$. Odd-monotone scalar normalization implies
+$m_iF_i(u)\geq0$. Consequently
+\begin{equation}\label{eq:restoring-lyapunov}
+ u^\top\bar H G(u)\geq\lambda u^\top\bar H u.
+\end{equation}
+This inequality shows that the average loss decreases along the averaged
+dynamics away from the minimum. It is a Lyapunov bound, meaning a bound
+that controls distance from the minimum. It first gives stationary moment
+bounds for the actual update; a diffusion limit then gives the precise
+leading error. With common origin variance $D>0$,
+the independent limiting covariance and risk coefficient are
+\begin{equation}\label{eq:reference-limit}
+ S_r=\tfrac D2(\lambda I+c\bar H)^{-1},\qquad
+ C_r=\tfrac D4\operatorname{tr}[\bar H(\lambda I+c\bar H)^{-1}].
+\end{equation}
+Appendix~\ref{app:reference} proves \eqref{eq:restoring-lyapunov} and
+derives the result for the update using its actual past gradients.
+
+\paragraph{Why the coupled case retains positive error.}
+Swapping the two coordinates leaves the problem unchanged. This symmetry
+makes the antisymmetric drift component divisible by
+$y=v^\top u$: $|G_v(u)|\leq L|y|$ on the enlarged native box. Its
+negative local derivative gives $yG_v(u)\leq-a_0y^2$ near zero. At the
+origin a bounded adjustment for past noise, called the Poisson corrector,
+is linear in the realized noise signs, with
+a uniformly positive coefficient for the fresh sign. Hence the variance of
+the remaining centered random update in direction $v$ has a positive lower
+bound for every old history. For the test function $\log(y^2+h\eta)$,
+repulsion and this fresh noise give a positive expected change near zero,
+with a bounded negative change elsewhere. Stationarity requires the average
+change to be zero, forcing positive probability outside a fixed neighborhood
+of the minimum. Appendix~\ref{app:repulsion} proves this for the actual
+chain, without assuming an unproved rate of approach to stationarity or
+independence from past gradients.
+
+\paragraph{Smooth distributions and the SGD comparison.}
+Add the same independent small fixed smooth symmetric matrix jitter to $A$
+and iid symmetric smooth coordinate jitters to $e$ in both laws. Choose a
+matrix perturbation from a smooth density that depends only on its norm.
+This preserves symmetry under reflection and coordinate exchange. The joint
+densities are smooth in every matrix and noise direction, while all matching
+conditions and sign symmetries remain. Small enough fixed perturbations
+preserve positive sample curvature and the strict stability signs. The
+independent law retains matrix central symmetry and independence from $e$.
+
+For SGD put $T=I-\eta(A+\lambda I)$. In a common contractive step interval
+the invariant covariance uniquely solves
+\begin{equation}\label{eq:SGD-matrix}
+ \Sigma=\E[T\Sigma T^\top]+\eta^2\E ee^\top.
+\end{equation}
+All cross terms vanish; this equation depends only on the fixed separate
+distributions. Both stationary covariances and errors agree exactly and are of order
+$\eta$. Appendix~\ref{app:reference} completes smoothing and this matrix
+argument, proving Theorem~\ref{thm:main}.
+
+\subsection{Changing the Pairing Continuously}
+\label{sec:continuous-copula}
+The distinction is not restricted to two isolated pairings. Mixing their
+sampling distributions gives a continuous range of dependence choices,
+all with exactly the same listed summaries. Fix one smooth pair of
+Theorem~\ref{thm:main}, with joint sample laws $\mathcal P_0,\mathcal P_1$, and put
+$\mathcal P_\theta=(1-\theta)\mathcal P_0+\theta\mathcal P_1$,
+$0\leq\theta\leq1$. Each time sample is drawn independently from this
+mixture. Let $k_{0,-}>0$ and $k_{1,-}<0$ be the endpoint antisymmetric
+eigenvalues of $\lambda I+DF(0)$; their symmetric eigenvalues are positive.
+
+\begin{corollary}[Ranges of pairings with different stationary errors]
+\label{cor:continuous-copula-phases}
+Every $\mathcal P_\theta$ has the same complete Hessian/noise marginals,
+population loss and gradient covariance kernel. Its local origin threshold
+is exactly
+\begin{equation}\label{eq:copula-local-threshold}
+ \theta_* =\frac{k_{0,-}}{k_{0,-}-k_{1,-}}\in(0,1).
+\end{equation}
+The origin is locally exponentially stable for $\theta<\theta_*$ and a
+hyperbolic saddle for $\theta>\theta_*$. There is a fixed $\theta_0>0$
+such that every $\theta\in[0,\theta_0]$ has stationary risk
+$C_\theta\eta+o(\eta)$ with $C_\theta>0$, for every invariant selection.
+Every fixed $\theta>\theta_*$ has stationary risk $\Theta(1)$ for every
+selection. Plain SGD has exactly the same stationary covariance and
+order-$\eta$ risk for the whole family at sufficiently small common steps.
+No stationary classification is asserted at $\theta_*$ or throughout the
+remaining locally stable interval $(\theta_0,\theta_*)$.
+\end{corollary}
+The complete proof is in Appendix~\ref{app:continuous}. Near the independent
+endpoint we prove vanishing stationary error; beyond the local stability
+threshold we prove a positive floor. The interval between these ranges and
+the threshold itself are not fully classified. A local stability change
+does not determine a finite-learning-rate transition or the dynamics
+exactly at the threshold.
+
+Online Resource~1, Section~\ref{sec:supplementary-extensions}, gives the
+matched-return-speed comparison, a sequential long-memory expansion, and
+the extension of the exact scalar error range to an interacting matrix
+family. Their full statements, assumptions and proofs are retained there.
+
+\section{Numerical Tests}
+For each prospective experiment, the code, settings and prediction intervals
+were fixed before its simulations. The analysis includes every declared
+setting and every recorded run. We estimate uncertainty by resampling whole
+independent simulation runs, keeping all paired conditions together.
+The resulting bootstrap intervals are approximate. They do not prove that
+the runs have reached stationarity or bound how fast this happens.
+The reproducibility archive contains the raw observations and run records.
+
+\subsection{The Two-Dimensional AdamW Experiment}\label{sec:matrix-experiment}
+The experiment samples the two matrices
+\[
+ H_1=\begin{pmatrix}1&1.25\\1.25&3\end{pmatrix},\qquad
+ H_2=\begin{pmatrix}3&1.25\\1.25&1\end{pmatrix},\qquad a=1,
+\]
+with $\alpha=.1$, $\beta=.2$, $\epsilon=.03$, $\lambda=.1$ and no
+Hessian scaling. The displayed optimizer decimals label their exact
+double-precision computer representations. Appendix~\ref{app:certificate}
+specifies these rational values and the calculation used to bound the
+curvature weights. Before simulating any two-dimensional trajectory, a
+deterministic calculation over finite histories, with bounds for omitted
+history and rounding, gave
+\[
+ \Psi(0)\in[5.703200,5.816980],\qquad
+ \Psi(1)\in[.126867,.240647].
+\]
+Propagating the underlying unrounded intervals with outward rounding gives bounds on the
+eigenvalues of $\lambda I+J$, whose signs determine local stability
+(Table~\ref{tab:field-stability}):
+\begin{table}[htbp]
+\caption{Certified Bounds for the Local Drift Eigenvalues}\label{tab:field-stability}
+\centering
+
+\begin{tabular}{ccc}
+\toprule
+Law & Antisymmetric direction & Symmetric direction\\
+\midrule
+Coupled & $[-.516114,-.402334]$ & $[6.785694,7.155475]$\\
+Independent & $[2.286275,2.371610]$ & $[9.573861,9.943642]$\\
+\bottomrule
+\end{tabular}
+\end{table}
+The sample Hessian eigenvalues are approximately $.399219,3.600781$, with
+condition number $9.019565<10$; the population eigenvalues are $.75,3.25$.
+The mechanism is visible on $u=(x,-x)$. In the coupled law the quiet
+coordinate has deterministic sample-gradient component $-.25u_i$, pointing
+outward in that coordinate, while the noisy coordinate has $1.75u_i$.
+The population component remains $.75u_i$ inward. AdamW gives greater
+weight to the quieter coordinate. This reverses the restoring force in
+the antisymmetric direction:
+\[
+ \lambda+\tfrac12[-.25\Psi(0)+1.75\Psi(1)]<0.
+\]
+An explicit smooth instance at these optimizer settings uses independent
+smooth matrix and independent symmetric coordinate perturbations at fixed scale
+$\tau=2^{-20}$. Appendix~\ref{app:reference} specifies their densities and
+proves $\|J_\tau-J_0\|_{\rm op}<.1$, preserving every stability sign and
+sample condition number below ten. Thus the smoothing size is specified
+explicitly. The simulations here use the original discrete law; the result
+for smooth sampling distributions is proved separately.
+
+The study fixes learning rates $10^{-3},2\cdot10^{-4},4\cdot10^{-5}$,
+256 paired simulation runs, and starts $0,\pm(.05,-.05)$ with zero
+moment estimates. For AdamW and SGD under both pairings, we record 17
+observations in each time window $16{:}32$, $48{:}64$, $112{:}128$, using
+time $t=n\eta$. The 432 primary quantities specified before simulation
+include all errors, paired differences, exact SGD comparisons, differences
+between starts and time windows, and normalized differences between adjacent
+learning rates. Their approximate simultaneous confidence intervals account
+for the whole set. Descriptive ratios and coordinate means have no such
+simultaneous-coverage claim.
+
+All 12 settings and all 612 snapshots completed without a recorded arithmetic
+failure. The following display uses the previously specified zero start
+and final observation window (Table~\ref{tab:matrix-errors}):
+\begin{table}[htbp]
+\caption{Stationary-Error Displays at the Prespecified Final Window}\label{tab:matrix-errors}
+\centering
+
+\small
+\begin{tabular}{cccc}
+\toprule
+$\eta$ & \shortstack{Independent\\AdamW error} & \shortstack{Coupled\\AdamW error} & \shortstack{Coupled/\\independent ratio}\\
+\midrule
+$10^{-3}$ & $1.169172\cdot10^{-4}$ & $.2079983$ & $1779\ [1723,1838]$\\
+$2\cdot10^{-4}$ & $2.082282\cdot10^{-5}$ & $.2114666$ & $10156\ [9850,10491]$\\
+$4\cdot10^{-5}$ & $3.975007\cdot10^{-6}$ & $.2120988$ & $53358\ [51701,55075]$\\
+\bottomrule
+\end{tabular}
+\end{table}
+Each ratio has an approximate 95\% interval with endpoints rounded outward;
+these intervals are not simultaneous across ratios.
+All 27 paired coupled-minus-independent AdamW error differences have positive
+lower endpoints in the approximate simultaneous band for all 432 quantities.
+All 27 SGD pairing differences and all 54 comparisons with the exact nominal
+SGD stationary predictions have intervals containing zero in that band.
+The zero-start final-window SGD errors
+under the two pairings are respectively
+$(2.355295,2.357937)\cdot10^{-4}$,
+$(4.677611,4.678263)\cdot10^{-5}$, and
+$(9.293840,9.293543)\cdot10^{-6}$.
+These exact nominal controls use decimal-rational coefficients; they check
+statistical compatibility and are not identities for native floating-point
+stationary laws.
+
+The checks also show effects of the finite observation time and learning
+rate. Four of 72 differences between starts and two of 72 differences
+between time windows exclude zero in the primary simultaneous band. These
+involve early coupled AdamW at the two smaller learning rates. Similar late
+errors from different starts do not prove that the chain moves between its
+two symmetric states. Of 72 normalized adjacent-rate differences, 22 exclude
+zero: 16 coupled raw-error differences and six independent AdamW
+error/$\eta$ differences. Coupled late error increases by about 2\% across
+the grid, and the independent error coefficient also changes. The large
+separation at a common observation clock supports the mechanism. Three
+learning rates do not prove the limiting scaling, bound the finite-step
+error, or determine the numerical value of the stationary error floor.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/matrix_phases.pdf}
+\caption{Two-Dimensional problems with the same listed summaries but
+different curvature/noise pairings, using the discrete sampling law.
+Left: all four zero-start final-window error displays, with approximate
+simultaneous 95\% error bars for the 432 primary quantities (often smaller than the symbols).
+Lines connect observed means; no exponent is fitted. Right: every terminal
+state at the finest step, retaining all 256 zero-start replicas for
+each method/pairing. The inset shows the clouds near the minimum. These
+plots do not prove switching between states or convergence to stationarity.
+The error separation for smooth sampling distributions is proved separately. Plotting code was developed with OpenAI Codex; displayed quantities are derived from recorded numerical outputs.}
+\label{fig:matrix-phases}
+\end{figure}
+
+The supporting scalar study, exploratory time-correlation checks,
+and earlier crossover disagreements are retained in Online Resource~1,
+Appendix~\ref{app:supporting-studies}. They are not needed for the main
+matched-pair theorem.
+
+\section{Conclusions}
+For these quadratic problems, the shared loss and covariance summaries
+determine SGD's stationary error but do not even determine whether AdamW's
+stationary error tends to zero with the learning rate. The curvature-weight
+formula identifies the missing dependence. Independence of curvature and
+noise, together with the stated matrix symmetry, is one condition that
+restores vanishing error.
+
+The result is useful as a controlled test of what a theory of learning
+dynamics needs to describe. It isolates one dependence that average loss
+and covariance cannot capture, shows how to calculate its effect, and
+provides examples against which simplified predictions can be checked.
+Whether the same mechanism matters in a trained language model requires
+separate evidence.
+
+The main pair is two dimensional and deliberately constructed. The universal
+construction may need large conditioning or curvature spread; the explicit
+short-memory instance has sample condition numbers below ten. Memory remains
+fixed, and all stationary statements refer to the moment constraints
+specified in Section~2. Smoothing removes discrete atoms but does not make
+the constructed example representative of a trained transformer. We have
+not bounded the time to escape the origin or reach stationarity, proved a
+unique stationary distribution in the coupled case, or demonstrated a
+neural-training intervention. The long-memory result also prevents a direct
+extrapolation of the measured short-memory effect to language-model settings.
+
+The appendices give complete proofs, including the adjustment for past
+gradients, the positive-error argument and the explicit smooth example.
+
+\appendix
+\input{proofs/kernel}
+\input{proofs/native_transfer}
+\input{proofs/phase_selection}
+\input{proofs/reference}
+\input{proofs/continuous}
+
+
+
+\FloatBarrier
+\makeatletter
+\protected@write\@auxout{}{\string\newlabel{jota-main-last-equation}{{\theequation}{\thepage}{}{}}}
+\makeatother
+\input{declarations}
+\begingroup
+\renewcommand{\url}[1]{\href{#1}{Online source}}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{\nolinkurl{https://doi.org/#1}}}
+\def\urlprefix{}
+\bibliographystyle{jota_spmpsci}
+\bibliography{references}
+\endgroup
+\end{document}

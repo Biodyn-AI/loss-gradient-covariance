@@ -1,0 +1,5 @@
+# Pinned environment for saved-data analysis and the supplied figure producers.
+# Use Python 3.10-3.12. The exact core itself has no third-party dependencies.
+numpy==1.26.4
+matplotlib==3.10.8
+scipy==1.15.2
